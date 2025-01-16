@@ -1,0 +1,68 @@
+<header class="header">
+
+  <!-- Menu Desktop -->
+  <nav class="nav__container">
+    <div class="nav__logo-container">
+      <figure class="nav__logo">
+        <img src="../../../assets/logo.jpg" alt="logo">
+      </figure>
+      <a routerLink="/home" class="nav__logo-text">CD-Futuro13</a>
+    </div>
+
+    <ul class="nav__list">
+      <li class="nav__item has-submenu">
+        <a routerLink="/about">Sobre Nosotros <span class="arrow"></span></a>
+        <ul class="submenu">
+          <li class="submenu-item"><a routerLink="/about/history">Historia</a></li>
+          <li class="submenu-item"><a routerLink="/about/team">Misión</a></li>
+          <li class="submenu-item"><a routerLink="/about/mission">Visión</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item has-submenu">
+        <a routerLink="/testimonials">Testimonios <span class="arrow"></span></a>
+        <ul class="submenu">
+          <li class="submenu-item"><a routerLink="/testimonials/testimonials-fathers">Padres</a></li>
+          <li class="submenu-item"><a routerLink="/testimonials/testimonials-jugadores">Jugadores</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item"><a routerLink="/contact">Sala de Trofeos</a></li>
+      <li class="nav__item"><a routerLink="/contact">Torneos</a></li>
+      <li class="nav__item"><a routerLink="/contact">Coporación</a></li>
+      <li class="nav__item"><a routerLink="/contact">Contacto</a></li>
+    </ul>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="menu-button">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <!-- Menu Mobile -->
+    <mat-menu #menu="matMenu">
+
+      <button mat-menu-item routerLink="/about">
+        <span>Sobre Nosotros</span>
+      </button>
+
+      <button mat-menu-item="nav__mobile-item" routerLink="/contact">
+        <span>Testimonios</span>
+      </button>
+
+      <button mat-menu-item routerLink="/contact">
+        <span>Sala de Trofeos</span>
+      </button>
+
+      <button mat-menu-item routerLink="/contact">
+        <span>Torneos</span>
+      </button>
+
+      <button mat-menu-item routerLink="/contact">
+        <span>Coporación</span>
+      </button>
+
+      <button mat-menu-item routerLink="/contact">
+        <span>Contacto</span>
+      </button>
+    </mat-menu>
+  </nav>
+</header>
