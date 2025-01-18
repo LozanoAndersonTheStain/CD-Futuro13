@@ -49,3 +49,38 @@
   padding: 0.3rem;
   object-fit: contain;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .not-content-page {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .not-content-page__container {
+    gap: 2rem;
+  }
+
+  .not-content-page__text {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .not-content-page__content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .not-content-page__title__button {
+    font-size: 1.2rem;
+
+    & span {
+      font-size: 3rem;
+    }
+  }
+
+  .not-content-page__logo img {
+    width: 12rem;
+    height: 16rem;
+  }
+}
