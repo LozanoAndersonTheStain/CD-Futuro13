@@ -1,0 +1,8 @@
+<button
+  [type]="config.type || 'button'"
+  [disabled]="config.disabled"
+  [ngClass]="config.class"
+  [ngStyle]="{'font-size': config.fontSize}"
+  (click)="config.action()">
+  {{ config.label }}
+</button>
