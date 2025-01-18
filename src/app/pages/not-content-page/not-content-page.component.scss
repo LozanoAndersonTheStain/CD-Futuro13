@@ -1,0 +1,51 @@
+.not-content-page {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image:
+    linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)), /* Capa de color con transparencia */
+    url(../../../../public/assets/imagen_de_fondo.jpg); /* Capa de imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color); /* Color de fondo de respaldo */
+  height: 90.6vh;
+}
+
+.not-content-page__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.not-content-page__text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--quaternary-color);
+  width: 60%;
+}
+
+.not-content-page__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.not-content-page__title__button {
+  font-size: 1.4rem;
+
+  & span {
+    font-weight: 800;
+    font-size: 5rem;
+  }
+}
+
+.not-content-page__logo img {
+  width: 18rem;
+  height: 22rem;
+  padding: 0.3rem;
+  object-fit: contain;
+}
