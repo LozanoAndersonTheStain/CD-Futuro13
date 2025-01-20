@@ -3,12 +3,17 @@
     <div class="sponsors-slider__container">
       <div class="sponsors-slider__content">
         <div class="sponsors-slider__title">
-          <h2>Patrocinadores</h2>
+          <h2>Nuestros Patrocinadores</h2>
         </div>
         <div class="sponsors-slider__slider">
           <ng-container *ngFor="let sponsor of sponsors">
             <div class="sponsors-slider__slider__item">
-              <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}" />
+              <img [src]="sponsor.image" [alt]="sponsor.name" />
+            </div>
+          </ng-container>
+          <ng-container *ngFor="let sponsor of sponsors">
+            <div class="sponsors-slider__slider__item">
+              <img [src]="sponsor.image" [alt]="sponsor.name" />
             </div>
           </ng-container>
         </div>
