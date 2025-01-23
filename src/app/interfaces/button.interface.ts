@@ -1,10 +1,9 @@
-
 export interface ButtonConfig {
   label: string;
   action: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  disabled?: boolean;
+  type?: string;
   class?: string;
-  icon?: string;
   fontSize?: string;
+  disabled?: boolean;
+  href?: string;
 }

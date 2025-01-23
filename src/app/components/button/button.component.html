@@ -1,8 +1,9 @@
-<button
-  [type]="config.type || 'button'"
-  [disabled]="config.disabled"
+<a
+  [href]="config.href || '#'"
   [ngClass]="config.class"
   [ngStyle]="{'font-size': config.fontSize}"
   (click)="config.action()">
-  {{ config.label }}
-</button>
+  <button [type]="config.type || 'button'" [disabled]="config.disabled">
+    {{ config.label }}
+  </button>
+</a>

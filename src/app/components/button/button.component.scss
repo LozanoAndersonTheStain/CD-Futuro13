@@ -1,14 +1,18 @@
-button {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  padding: 1rem;
-  border-radius: 0.5rem;
+a {
   text-decoration: none;
-  font-size: 1rem;
 
-  &:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+  button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
   }
 }
