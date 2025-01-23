@@ -29,9 +29,10 @@
   &__slider {
     display: flex;
     overflow: hidden;
-    width: 200%;
+    width: 300%;
     position: relative;
     animation: slide 30s linear infinite;
+    -webkit-animation: slide 30s linear infinite;
 
     &__item {
       flex: 0 0 auto;
@@ -54,9 +55,11 @@
   @keyframes slide {
     0% {
       transform: translateX(0);
+      -webkit-animation: translateX(-0%);
     }
     100% {
       transform: translateX(-78%);
+      -webkit-animation: translateX(-78%);
     }
   }
 }
