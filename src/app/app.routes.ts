@@ -4,11 +4,12 @@ import { AboutComponent } from './pages/about/about.component';
 import { HistoryComponent } from './pages/about/history/history.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NotContentPageComponent } from './pages/not-content-page/not-content-page.component';
+import { JoinUsComponent } from './pages/join-us/join-us.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'join-us', component: NotContentPageComponent },
+  { path: 'join-us', component: JoinUsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'about/history', component: HistoryComponent },
   { path: 'about/mission', component: NotContentPageComponent },

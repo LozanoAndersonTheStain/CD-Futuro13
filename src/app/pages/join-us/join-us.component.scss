@@ -1,0 +1,96 @@
+.join-us {
+  background-image:
+    linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
+    /* Capa de color con transparencia */
+    url(../../../../public/assets/imagen_de_fondo_join_us.jpg);
+  /* Capa de imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+
+  .join-us__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+
+    .join-us__title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0 0 1.1rem 0;
+    }
+
+    .join-us__slogan {
+      font-size: 1.2rem;
+      margin: 0 0 1.5rem 0;
+      font-weight: 700;
+    }
+
+    .join-us__description {
+      display: flex;
+      flex-direction: column;
+
+      .join-us__description__text {
+        margin: 2rem 2rem 0 0;
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+
+        .join-us__description__text__title {
+          font-size: 1.6rem;
+          margin: 0 0 1rem 0;
+        }
+
+        .join-us__description__text__list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+            li a {
+              font-size: 1.2rem;
+              font-weight: 600;
+              color: var(--tertiary-color);
+              text-decoration: underline;
+            }
+
+            span {
+              font-size: 1.2rem;
+              font-weight: 700;
+            }
+
+            .join-us__description__text__list__item {
+              font-size: 1.2rem;
+              font-weight: 600;
+            }
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .join-us__container {
+    padding: 2.2rem;
+  }
+
+  .join-us__content__title {
+    font-size: 2rem;
+  }
+
+  .join-us__content__slogan {
+    font-size: 1.1rem;
+  }
+
+  .join-us__description__text__title {
+    font-size: 1.5rem;
+  }
+
+  .join-us__description__text__list__item {
+    font-size: 1rem;
+  }
+}
