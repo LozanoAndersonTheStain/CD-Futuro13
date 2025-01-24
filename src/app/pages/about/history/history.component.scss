@@ -1,0 +1,61 @@
+.history {
+  position: relative;
+  background-color: var(--background-color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      linear-gradient(var(--background-color) 8%, rgba(0, 0, 0, 0.5)),
+      url(../../../../../public/assets/logo.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.2px); /* Aplica el desenfoque */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  }
+
+  .history__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+
+    .history__content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .history__title {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-family: 'Passion One';
+        padding: 1.8rem;
+      }
+
+      .history__description__text {
+        text-align: justify;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 1.5rem 0;
+      }
+    }
+
+    .history__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      gap: 0.5rem;
+      margin: 2rem auto;
+    }
+  }
+}
