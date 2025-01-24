@@ -1,0 +1,36 @@
+.about {
+  background-image:
+    linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
+    /* Capa de color con transparencia */
+    url(../../../../public/assets/imagen_de_fondo.jpg);
+  /* Capa de imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+
+  .about__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .about__title {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-family: 'Passion One';
+      padding: 1.8rem;
+    }
+
+    .about__container__cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+      gap: 5rem;
+    }
+  }
+}
