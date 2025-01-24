@@ -2,16 +2,20 @@ a {
   text-decoration: none;
 
   button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--button-color);
+    color: var(--quaternary-color);
     border: none;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
     &:hover {
-      background-color: var(--secondary-color);
+      background-color: var(--tertiary-color);
       color: var(--primary-color);
     }
   }

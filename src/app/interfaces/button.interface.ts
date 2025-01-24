@@ -6,4 +6,5 @@ export interface ButtonConfig {
   fontSize?: string;
   disabled?: boolean;
   href?: string;
+  icon?: string;
 }
