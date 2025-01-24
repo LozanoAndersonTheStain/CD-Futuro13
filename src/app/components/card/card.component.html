@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="img">
+    <mat-icon class="icon">{{ config.imageUrl }}</mat-icon>
+  </div>
+  <span>{{ config.title }}</span>
+  <p class="info">{{ config.description }}</p>
+  <a [href]="config.buttonHref">
+    <button>
+      {{ config.buttonLabel }}
+      <mat-icon>{{ config.icon }}</mat-icon>
+    </button>
+  </a>
+</div>
