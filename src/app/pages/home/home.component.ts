@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
+    href: '/join-us'
   };
 
   constructor(
