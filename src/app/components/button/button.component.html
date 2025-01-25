@@ -1,10 +1,11 @@
-<a
-  [href]="config.href || '#'"
-  [ngClass]="config.class"
-  [ngStyle]="{'font-size': config.fontSize}"
-  (click)="config.action()">
+<a [href]="config.href || 'javascript:void(0)'" [ngClass]="config.class" [ngStyle]="{'font-size': config.fontSize}" (click)="config.action()">
   <button [type]="config.type || 'button'" [disabled]="config.disabled">
+    <ng-container *ngIf="config.icon && iconPosition === 'left'">
+      <mat-icon>{{ config.icon }}</mat-icon>
+    </ng-container>
     {{ config.label }}
-    <mat-icon *ngIf="config.icon">{{ config.icon }}</mat-icon>
+    <ng-container *ngIf="config.icon && iconPosition === 'right'">
+      <mat-icon>{{ config.icon }}</mat-icon>
+    </ng-container>
   </button>
 </a>

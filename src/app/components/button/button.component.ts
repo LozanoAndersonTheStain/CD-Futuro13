@@ -11,4 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ButtonComponent {
   @Input() config!: ButtonConfig;
+
+  get iconPosition(): 'left' | 'right' {
+    return this.config.iconPosition || 'right';
+  }
 }

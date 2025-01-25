@@ -7,4 +7,5 @@ export interface ButtonConfig {
   disabled?: boolean;
   href?: string;
   icon?: string;
+  iconPosition?: 'left' | 'right'; 
 }
