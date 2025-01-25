@@ -7,6 +7,9 @@ import { NotContentPageComponent } from './pages/not-content-page/not-content-pa
 import { JoinUsComponent } from './pages/join-us/join-us.component';
 import { MissionComponent } from './pages/about/mission/mission.component';
 import { VisionComponent } from './pages/about/vision/vision.component';
+import { TeamComponent } from './pages/team/team.component';
+import { TeachersComponent } from './pages/team/teachers/teachers.component';
+import { AdministratorsComponent } from './pages/team/administrators/administrators.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,6 +19,9 @@ export const routes: Routes = [
   { path: 'about/history', component: HistoryComponent },
   { path: 'about/mission', component: MissionComponent },
   { path: 'about/vision', component: VisionComponent },
+  { path: 'team', component: TeamComponent },
+  { path: 'team/teachers', component: TeachersComponent },
+  { path: 'team/administrators', component: AdministratorsComponent },
   { path: 'testimonials', component: NotContentPageComponent },
   { path: 'testimonials/testimonials-fathers', component: NotContentPageComponent },
   { path: 'testimonials/testimonials-players', component: NotContentPageComponent },
