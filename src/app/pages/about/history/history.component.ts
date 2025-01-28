@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from "../../../components/button/button.component";
 import { ButtonConfig } from '../../../interfaces/button.interface';
 import { Router, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { Title, Meta } from '@angular/platform-browser';
 
 
 @Component({
@@ -11,8 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './history.component.html',
   styleUrl: './history.component.scss'
 })
-export class HistoryComponent {
-  constructor(private router: Router) {}
+export class HistoryComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private router: Router
+  ) {}
 
   buttonConfig: ButtonConfig = {
     label: 'Ver Misión',
@@ -28,5 +33,21 @@ export class HistoryComponent {
 
   navigateToMission(): void {
     this.router.navigate(['/join-us']);
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Historia');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'La historia de CD Futuro 13 es una historia de superación y esfuerzo. Conoce más sobre nosotros aquí.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, historia, conocer, jóvenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
   }
 }
