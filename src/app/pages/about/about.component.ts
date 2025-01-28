@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
 import { CardConfig } from '../../interfaces/card.interface';
 import { CommonModule } from '@angular/common';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -10,7 +11,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) { }
+
   cardConfigs: CardConfig[] = [
     {
       imageUrl: 'info',
@@ -37,4 +44,20 @@ export class AboutComponent {
       icon: 'arrow_forward'
     }
   ];
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Sobre Nosotros');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Conoce más sobre CD Futuro 13, un club deportivo que busca impactar positivamente en la vida de los jóvenes y sus familias a través del deporte.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, deporte, sobre nosotros, jóvenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
+  }
 }
