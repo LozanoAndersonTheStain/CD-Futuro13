@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from "../../../components/button/button.component";
 import { ButtonConfig } from '../../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
+import { Meta, Title } from '@angular/platform-browser';
 
 interface Teachers {
   name: string;
@@ -20,7 +21,13 @@ interface Teachers {
   templateUrl: './teachers.component.html',
   styleUrl: './teachers.component.scss'
 })
-export class TeachersComponent {
+export class TeachersComponent implements OnInit {
+
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) {};
+
   teachers: Teachers[] = [
     {
       name: 'Santos Eliecer',
@@ -111,5 +118,21 @@ export class TeachersComponent {
     if (modal) {
       modal.style.display = "none";
     }
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Profesores');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Conoce a los profesores de CD Futuro 13, quienes se encargan de formar a los jóvenes en las diferentes categorías del club.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, profesores, categorías, formación, jóvenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
   }
 }
