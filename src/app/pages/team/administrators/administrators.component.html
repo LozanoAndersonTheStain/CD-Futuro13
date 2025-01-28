@@ -1,0 +1,72 @@
+<main class="team-administrators">
+  <div class="team-administrators__banner">
+    <div class="team-administrators__slider" style="--quantity: 4">
+      <div class="team-administrators__item" *ngFor="let administrator of administrators; let i = index" [style.--position]="i + 1" (mouseenter)="updateCurrentAdministrator(i)">
+        <img [src]="administrator.imageUrl" alt="">
+      </div>
+    </div>
+    <div class="team-administrators__content">
+      <h1 class="team-administrators__title" data-content="Administradores">
+        Administradores
+      </h1>
+      <div class="team-administrators__data-administrator">
+        <h2>{{currentAdministrator.name}}</h2>
+        <p class="team-administrators__data-administrator__age"><b>Edad: {{currentAdministrator.age}}</b></p>
+        <p class="team-administrators__data-administrator__position">Ocupación en el club: {{currentAdministrator.position}}</p>
+        <app-button class="team-administrators__button" [config]="buttonConfig">Ver más</app-button>
+      </div>
+      <div class="team-administrators__model" [style.backgroundImage]="'url(' + currentAdministrator.imageUrl + ')'"></div>
+    </div>
+  </div>
+
+  <div class="team-administrators__cards-mobile">
+    <div class="team-administrators__cards-mobile__content">
+      <div class="team-administrators__cards-mobile__content__card" *ngFor="let administrator of administrators; let i = index" [class.active]="i === currentCardIndex">
+        <div class="top-card" [style.backgroundImage]="'url(' + administrator.imageUrl + ')'"></div>
+        <div class="bottom-card">
+          <div class="card-content">
+            <span class="card-title">{{administrator.name}}</span>
+            <p class="card-txt">Cargo: {{administrator.position}}</p>
+            <app-button class="card-btn" [config]="buttonConfig">Ver más</app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-administrators__cards-mobile__controls">
+      <button (click)="prevCard()">Anterior</button>
+      <button (click)="nextCard()">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="team-administrators__modal" id="modal">
+    <div class="team-administrators__modal__content">
+      <div class="team-administrators__modal__image">
+        <img class="team-administrators__modal__image__img" [src]="currentAdministrator.imageUrl" id="modalImage" alt="">
+      </div>
+      <div class="team-administrators__modal__data">
+        <section class="team-administrators__modal__data-administrator">
+          <h2 id="modalTitle">
+            {{currentAdministrator.name}}
+          </h2>
+          <div id="modalDescription">
+            <div class="description">
+              <h3>Descripción:</h3>
+              <p>{{currentAdministrator.description}}</p>
+            </div>
+            <div class="team-administrators__modal__data-administrator__age">
+              <h3>Edad: </h3> <p>{{currentAdministrator.age}}</p>
+            </div>
+          </div>
+          <div class="team-administrators__modal__data-administrator__position" id="modalPosition">
+            <h3>Cargo: <p>{{currentAdministrator.position}}</p></h3>
+          </div>
+        </section>
+      </div>
+      <div class="team-administrators__modal__close">
+        <span class="close" id="closeModal" (click)="closeModal()">
+          <mat-icon>close</mat-icon>
+        </span>
+      </div>
+    </div>
+  </div>
+</main>
