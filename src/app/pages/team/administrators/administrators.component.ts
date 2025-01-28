@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonConfig } from '../../../interfaces/button.interface';
+import { Meta, Title } from '@angular/platform-browser';
 
 interface Administrator {
   name: string;
@@ -18,7 +19,12 @@ interface Administrator {
   templateUrl: './administrators.component.html',
   styleUrl: './administrators.component.scss'
 })
-export class AdministratorsComponent {
+export class AdministratorsComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+  ) {}
+
   administrators: Administrator[] = [
     {
       name: 'Carlos Espinoza',
@@ -102,5 +108,21 @@ export class AdministratorsComponent {
 
   prevCard(): void {
     this.currentCardIndex = (this.currentCardIndex - 1 + this.administrators.length) % this.administrators.length;
+  }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Administradores');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Un equipo de administradores que se encargan de la gestión y organización de CD Futuro 13.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, deporte, administración, jovenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
   }
 }
