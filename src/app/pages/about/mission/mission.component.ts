@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from "../../../components/button/button.component";
 import { Router, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonConfig } from '../../../interfaces/button.interface';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-mission',
@@ -10,8 +11,12 @@ import { ButtonConfig } from '../../../interfaces/button.interface';
   templateUrl: './mission.component.html',
   styleUrl: './mission.component.scss'
 })
-export class MissionComponent {
-  constructor(private router: Router) {}
+export class MissionComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta,
+    private router: Router
+  ) {}
 
   buttonConfigVision: ButtonConfig = {
     label: 'Ver Visión',
@@ -46,4 +51,20 @@ export class MissionComponent {
     navigateToHistory(): void {
       this.router.navigate(['/about/history']);
     }
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Misión');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Conoce la misión que tiene CD Futuro 13 con los jóvenes de la comuna 13.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, misión, conocer, jóvenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
+  }
 }
