@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardConfig } from '../../interfaces/card.interface';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../../components/card/card.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-team',
@@ -10,8 +11,13 @@ import { CardComponent } from '../../components/card/card.component';
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss'
 })
-export class TeamComponent {
- cardConfigs: CardConfig[] = [
+export class TeamComponent implements OnInit {
+  constructor(
+    private titleService: Title,
+    private metaService: Meta
+  ) {}
+
+  cardConfigs: CardConfig[] = [
     {
       imageUrl: 'school',
       title: 'Nuestros Profesores',
@@ -29,4 +35,20 @@ export class TeamComponent {
       icon: 'arrow_forward'
     }
   ];
+
+  ngOnInit(): void {
+    this.titleService.setTitle('CD Futuro 13 - Equipo');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Conoce a los profesionales que están detrás de la formación de nuestros jóvenes y a los responsables de la gestión y administración del club.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, deporte, formación, jóvenes, comuna 13',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
+  }
 }
