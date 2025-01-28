@@ -30,28 +30,28 @@ export class AdministratorsComponent implements OnInit {
       name: 'Carlos Espinoza',
       age: 33,
       description: '',
-      imageUrl: '/assets/img_carousel/image_1.jpg',
+      imageUrl: 'assets/img_carousel/image_1.jpg',
       position: 'Director'
     },
     {
       name: 'Camila Perez',
       age: 35,
       description: '',
-      imageUrl: '/assets/img_carousel/image_2.jpg',
+      imageUrl: 'assets/img_carousel/image_2.jpg',
       position: 'Subdirector'
     },
     {
       name: 'Jhonfer Rodriguez',
       age: 40,
       description: '',
-      imageUrl: '/assets/img_carousel/image_3.jpg',
+      imageUrl: 'assets/img_carousel/image_3.jpg',
       position: 'Administrador'
     },
     {
       name: 'Sofía Velez',
       age: 30,
       description: '',
-      imageUrl: '/assets/img_carousel/image_4.jpg',
+      imageUrl: 'assets/img_carousel/image_4.jpg',
       position: 'Administrador'
     }
   ]
