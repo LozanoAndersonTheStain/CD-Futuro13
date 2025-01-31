@@ -1,9 +1,7 @@
 .about {
   background-image:
     linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
-    /* Capa de color con transparencia */
     url(../../../../public/assets/imagen_de_fondo.jpg);
-  /* Capa de imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,6 +28,24 @@
       align-items: center;
       justify-content: center;
       gap: 5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about__content {
+      height: 245vh;
+
+      .about__title {
+        font-size: 1.2rem;
+        padding: 1rem;
+      }
+
+      .about__container__cards {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+      }
     }
   }
 }
