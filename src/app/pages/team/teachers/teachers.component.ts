@@ -86,6 +86,7 @@ export class TeachersComponent implements OnInit {
   ];
 
   currentTeacherIndex = 0;
+  currentCardIndex = 0;
 
   get currentTeacher(): Teachers {
     return this.teachers[this.currentTeacherIndex]
@@ -118,6 +119,14 @@ export class TeachersComponent implements OnInit {
     if (modal) {
       modal.style.display = "none";
     }
+  }
+
+  nextCard(): void {
+    this.currentCardIndex = (this.currentCardIndex + 1) % this.teachers.length;
+  }
+
+  prevCard(): void {
+    this.currentCardIndex = (this.currentCardIndex - 1 + this.teachers.length) % this.teachers.length;
   }
 
   ngOnInit(): void {

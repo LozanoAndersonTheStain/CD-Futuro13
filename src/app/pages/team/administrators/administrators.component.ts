@@ -29,28 +29,28 @@ export class AdministratorsComponent implements OnInit {
     {
       name: 'Carlos Espinoza',
       age: 33,
-      description: '',
+      description: 'Carlos es el director del club, encargado de la planificación y supervisión de todas las actividades.',
       imageUrl: 'assets/img_carousel/image_1.jpg',
       position: 'Director'
     },
     {
       name: 'Camila Perez',
       age: 35,
-      description: '',
+      description: 'Camila es la subdirectora, responsable de apoyar al director y coordinar eventos especiales.',
       imageUrl: 'assets/img_carousel/image_2.jpg',
       position: 'Subdirector'
     },
     {
       name: 'Jhonfer Rodriguez',
       age: 40,
-      description: '',
+      description: 'Jhonfer es el administrador principal, encargado de la gestión diaria y la administración del club.',
       imageUrl: 'assets/img_carousel/image_3.jpg',
       position: 'Administrador'
     },
     {
       name: 'Sofía Velez',
       age: 30,
-      description: '',
+      description: 'Sofía es administradora, encargada de la logística y el soporte administrativo del club.',
       imageUrl: 'assets/img_carousel/image_4.jpg',
       position: 'Administrador'
     }
@@ -81,16 +81,9 @@ export class AdministratorsComponent implements OnInit {
     openModal(index: number): void {
       this.updateCurrentAdministrator(index);
       const modal = document.getElementById('modal');
+
       if (modal) {
         modal.style.display = 'block';
-        const modalTitle = document.getElementById('modalTitle');
-        const modalDescription = document.getElementById('modalDescription');
-        if (modalTitle) {
-          modalTitle.textContent = this.currentAdministrator.name;
-        }
-        if (modalDescription) {
-          modalDescription.textContent = `Edad: ${this.currentAdministrator.age}. Ocupación en el club: ${this.currentAdministrator.position}`;
-        }
       }
     }
 

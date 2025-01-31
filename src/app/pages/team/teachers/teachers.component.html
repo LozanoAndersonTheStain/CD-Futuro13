@@ -22,6 +22,25 @@
     </div>
   </div>
 
+  <div class="team-teachers__cards-mobile">
+    <div class="team-teachers__cards-mobile__content">
+      <div class="team-teachers__cards-mobile__content__card" *ngFor="let teacher of teachers; let i = index" [class.active]="i === currentCardIndex">
+        <div class="top-card" [style.backgroundImage]="'url(' + teacher.imageUrl + ')'"></div>
+        <div class="bottom-card">
+          <div class="card-content">
+            <span class="card-title">{{teacher.name}}</span>
+            <p class="card-txt">Edad: {{teacher.age}}</p>
+            <app-button class="card-btn" [config]="buttonConfig">Ver más</app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-teachers__cards-mobile__controls">
+      <button (click)="prevCard()">Anterior</button>
+      <button (click)="nextCard()">Siguiente</button>
+    </div>
+  </div>
+
   <div class="team-teachers__modal" id="modal">
     <div class="team-teachers__modal__content">
       <div class="team-teachers__modal__image">

@@ -190,69 +190,203 @@
       position: absolute;
       top: 0;
       right: 0;
-      color: #aaa;
+      color: var(--quaternary-color);
       font-size: 28px;
       font-weight: bold;
       cursor: pointer;
       padding: 8px;
     }
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+    .close {
+      color: var(--quaternary-color);
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: var(--quaternary-color);
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 
-  .close:hover,
-  .close:focus {
-    color: var(--quaternary-color);
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
+  &__cards-mobile {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
 
-  @media screen and (max-width: 1023px) {
-    &__slider {
-      width: 160px;
-      height: 200px;
-      left: calc(50% - 80px);
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 5rem 20px 20px 20px;
     }
-    &__item {
-      transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(180px);
+
+    &__content__card {
+      position: relative;
+      width: 260px;
+      height: 360px;
+      background-color: transparent;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease, border 0.3s ease;
+
+      &.active {
+        display: block;
+      }
+
+      &:not(.active) {
+        display: none;
+      }
+
+      .top-card {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 65%;
+        transition: height 0.3s ease;
+        background-size: cover;
+        background-position: center;
+        background-color: #fff;
+      }
+
+      .bottom-card {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        height: 35%;
+        transition: height 0.3s ease;
+        background-color: var(--tertiary-color);
+        position: relative;
+      }
+
+      &:hover .top-card {
+        height: 35%;
+        transition: height 0.3s ease;
+      }
+
+      &:hover .bottom-card {
+        height: 65%;
+        transition: height 0.3s ease;
+      }
+
+      &:hover .bottom-card::before {
+        bottom: 164px;
+        transition: bottom 0.3s ease;
+      }
+
+      .card-content {
+        padding-top: 16%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+
+        .card-title {
+          font-weight: 700;
+          font-size: 1.4rem;
+        }
+
+        .card-txt {
+          font-size: 1.2rem;
+        }
+
+        .card-btn {
+          font-size: 11px;
+          margin-top: 15%;
+          text-decoration: none;
+          background-color: transparent;
+          border-radius: 15px;
+          padding: 5%;
+          transition: background-color 0.4s ease;
+        }
+      }
     }
-    &__title {
-      text-align: center;
+
+    &__controls {
+      display: flex;
+      justify-content: space-between;
       width: 100%;
-      text-shadow: 0 10px 20px #000;
-      font-size: 7em;
-    }
-    &__author {
-      color: #fff;
-      padding: 20px;
-      text-shadow: 0 10px 20px #000;
-      z-index: 2;
-      max-width: unset;
-      width: 100%;
-      text-align: center;
-      padding: 0 30px;
+      padding: 10px;
+
+      button {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: var(--secondary-color);
+        }
+      }
     }
   }
 
-  @media screen and (max-width: 767px) {
-    &__slider {
-      width: 100px;
-      height: 150px;
-      left: calc(50% - 50px);
+  @media screen and (max-width: 768px) {
+    .team-teachers {
+      height: 100vh;
     }
-    &__item {
-      transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-        translateZ(100px);
+
+    &__banner {
+      display: none;
     }
-    &__title {
-      font-size: 5em;
+
+    &__cards-mobile {
+      display: block;
+      height: 84vh
+    }
+
+    &__modal {
+
+      &__content {
+        width: 90%;
+        flex-direction: column;
+      }
+
+      &__image {
+        &__img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+          border-bottom-left-radius: 0;
+        }
+      }
+
+      &__data {
+        &-teacher {
+
+          & h2 {
+            font-size: 1.5em;
+          }
+
+          & p {
+            font-size: 1rem;
+          }
+
+          &__categories,
+          &__torunaments {
+
+            & h3 {
+              font-size: 1.2em;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      &__close {
+        top: 5px;
+        right: 5px;
+        font-size: 24px;
+        color: var(--quaternary-color);
+      }
     }
   }
 }
