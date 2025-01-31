@@ -6,39 +6,39 @@
       <figure class="nav__logo">
         <img src="assets/logo.svg" alt="logo">
       </figure>
-      <a routerLink="/CD-Futuro13/home" class="nav__logo-text">CD-Futuro13</a>
+      <a routerLink="/home" class="nav__logo-text">CD-Futuro13</a>
     </div>
 
     <ul class="nav__list">
       <li class="nav__item has-submenu">
-        <a routerLink="/CD-Futuro13/about">Sobre Nosotros <span class="arrow"></span></a>
+        <a routerLink="/about">Sobre Nosotros <span class="arrow"></span></a>
         <ul class="submenu">
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/about/history">Historia</a></li>
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/about/mission">Misión</a></li>
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/about/vision">Visión</a></li>
+          <li class="submenu-item"><a routerLink="/about/history">Historia</a></li>
+          <li class="submenu-item"><a routerLink="/about/mission">Misión</a></li>
+          <li class="submenu-item"><a routerLink="/about/vision">Visión</a></li>
         </ul>
       </li>
 
       <li class="nav__item has-submenu">
-        <a routerLink="/CD-Futuro13/team">Equipo <span class="arrow"></span></a>
+        <a routerLink="/team">Equipo <span class="arrow"></span></a>
         <ul class="submenu">
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/team/teachers">Entrenadores</a></li>
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/team/administrators">Administradores</a></li>
+          <li class="submenu-item"><a routerLink="/team/teachers">Entrenadores</a></li>
+          <li class="submenu-item"><a routerLink="/team/administrators">Administradores</a></li>
         </ul>
       </li>
 
       <li class="nav__item has-submenu">
-        <a routerLink="/CD-Futuro13/testimonials">Testimonios <span class="arrow"></span></a>
+        <a routerLink="/testimonials">Testimonios <span class="arrow"></span></a>
         <ul class="submenu">
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/testimonials/testimonials-fathers">Padres</a></li>
-          <li class="submenu-item"><a routerLink="/CD-Futuro13/testimonials/testimonials-players">Jugadores</a></li>
+          <li class="submenu-item"><a routerLink="/testimonials/testimonials-fathers">Padres</a></li>
+          <li class="submenu-item"><a routerLink="/testimonials/testimonials-players">Jugadores</a></li>
         </ul>
       </li>
 
-      <li class="nav__item"><a routerLink="/CD-Futuro13/trophy_room">Sala de Trofeos</a></li>
-      <li class="nav__item"><a routerLink="/CD-Futuro13/tournaments">Torneos</a></li>
-      <li class="nav__item"><a routerLink="/CD-Futuro13/corporation">Coporación</a></li>
-      <li class="nav__item"><a routerLink="/CD-Futuro13/contact">Contacto</a></li>
+      <li class="nav__item"><a routerLink="/trophy_room">Sala de Trofeos</a></li>
+      <li class="nav__item"><a routerLink="/tournaments">Torneos</a></li>
+      <li class="nav__item"><a routerLink="/corporation">Coporación</a></li>
+      <li class="nav__item"><a routerLink="/contact">Contacto</a></li>
     </ul>
 
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="menu-button">
@@ -48,31 +48,31 @@
     <!-- Menu Mobile -->
     <mat-menu #menu="matMenu">
 
-      <button mat-menu-item routerLink="/CD-Futuro13/about">
+      <button mat-menu-item routerLink="/about">
         <span>Sobre Nosotros</span>
       </button>
 
-      <button mat-menu-item routerLink="/CD-Futuro13/team">
+      <button mat-menu-item routerLink="/team">
         <span>Equipo</span>
       </button>
 
-      <button mat-menu-item="nav__mobile-item" routerLink="/CD-Futuro13/testimonials">
+      <button mat-menu-item="nav__mobile-item" routerLink="/testimonials">
         <span>Testimonios</span>
       </button>
 
-      <button mat-menu-item routerLink="/CD-Futuro13/trophy_room">
+      <button mat-menu-item routerLink="/trophy_room">
         <span>Sala de Trofeos</span>
       </button>
 
-      <button mat-menu-item routerLink="/CD-Futuro13/tournaments">
+      <button mat-menu-item routerLink="/tournaments">
         <span>Torneos</span>
       </button>
 
-      <button mat-menu-item routerLink="/CD-Futuro13/corporation">
+      <button mat-menu-item routerLink="/corporation">
         <span>Coporación</span>
       </button>
 
-      <button mat-menu-item routerLink="/CD-Futuro13/contact">
+      <button mat-menu-item routerLink="/contact">
         <span>Contacto</span>
       </button>
     </mat-menu>

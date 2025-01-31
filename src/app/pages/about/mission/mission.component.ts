@@ -26,7 +26,7 @@ export class MissionComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: 'CD-Futuro13/about/vision',
+    href: '/about/vision',
     icon: 'arrow_forward',
     iconPosition: 'right'
   };
@@ -39,17 +39,17 @@ export class MissionComponent implements OnInit {
     type: 'button',
     class: 'btn-secondary',
     fontSize: '1rem',
-    href: 'CD-Futuro13/about/history',
+    href: '/about/history',
     icon: 'arrow_back',
     iconPosition: 'left'
   };
 
     navigateToVision(): void {
-      this.router.navigate(['CD-Futuro13/about/vision']);
+      this.router.navigate(['/about/vision']);
     }
 
     navigateToHistory(): void {
-      this.router.navigate(['CD-Futuro13/about/history']);
+      this.router.navigate(['/about/history']);
     }
 
   ngOnInit(): void {
