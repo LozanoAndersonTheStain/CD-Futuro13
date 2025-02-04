@@ -1,0 +1,54 @@
+.testimonials {
+  background-image:
+    linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
+    url(../../../../public/assets/Imagen_fondo_testimonios_padres.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+
+  .testimonials__content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    .testimonials__title {
+      display: flex;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-family: 'Passion One';
+      padding: 1.8rem;
+    }
+
+    .testimonials__container__cards {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .testimonials__container {
+      height: 150vh;
+
+      .testimonials__content {
+        .testimonials__title {
+          font-size: 1.2rem;
+          padding: 1rem;
+        }
+
+        .testimonials__container__cards {
+          flex-direction: column;
+          gap: 2rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}

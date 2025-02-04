@@ -1,1 +1,12 @@
-<p>testimonials works!</p>
+<main class="testimonials">
+  <div class="testimonials__container">
+    <div class="testimonials__content">
+      <div class="testimonials__title">
+        <h1>Testimonios</h1>
+      </div>
+      <div class="testimonials__container__cards">
+        <app-card *ngFor="let config of cardConfigs" [config]="config"></app-card>
+      </div>
+    </div>
+  </div>
+</main>
