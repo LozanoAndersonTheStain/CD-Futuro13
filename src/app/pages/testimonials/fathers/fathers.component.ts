@@ -1,12 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-
-interface Father {
-  name: string;
-  description: string;
-  imageUrl: string;
-  testimonial: string;
-}
+import { Testimonial } from '../../../interfaces/testimonial.interface';
 
 @Component({
   selector: 'app-fathers',
@@ -15,7 +9,7 @@ interface Father {
   styleUrls: ['./fathers.component.scss']
 })
 export class FathersComponent implements OnInit {
-  fathers: Father[] = [
+  fathers: Testimonial[] = [
     { name: 'Mike', description: 'Padre de Sebatian Suarez sub 12 y de Lucas Suarez sub 10', imageUrl: 'assets/img_carousel/image_1.jpg', testimonial: 'Mis hijos han mejorado mucho desde que se unieron al club no solo en el deporte sino también en su vida personal.'},
     { name: 'Samite', description: 'Madre de Daniel Samora sub 12 y de Camila Samora sub 10', imageUrl: 'assets/img_carousel/image_2.jpg', testimonial: 'Estoy muy agradecida con el club por la formación que le han dado a mis hijos y por la confianza que han tenido.'},
     { name: 'Hashi', description: 'Padre de Daniel Duran sub 12 y de Felipe Duran sub 10', imageUrl: 'assets/img_carousel/image_3.jpg', testimonial: 'El club ha sido una gran influencia para mis hijos, no solo en el ámbito deportivo, sino también en su desarrollo como personas.'},
