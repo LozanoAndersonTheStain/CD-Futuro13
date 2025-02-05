@@ -1,0 +1,25 @@
+<main class="fathers-testimonials">
+  <div class="fathers-testimonials__title">
+    <h1 class="fathers-testimonials__text">Testimonios de Padres</h1>
+  </div>
+  <section class="fathers-testimonials__container">
+    <div class="fathers-testimonials__content">
+      <div class="father-testimonials__images">
+        <div class="father-testimonials__images__img" *ngFor="let father of fathers; let i = index"
+          [class.active]="i === currentFatherIndex" (click)="updateCurrentFather(i)">
+          <img [src]="father.imageUrl" [alt]="father.name">
+          <h2>{{father.name}}</h2>
+          <div class="details">
+            <h3>{{father.name}}</h3>
+            <p>{{father.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="fathers-testimonials__content-description">
+    <p class="fathers-testimonials__description">
+      {{fathers[currentFatherIndex].testimonial}}
+    </p>
+  </div>
+</main>
