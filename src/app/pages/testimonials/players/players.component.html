@@ -1,0 +1,44 @@
+<main class="players-testimonials">
+  <div class="players-testimonials__title">
+    <h1>Testimonios de Jugadores</h1>
+  </div>
+  <div class="players-testimonials__info">
+    <section class="players-testimonials__container">
+      <div class="players-testimonials__content">
+        <div class="player-testimonials__images">
+          <div class="player-testimonials__images__img" *ngFor="let player of players; let i = index" [class.active]="i === currentPlayerIndex" (click)="updateCurrentPlayer(i)">
+            <img [src]="player.imageUrl" [alt]="player.name">
+            <h2>{{player.name}}</h2>
+            <div class="details">
+              <h3>{{player.name}}</h3>
+              <p>{{player.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="players-testimonials__content-description">
+      <p class="players-testimonials__description">
+        {{players[currentPlayerIndex].testimonial}}
+      </p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let player of players; let i = index">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{player.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>
+          {{players[currentPlayerIndex].testimonial}}
+        </p>
+        <p>
+          {{player.description}}
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</main>
