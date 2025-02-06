@@ -2,8 +2,9 @@
   <div class="fathers-testimonials__title">
     <h1 class="fathers-testimonials__text">Testimonios de Padres</h1>
   </div>
-  <section class="fathers-testimonials__container">
-    <div class="fathers-testimonials__content">
+  <div class="fathers-testimonials__info">
+    <section class="fathers-testimonials__container">
+      <div class="fathers-testimonials__content">
       <div class="father-testimonials__images">
         <div class="father-testimonials__images__img" *ngFor="let father of fathers; let i = index"
           [class.active]="i === currentFatherIndex" (click)="updateCurrentFather(i)">
@@ -22,4 +23,23 @@
       {{fathers[currentFatherIndex].testimonial}}
     </p>
   </div>
+</div>
+
+<div class="accordion">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let father of fathers; let i = index">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{father.name}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        {{fathers[currentFatherIndex].testimonial}}
+      </p>
+      <p>
+        {{father.description}}
+      </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
 </main>

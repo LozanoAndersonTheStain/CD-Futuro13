@@ -157,3 +157,64 @@ h2 {
   }
 }
 
+.accordion {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .fathers-testimonials {
+    height: auto;
+
+    &__title {
+      text-align: center;
+
+      & h1 {
+        width: 70%;
+      }
+    }
+
+    &__info {
+      display: none;
+    }
+
+    .accordion {
+      display: flex;
+      justify-content: center;
+
+      mat-accordion {
+        margin: 2rem;
+        width: 80%;
+        background-color: transparent;
+
+        mat-expansion-panel {
+          background-color: var(--primary-color);
+          color: var(--quaternary-color);
+          margin-bottom: 1rem;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+          mat-expansion-panel-header {
+            background-color: var(--tertiary-color);
+            color: var(--quaternary-color);
+            border-radius: 8px 8px 0 0;
+            padding: 0.5rem 1rem;
+
+            mat-panel-title {
+              color: var(--quaternary-color);
+              font-size: 1.2rem;
+              font-weight: 700;
+            }
+          }
+
+          p {
+            padding: 1rem;
+            font-family: 'Jost', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--quaternary-color);
+          }
+        }
+      }
+    }
+  }
+}

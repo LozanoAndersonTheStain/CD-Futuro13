@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Testimonial } from '../../../interfaces/testimonial.interface';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-fathers',
-  imports: [CommonModule],
+  imports: [CommonModule, MatExpansionModule],
   templateUrl: './fathers.component.html',
   styleUrls: ['./fathers.component.scss']
 })
