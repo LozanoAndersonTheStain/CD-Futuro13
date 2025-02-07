@@ -26,7 +26,7 @@ export class MissionComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/about/vision',
+    href: 'about/vision',
     icon: 'arrow_forward',
     iconPosition: 'right'
   };
