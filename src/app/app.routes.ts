@@ -16,6 +16,7 @@ import { PlayersComponent } from './pages/testimonials/players/players.component
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '/', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'join-us', component: JoinUsComponent },
   { path: 'about', component: AboutComponent },
