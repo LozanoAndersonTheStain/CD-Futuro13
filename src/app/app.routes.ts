@@ -13,10 +13,10 @@ import { AdministratorsComponent } from './pages/team/administrators/administrat
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { FathersComponent } from './pages/testimonials/fathers/fathers.component';
 import { PlayersComponent } from './pages/testimonials/players/players.component';
+import { TrophyRoomComponent } from './pages/trophy-room/trophy-room.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '/', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'join-us', component: JoinUsComponent },
   { path: 'about', component: AboutComponent },
@@ -29,7 +29,7 @@ export const routes: Routes = [
   { path: 'testimonials', component: TestimonialsComponent },
   { path: 'testimonials/fathers', component: FathersComponent },
   { path: 'testimonials/players', component: PlayersComponent },
-  { path: 'trophy_room', component: NotContentPageComponent },
+  { path: 'trophy-room', component: TrophyRoomComponent },
   { path: 'tournaments', component: NotContentPageComponent },
   { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
