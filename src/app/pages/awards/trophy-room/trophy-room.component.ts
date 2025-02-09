@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Trophy } from '../../interfaces/trophy.interface';
+import { Trophy } from '../../../interfaces/trophy.interface';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-trophy-room',
@@ -47,7 +48,8 @@ export class TrophyRoomComponent implements OnInit {
       },
       dateEarned: '2023-04-10',
       location: 'Estadio Regional, Arequipa',
-      description: 'Primer lugar en el torneo regional con una destacada participación del equipo.',
+      description:
+        'Primer lugar en el torneo regional con una destacada participación del equipo.',
       coach: 'Carlos López',
       captain: 'Miguel Torres',
     },
@@ -67,7 +69,8 @@ export class TrophyRoomComponent implements OnInit {
       },
       dateEarned: '2023-06-20',
       location: 'Estadio Internacional, Santiago',
-      description: 'Tercer lugar en un torneo con equipos de alto nivel internacional.',
+      description:
+        'Tercer lugar en un torneo con equipos de alto nivel internacional.',
       coach: 'Ana Martínez',
       captain: 'Diego Ramírez',
     },
@@ -87,7 +90,8 @@ export class TrophyRoomComponent implements OnInit {
       },
       dateEarned: '2023-07-05',
       location: 'Estadio Continental, Buenos Aires',
-      description: 'Campeones del torneo continental con una actuación impecable.',
+      description:
+        'Campeones del torneo continental con una actuación impecable.',
       coach: 'Roberto Sánchez',
       captain: 'Javier Fernández',
     },
@@ -107,7 +111,8 @@ export class TrophyRoomComponent implements OnInit {
       },
       dateEarned: '2023-08-12',
       location: 'Estadio Mundial, Madrid',
-      description: 'Subcampeones en el torneo mundial, demostrando un gran nivel de juego.',
+      description:
+        'Subcampeones en el torneo mundial, demostrando un gran nivel de juego.',
       coach: 'Laura García',
       captain: 'Carlos Mendoza',
     },
@@ -116,10 +121,29 @@ export class TrophyRoomComponent implements OnInit {
   currentTrophyIndex = 0;
   visibleTrophies: Trophy[] = [];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+      @Inject(PLATFORM_ID)
+        private platformId: Object,
+        private metaTitle: Title,
+        private metaService: Meta
+    ) {}
 
   ngOnInit(): void {
     this.updateVisibleTrophies();
+
+    this.metaTitle.setTitle('CD Futuro 13 - Trofeos y Copas');
+    this.metaService.addTags([
+      {
+        name: 'description',
+        content:
+          'Conoce los trofeos y copas que hemos obtenido en nuestra trayectoria como club en los diferentes torneos.',
+      },
+      {
+        name: 'keywords',
+        content: 'CD Futuro 13, premios, reconocimientos, copas, torneos',
+      },
+      { name: 'author', content: 'CD Futuro 13' },
+    ]);
   }
 
   updateVisibleTrophies(): void {

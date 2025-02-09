@@ -1,0 +1,12 @@
+<main class="awards">
+  <div class="awards__container">
+    <div class="awards__content">
+      <div class="awards__title">
+        <h1>Trofeos y Reconocimientos</h1>
+      </div>
+      <div class="awards__container__cards">
+        <app-card *ngFor="let config of cardConfigs" [config]="config"></app-card>
+      </div>
+    </div>
+  </div>
+</main>
