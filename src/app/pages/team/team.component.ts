@@ -23,7 +23,7 @@ export class TeamComponent implements OnInit {
       title: 'Nuestros Profesores',
       description: 'Conoce a los profesionales que están detrás de la formación de nuestros jóvenes.',
       buttonLabel: 'Ver Profesores',
-      buttonHref: 'CD-Futuro13/team/teachers',
+      buttonHref: '/team/teachers',
       icon: 'arrow_forward'
     },
     {
@@ -31,7 +31,7 @@ export class TeamComponent implements OnInit {
       title: 'Nuestra Administración',
       description: 'Descubre quiénes son los responsables de la gestión y administración del club.',
       buttonLabel: 'Ver Administración',
-      buttonHref: 'CD-Futuro13/team/administrators',
+      buttonHref: '/team/administrators',
       icon: 'arrow_forward'
     }
   ];

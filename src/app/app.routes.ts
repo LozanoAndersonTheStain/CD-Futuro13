@@ -13,7 +13,9 @@ import { AdministratorsComponent } from './pages/team/administrators/administrat
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { FathersComponent } from './pages/testimonials/fathers/fathers.component';
 import { PlayersComponent } from './pages/testimonials/players/players.component';
-import { TrophyRoomComponent } from './pages/trophy-room/trophy-room.component';
+import { TrophyRoomComponent } from './pages/awards/trophy-room/trophy-room.component';
+import { PlayerAwardsComponent } from './pages/awards/player-awards/player-awards.component';
+import { AwardsComponent } from './pages/awards/awards.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,9 +31,11 @@ export const routes: Routes = [
   { path: 'testimonials', component: TestimonialsComponent },
   { path: 'testimonials/fathers', component: FathersComponent },
   { path: 'testimonials/players', component: PlayersComponent },
-  { path: 'trophy-room', component: TrophyRoomComponent },
+  { path: 'awards', component: AwardsComponent },
+  { path: 'awards/trophy-room', component: TrophyRoomComponent },
+  { path: 'awards/player-awards', component: PlayerAwardsComponent },
   { path: 'tournaments', component: NotContentPageComponent },
   { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
-  { path: '**', component: ErrorPageComponent }
+  { path: '**', component: ErrorPageComponent },
 ];

@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: 'CD-Futuro13/join-us'
+    href: '/join-us'
   };
 
   constructor(
@@ -49,6 +49,6 @@ export class HomeComponent implements OnInit {
   }
 
   navigateToJoinUs(): void {
-    this.router.navigate(['CD-Futuro13/join-us']);
+    this.router.navigate(['/join-us']);
   }
 }

@@ -35,7 +35,14 @@
         </ul>
       </li>
 
-      <li class="nav__item"><a routerLink="/trophy-room">Sala de Trofeos</a></li>
+      <li class="nav__item has-submenu">
+        <a routerLink="/awards">Trofeos y Reconocimientos <span class="arrow"></span></a>
+        <ul class="submenu">
+          <li class="submenu-item"><a routerLink="/awards/trophy-room">Sala de Trofeos</a></li>
+          <li class="submenu-item"><a routerLink="/awards/player-awards">Reconocimientos</a></li>
+        </ul>
+      </li>
+
       <li class="nav__item"><a routerLink="/tournaments">Torneos</a></li>
       <li class="nav__item"><a routerLink="/corporation">Coporación</a></li>
       <li class="nav__item"><a routerLink="/contact">Contacto</a></li>
@@ -61,7 +68,7 @@
       </button>
 
       <button mat-menu-item routerLink="/trophy-room">
-        <span>Sala de Trofeos</span>
+        <span>Trofeos y Reconocimientos</span>
       </button>
 
       <button mat-menu-item routerLink="/tournaments">
