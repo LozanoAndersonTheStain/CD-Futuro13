@@ -1,1 +1,46 @@
-<p>trophy-room works!</p>
+<main class="trophy-room">
+  <div class="trophy-room__container">
+    <div class="trophy-room__content">
+      <button class="nav-button prev" (click)="prevTrophy()">Prev</button>
+      <section class="trophy-room__trophies">
+        <article class="trophy-room__trophies__item" *ngFor="let trophy of visibleTrophies; let i = index" [class.active]="i === currentTrophyIndex" (click)="updateCurrentTrophy(i)" [style.backgroundImage]="'url(' + trophy.imageUrl +')'">
+          <div class="overlay">
+            <div class="overlay__details">
+              <div class="overlay__category">
+                <h4>{{trophy.nameCategory}}</h4>
+              </div>
+              <div class="overlay__name-trophy">
+                <h3>{{trophy.nameTrophy}}</h3>
+              </div>
+              <div class="overlay__name-tournament">
+                <h4>{{trophy.nameTournament}}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="trophy-room__trophies__item__content">
+            <h2 class="trophy-room__trophies__item__content__title">Detalles:</h2>
+            <div class="trophy-room__trophies__item__content__details">
+              <div class="trophy-room__trophies__item__content__details__game">
+                <ul>
+                  <li>Partidos Ganados: {{trophy.GamesWon}}</li>
+                  <li>Partidos Perdidos: {{trophy.GamesLost}}</li>
+                  <li>Partidos Empatados: {{trophy.GamesTied}}</li>
+                  <li>Goles Marcados: {{trophy.GoalsScored}}</li>
+                  <li>Faltas Cometidas: {{trophy.FoulsCommitted}}</li>
+                </ul>
+              </div>
+              <div class="trophy-room__trophies__item__content__details__cards">
+                <ul>
+                  <li>Tarjetas:</li>
+                  <li>Amarillas: {{trophy.cards.yellow}}</li>
+                  <li>Rojas: {{trophy.cards.red}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <button class="nav-button next" (click)="nextTrophy()">Next</button>
+    </div>
+  </div>
+</main>
