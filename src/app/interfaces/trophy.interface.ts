@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 export interface Trophy {
   nameCategory: string;
   nameTrophy: string;
@@ -11,5 +12,10 @@ export interface Trophy {
   cards: {
     yellow: number;
     red: number;
-  }
+  };
+  dateEarned: string;
+  location: string;
+  description: string;
+  coach: string;
+  captain: string;
 }
