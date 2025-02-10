@@ -27,12 +27,12 @@ export class HistoryComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/about/mission',
+    href: '/CD-Futuro13/about/mission',
     icon: 'arrow_forward'
   };
 
   navigateToMission(): void {
-    this.router.navigate(['/join-us']);
+    this.router.navigate(['/CD-Futuro13/about/mission']);
   }
 
   ngOnInit(): void {

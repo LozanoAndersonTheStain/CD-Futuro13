@@ -26,13 +26,13 @@ export class VisionComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/about/mission',
+    href: '/CD-Futuro13/about/mission',
     icon: 'arrow_back',
     iconPosition: 'left'
   };
 
   navigateToMission(): void {
-    this.router.navigate(['/about/mission']);
+    this.router.navigate(['/CD-Futuro13/about/mission']);
   }
 
   ngOnInit(): void {
