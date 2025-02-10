@@ -22,7 +22,7 @@ export class TestimonialsComponent implements OnInit {
       title: 'Lo que dicen los Padres',
       description: 'Descubre que opinan de los padres sobre la formación brindada por el club.',
       buttonLabel: 'Ver Testimonios',
-      buttonHref: '/testimonials/fathers',
+      buttonHref: '/CD-Futuro13/testimonials/fathers',
       icon: 'arrow_forward'
     },
     {
@@ -30,7 +30,7 @@ export class TestimonialsComponent implements OnInit {
       title: 'Lo que dicen los Alumnos',
       description: 'Nuestros alumnos cuentan sus experiencias con el club y como los ha cambiado.',
       buttonLabel: 'Ver Testimonios',
-      buttonHref: '/testimonials/players',
+      buttonHref: '/CD-Futuro13/testimonials/players',
       icon: 'arrow_forward'
     }
   ];
