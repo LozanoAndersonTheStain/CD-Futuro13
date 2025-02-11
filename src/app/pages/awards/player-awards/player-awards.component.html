@@ -1,1 +1,47 @@
-<p>player-awards works!</p>
+<main class="player-award">
+  <div class="player-award__container">
+    <div class="player-award__content">
+      <button class="nav-button prev" (click)="prevPlayerAward()">Prev</button>
+      <section class="player-award__awards">
+        <article class="player-award__awards__item" *ngFor="let playerAward of visiblePlayerAwards; let i = index" [class.active]="i === currentPlayerAwardIndex" (click)="updateCurrentPlayerAward(i)" [style.backgroundImage]="'url(' + playerAward.imageUrl +')'">
+          <div class="overlay">
+            <div class="overlay__details">
+              <div class="overlay__category">
+                <h4>{{playerAward.nameCategory}}</h4>
+              </div>
+              <div class="overlay__name-player">
+                <h3>{{playerAward.namePlayer}}</h3>
+              </div>
+              <div class="overlay__name-tournament-award">
+                <h4>{{playerAward.nameTournament}}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="player-award__awards__item__content">
+            <h2 class="player-award__awards__item__content__title">Detalles:</h2>
+            <div class="player-award__awards__item__content__details">
+              <div class="player-award__awards__item__content__details__award">
+                <ul>
+                  <li>Nombre del Jugador: <br> {{playerAward.namePlayer}}</li>
+                  <li>Edad: {{playerAward.agePlayer}}</li>
+                  <li>Categoria: {{playerAward.nameCategory}}</li>
+                  <li>Posición: {{playerAward.position}}</li>
+                  <li>Goles Marcados: {{playerAward.goalsScored}}</li>
+                  <li>Asistencias: {{playerAward.assistance}}</li>
+                </ul>
+              </div>
+              <div class="player-award__awards__item__content__details__award-description">
+                <ul>
+                  <li>Reconocimiento:</li>
+                  <li>Nombre del Premio: <br> <span>{{playerAward.award.nameAward}}</span></li>
+                  <li>Año de entrega: {{playerAward.award.year}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <button class="nav-button next" (click)="nextPlayerAward()">Next</button>
+    </div>
+  </div>
+</main>
