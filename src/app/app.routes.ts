@@ -16,10 +16,10 @@ import { PlayersComponent } from './pages/testimonials/players/players.component
 import { TrophyRoomComponent } from './pages/awards/trophy-room/trophy-room.component';
 import { PlayerAwardsComponent } from './pages/awards/player-awards/player-awards.component';
 import { AwardsComponent } from './pages/awards/awards.component';
+import { TournamentsComponent } from './pages/tournaments/tournaments.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '/', redirectTo: '/home', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'join-us', component: JoinUsComponent },
   { path: 'about', component: AboutComponent },
@@ -35,7 +35,7 @@ export const routes: Routes = [
   { path: 'awards', component: AwardsComponent },
   { path: 'awards/trophy-room', component: TrophyRoomComponent },
   { path: 'awards/player-awards', component: PlayerAwardsComponent },
-  { path: 'tournaments', component: NotContentPageComponent },
+  { path: 'tournaments', component: TournamentsComponent },
   { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
   { path: '**', component: ErrorPageComponent },
