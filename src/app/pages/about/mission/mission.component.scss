@@ -69,4 +69,12 @@
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .mission__container {
+      .mission__content {
+        width: 90%;
+      }
+    }
+  }
 }

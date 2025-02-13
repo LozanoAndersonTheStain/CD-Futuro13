@@ -15,8 +15,8 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0.2px); /* Aplica el desenfoque */
-    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    filter: blur(0.2px);
+    z-index: -1;
   }
 
   .history__container {
@@ -56,6 +56,18 @@
       align-content: center;
       gap: 0.5rem;
       margin: 2rem auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .history__container {
+      .history__content {
+        width: 90%;
+
+        .history__title {
+          text-align: center;
+        }
+      }
     }
   }
 }

@@ -69,4 +69,12 @@
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .vision__container {
+      .vision__content {
+        width: 90%;
+      }
+    }
+  }
 }
