@@ -1,1 +1,43 @@
-<p>tournament-details works!</p>
+<main class="tournament-details">
+  <div class="tournament__container__button">
+    <app-button class="tournament__button" [config]="buttonConfig">
+      <mat-icon class="icon">{{ buttonConfig.icon }}</mat-icon>
+      {{ buttonConfig.label }}
+    </app-button>
+  </div>
+  <div class="tournament-details__container">
+    <ng-container *ngIf="isLoading; else content">
+      <div class="loading">
+        <mat-spinner></mat-spinner>
+        <p>Cargando...</p>
+      </div>
+    </ng-container>
+    <ng-template #content>
+      <h1 class="tournament-details__title">{{ tournament?.title }} - {{ tournament?.category }}</h1>
+      <table class="tournament-details__table">
+        <thead>
+          <tr>
+            <th>Equipo Local</th>
+            <th></th>
+            <th>Equipo Visitante</th>
+            <th>Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let match of matches">
+            <td class="team">
+              <img [src]="match.homeTeam.logo" alt="{{ match.homeTeam.name }} logo" class="team-logo">
+              <span>{{ match.homeTeam.name }}</span>
+            </td>
+            <td class="vs">vs</td>
+            <td class="team">
+              <img [src]="match.awayTeam.logo" alt="{{ match.awayTeam.name }} logo" class="team-logo">
+              <span>{{ match.awayTeam.name }}</span>
+            </td>
+            <td class="result">{{ match.result }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-template>
+  </div>
+</main>

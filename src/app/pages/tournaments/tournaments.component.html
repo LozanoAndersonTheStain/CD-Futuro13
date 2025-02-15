@@ -1,1 +1,21 @@
-<p>tournaments works!</p>
+<main class="tournaments">
+  <div class="tournaments__container">
+    <h1 class="tournaments__title">Torneos</h1>
+    <ng-container *ngIf="isLoading; else content">
+      <div class="loading">
+        <mat-spinner></mat-spinner> <!-- Spinner de Angular Material para mostrar la carga -->
+        <p>Cargando...</p>
+      </div>
+    </ng-container>
+    <ng-template #content>
+    <div class="tournaments__grid">
+      <div class="tournaments__card" *ngFor="let tournament of tournaments" (click)="navigateToTournament(tournament)" [style.backgroundImage]="'url(' + tournament.imageTournament +')'">
+        <div class="overlay">
+          <h2>{{ tournament.title }}</h2>
+          <p>{{ tournament.category }}</p>
+        </div>
+      </div>
+    </div>
+    </ng-template>
+  </div>
+</main>
