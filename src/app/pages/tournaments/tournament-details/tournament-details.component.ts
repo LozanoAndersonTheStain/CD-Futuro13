@@ -42,17 +42,13 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
   navigateToTournaments(): void {
     this.router.navigate(['/tournaments']);
   }
+
   ngOnInit(): void {
-    const tournamentId = this.route.snapshot.paramMap.get('id');
-    if (tournamentId) {
-      this.subscription.add(
-        this.tournamentService.getTournamentById(tournamentId).subscribe((data) => {
-          this.tournament = data;
-          this.matches = data?.matches ? Object.values(data.matches) : [];
-          this.isLoading = false;
-        })
-      );
-    }
+    this.route.data.subscribe((data) => {
+      this.tournament = data['tournament'];
+      this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
+      this.isLoading = false;
+    });
   }
 
   ngOnDestroy(): void {
