@@ -26,12 +26,12 @@
         <tbody>
           <tr *ngFor="let match of matches">
             <td class="team">
-              <img [src]="match.homeTeam.logo" alt="{{ match.homeTeam.name }} logo" class="team-logo">
+              <!-- <img [src]="match.homeTeam.logo" alt="{{ match.homeTeam.name }} logo" class="team-logo"> -->
               <span>{{ match.homeTeam.name }}</span>
             </td>
             <td class="vs">vs</td>
             <td class="team">
-              <img [src]="match.awayTeam.logo" alt="{{ match.awayTeam.name }} logo" class="team-logo">
+              <!-- <img [src]="match.awayTeam.logo" alt="{{ match.awayTeam.name }} logo" class="team-logo"> -->
               <span>{{ match.awayTeam.name }}</span>
             </td>
             <td class="result">{{ match.result }}</td>
