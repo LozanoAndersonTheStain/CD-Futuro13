@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { TournamentService } from '../../../services/tournament.service';
+import { Router, RouterModule } from '@angular/router';
+import { TournamentStateService } from '../../services/tournament-state.service';
 import { Subscription } from 'rxjs';
-import { ButtonComponent } from "../../../components/button/button.component";
-import { ButtonConfig } from '../../../interfaces/button.interface';
+import { ButtonComponent } from "../../components/button/button.component";
+import { ButtonConfig } from '../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -21,8 +21,7 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
 
   constructor(
-    private route: ActivatedRoute,
-    private tournamentService: TournamentService,
+    private tournamentStateService: TournamentStateService,
     private router: Router
   ) {}
 
@@ -44,8 +43,8 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data) => {
-      this.tournament = data['tournament'];
+    this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
+      this.tournament = tournament;
       this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
       this.isLoading = false;
     });
