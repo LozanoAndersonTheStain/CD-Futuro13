@@ -33,13 +33,13 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/tournaments',
+    href: '/CD-Futuro13/tournaments',
     icon: 'arrow_back',
     iconPosition: 'left'
   };
 
   navigateToTournaments(): void {
-    this.router.navigate(['/tournaments']);
+    this.router.navigate(['/CD-Futuro13/tournaments']);
   }
 
   ngOnInit(): void {
