@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TournamentService } from '../../services/tournament.service';
+import { TournamentStateService } from '../../services/tournament-state.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
@@ -14,7 +15,11 @@ export class TournamentsComponent implements OnInit {
   tournaments: any[] = [];
   isLoading = true;
 
-  constructor(private router: Router, private tournamentService: TournamentService) {}
+  constructor(
+    private router: Router,
+    private tournamentService: TournamentService,
+    private tournamentStateService: TournamentStateService
+  ) {}
 
   ngOnInit(): void {
     this.tournamentService.getTournaments().subscribe((data) => {
@@ -24,6 +29,7 @@ export class TournamentsComponent implements OnInit {
   }
 
   navigateToTournament(tournament: any): void {
-    this.router.navigate(['/tournaments', tournament.id]);
+    this.tournamentStateService.setSelectedTournament(tournament);
+    this.router.navigate(['/tournament-details']);
   }
 }
