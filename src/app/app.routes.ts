@@ -18,6 +18,7 @@ import { PlayerAwardsComponent } from './pages/awards/player-awards/player-award
 import { AwardsComponent } from './pages/awards/awards.component';
 import { TournamentsComponent } from './pages/tournaments/tournaments.component';
 import { TournamentDetailsComponent } from './pages/tournaments/tournament-details/tournament-details.component';
+import { TournamentResolver } from './resolvers/tournament.resolver';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -37,7 +38,13 @@ export const routes: Routes = [
   { path: 'awards/trophy-room', component: TrophyRoomComponent },
   { path: 'awards/player-awards', component: PlayerAwardsComponent },
   { path: 'tournaments', component: TournamentsComponent },
-  { path: 'tournaments/:id', component: TournamentDetailsComponent },
+  {
+    path: 'tournaments/:id',
+    component: TournamentDetailsComponent,
+    resolve: {
+      tournament: TournamentResolver
+    }
+  },
   { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
   { path: '**', component: ErrorPageComponent },
