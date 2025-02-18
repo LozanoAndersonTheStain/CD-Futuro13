@@ -1,0 +1,81 @@
+.categories {
+  background-image:
+  linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
+  url(../../../../public/assets/category_background_image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  height: auto;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 70px;
+  }
+
+  &__container__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  &__card {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+
+      & span {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: scale color 0.3s ease-in-out;
+
+
+        &:hover {
+          color: var(--primary-color);
+          scale: 1.1;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      width: 80%;
+    }
+  }
+}

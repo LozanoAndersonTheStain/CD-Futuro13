@@ -1,1 +1,18 @@
-<p>categories works!</p>
+<main class="categories">
+  <div class="categories__container">
+    <h1 class="categories__title">Categorias</h1>
+    <div class="categories__content">
+      <div class="categories__container__cards">
+        <div class="categories__card" *ngFor="let category of categories" [style.backgroundImage]="'url(' + category.imageCategory +')'">
+          <div class="overlay">
+            <h2>{{ category.title }}</h2>
+            <p>{{ category.showFullDescription ? category.description : (category.description | slice:0:100) + '...' }}</p>
+            <span class="view-more" (click)="toggleDescription(category)">
+              {{ category.showFullDescription ? 'Ver menos' : 'Ver más' }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
