@@ -18,6 +18,7 @@ import { PlayerAwardsComponent } from './pages/awards/player-awards/player-award
 import { AwardsComponent } from './pages/awards/awards.component';
 import { TournamentsComponent } from './pages/tournaments/tournaments.component';
 import { TournamentDetailsComponent } from './pages/tournament-details/tournament-details.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,6 +39,7 @@ export const routes: Routes = [
   { path: 'awards/player-awards', component: PlayerAwardsComponent },
   { path: 'tournaments', component: TournamentsComponent },
   { path: 'tournament-details', component: TournamentDetailsComponent },
+  { path: 'categories', component: CategoriesComponent },
   { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
   { path: '**', component: ErrorPageComponent },
