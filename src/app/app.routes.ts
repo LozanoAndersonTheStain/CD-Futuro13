@@ -40,7 +40,6 @@ export const routes: Routes = [
   { path: 'tournaments', component: TournamentsComponent },
   { path: 'tournament-details', component: TournamentDetailsComponent },
   { path: 'categories', component: CategoriesComponent },
-  { path: 'corporation', component: NotContentPageComponent },
   { path: 'contact', component: NotContentPageComponent },
   { path: '**', component: ErrorPageComponent },
 ];
