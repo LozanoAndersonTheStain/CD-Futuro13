@@ -49,6 +49,39 @@
     </div>
   </section>
 
+  <section class="home__content__sponsorship_plan">
+    <h2 class="home__content__sponsorship__plan__title">¡Conviértete en patrocinador de un jugador de CD Futuro 13!</h2>
+    <div class="home__content__sponsorship__plan__description">
+      <video src="https://res.cloudinary.com/dy6jglszo/video/upload/v1740793644/Plan-Padrino.mp4" width="300" height="585" autoplay controls></video>
+      <div class="home__content__sponsorship__plan__text">
+        <p>
+          En CD Futuro 13, creemos en el poder transformador del deporte. Al convertirte en patrocinador, no solo estarás apoyando el desarrollo deportivo de nuestros jóvenes talentos, sino que también estarás invirtiendo en su futuro y en la construcción de una comunidad más fuerte y unida. Tu contribución proporcionará los recursos necesarios para que estos jóvenes puedan alcanzar sus sueños y convertirse en líderes dentro y fuera del campo. ¡Únete a nosotros en esta noble causa y sé parte del cambio positivo en sus vidas!
+        </p>
+        <div class="home__content__sponsorship__plan__button">
+          <button (click)="openModal()" class="sponsorship-button">Ver información de donaciones</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Plan de Patrocinio -->
+  <div class="modal" [class.show]="isModalOpen">
+    <div class="modal__content">
+      <img src="https://res.cloudinary.com/dy6jglszo/image/upload/v1740798376/Donaciones-CD-Futuro13.jpg" alt="Información de Donaciones" class="modal__image">
+      <div class="home__content__sponsorship__plan__text__info">
+        <p>Con tu aporte, estarás cubriendo los siguientes gastos:</p>
+        <ul>
+          <li>Equipamiento deportivo</li>
+          <li>Transporte a competencias</li>
+          <li>Alimentación y suplementos</li>
+          <li>Asesoría académica y psicológica</li>
+          <li>Actividades de formación y recreación</li>
+        </ul>
+      </div>
+      <span class="modal__close" (click)="closeModal()">&times;</span>
+    </div>
+  </div>
+
   <section class="home__content__information-third">
     <h1 class="home__content__information__title">Continuamos en construcción, proximamente veras más informacion sobre nosotros</h1>
   </section>

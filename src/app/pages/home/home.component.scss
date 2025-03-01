@@ -25,6 +25,18 @@
     padding: 1.8rem;
   }
 
+  .home__content__information,
+  .home__content__information-second,
+  .home__content__information-third,
+  .home__content__sponsorship_plan {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
   .home__content__information {
     display: flex;
     align-items: center;
@@ -117,6 +129,151 @@
     text-align: center;
     padding: 18rem;
     gap: 4rem;
+  }
+
+  /** Fourth Section */
+
+  &__content__sponsorship_plan {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .home__content__sponsorship__plan__title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .home__content__sponsorship__plan__description {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 2rem;
+
+      .home__content__sponsorship__plan__text{
+        display: flex;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+
+        .home__content__sponsorship__plan__button {
+          height: 3rem;
+          width: 16rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .sponsorship-button {
+            background-color: var(--button-color);
+            color: var(--quaternary-color);
+            border: none;
+            padding: 1rem;
+            border-radius: 0.6rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+              background-color: var(--tertiary-color);
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+      display: flex;
+    }
+
+    &__content {
+      display: flex;
+      background-color: #fff;
+      width: 80%;
+      max-width: 820px;
+      position: relative;
+      border-radius: 10px;
+      flex-direction: row;
+    }
+
+    &__close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 0 0.8rem 0.8rem 0.8rem;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__image {
+      width: 25rem;
+      height: auto;
+      border-top-left-radius: 9px;
+      border-bottom-left-radius: 9px;
+    }
+
+    .home__content__sponsorship__plan__text__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.2rem;
+
+      p {
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+          position: relative;
+          padding-left: 2rem;
+
+          &::before {
+            content: '⚽'; /* Icono de balón */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
   }
 
   /* Media Queries */

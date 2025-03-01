@@ -26,6 +26,16 @@ export class HomeComponent implements OnInit {
     href: '/CD-Futuro13/join-us'
   };
 
+  buttonConfig2: ButtonConfig = {
+    label: 'Ver información de donaciones',
+    action: () => {
+      this.openModal();
+    },
+    type: 'button',
+    class: 'btn-secondary',
+    fontSize: '1rem'
+  }
+
   constructor(
     private titleService: Title,
     private metaService: Meta,
@@ -46,6 +56,16 @@ export class HomeComponent implements OnInit {
       },
       { name: 'author', content: 'CD Futuro 13' },
     ]);
+  }
+
+  isModalOpen = false;
+
+  openModal() {
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
   }
 
   navigateToJoinUs(): void {
