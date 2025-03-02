@@ -29,10 +29,10 @@
   &__slider {
     display: flex;
     overflow: hidden;
-    width: 300%;
+    width: 500%;
     position: relative;
-    animation: slide 30s linear infinite;
-    -webkit-animation: slide 30s linear infinite;
+    animation: slide 40s linear infinite;
+    -webkit-animation: slide 40s linear infinite;
 
     &__item {
       flex: 0 0 auto;
@@ -72,6 +72,10 @@
 
   .sponsors-slider__title h2 {
     font-size: 1.5rem;
+  }
+
+  .sponsors-slider__slider {
+    width: 700%;
   }
 
   .sponsors-slider__slider__item {

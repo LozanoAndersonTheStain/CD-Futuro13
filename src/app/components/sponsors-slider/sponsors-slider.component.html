@@ -16,6 +16,11 @@
               <img [src]="sponsor.image" [alt]="sponsor.name" />
             </div>
           </ng-container>
+          <ng-container *ngFor="let sponsor of sponsors">
+            <div class="sponsors-slider__slider__item">
+              <img [src]="sponsor.image" [alt]="sponsor.name" />
+            </div>
+          </ng-container>
         </div>
       </div>
     </div>
