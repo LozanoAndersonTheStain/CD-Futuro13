@@ -6,11 +6,12 @@ import { Meta, Title } from '@angular/platform-browser';
 import { ButtonComponent } from '../../components/button/button.component';
 import { ButtonConfig } from '../../interfaces/button.interface';
 import { SponsorsSliderComponent } from "../../components/sponsors-slider/sponsors-slider.component";
+import { RudePiggyComponent } from "../../components/rude-piggy/rude-piggy.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, CarouselComponent, ButtonComponent, SponsorsSliderComponent],
+  imports: [CommonModule, RouterModule, CarouselComponent, ButtonComponent, SponsorsSliderComponent, RudePiggyComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
