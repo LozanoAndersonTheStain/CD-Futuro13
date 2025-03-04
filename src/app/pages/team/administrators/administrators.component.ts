@@ -4,64 +4,61 @@ import { ButtonComponent } from '../../../components/button/button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonConfig } from '../../../interfaces/button.interface';
 import { Meta, Title } from '@angular/platform-browser';
-
-interface Administrator {
-  name: string;
-  age: number;
-  description?: string;
-  position?: string;
-  imageUrl: string;
-}
+import { Administrator } from '../../../interfaces/administrator.interface';
 
 @Component({
   selector: 'app-administrators',
   imports: [CommonModule, ButtonComponent, MatIconModule],
   templateUrl: './administrators.component.html',
-  styleUrl: './administrators.component.scss'
+  styleUrl: './administrators.component.scss',
 })
 export class AdministratorsComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-  ) {}
+  constructor(private titleService: Title, private metaService: Meta) {}
 
   administrators: Administrator[] = [
     {
-      name: 'Carlos Espinoza',
-      age: 33,
-      description: 'Carlos es el director del club, encargado de la planificación y supervisión de todas las actividades.',
-      imageUrl: 'assets/img_carousel/image_1.jpg',
-      position: 'Director'
+      name: 'Cristino Álvarez Moreno ',
+      description:
+        'Como Presidente del Club, Cristino lidera la planificación y supervisión de todas las actividades. Su visión estratégica y dedicación aseguran el crecimiento y éxito del club, guiando tanto a jugadores como a staff hacia objetivos comunes con excelencia y compromiso.',
+      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056245/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n_Pie.jpg'],
+      position: 'Presidente del Club',
     },
     {
-      name: 'Camila Perez',
-      age: 35,
-      description: 'Camila es la subdirectora, responsable de apoyar al director y coordinar eventos especiales.',
-      imageUrl: 'assets/img_carousel/image_2.jpg',
-      position: 'Subdirector'
+      name: 'Leisy Julie Parra Palacios',
+      description:
+        'En su rol de Gestora Social, Leisy se encarga de fortalecer los lazos entre el club y la comunidad. Con creatividad y empatía, organiza eventos especiales y promueve iniciativas que fomentan la inclusión y el desarrollo social a través del deporte.',
+      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n_Pie.jpg'],
+      position: 'Gestora Social',
     },
     {
-      name: 'Jhonfer Rodriguez',
-      age: 40,
-      description: 'Jhonfer es el administrador principal, encargado de la gestión diaria y la administración del club.',
-      imageUrl: 'assets/img_carousel/image_3.jpg',
-      position: 'Administrador'
+      name: 'Maria Camila Vélez Vélez',
+      description:
+        'Como Secretaria, Maria Camila es el pilar administrativo del club. Su organización y atención al detalle garantizan que las operaciones diarias fluyan sin problemas, apoyando tanto a directivos como a miembros del equipo con eficiencia y profesionalismo.',
+      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n_Pie.jpg'],
+      position: 'Secretaria',
     },
     {
-      name: 'Sofía Velez',
-      age: 30,
-      description: 'Sofía es administradora, encargada de la logística y el soporte administrativo del club.',
-      imageUrl: 'assets/img_carousel/image_4.jpg',
-      position: 'Administrador'
-    }
-  ]
+      name: 'Jhon Fernando Restrepo Garcia',
+      description:
+        'En el cargo de Jefe de Prensa, Jhon Fernando maneja la comunicación y la imagen del club. Con habilidades estratégicas y creatividad, asegura que las noticias, logros y eventos del club sean difundidos de manera efectiva, fortaleciendo su presencia en medios y redes sociales.',
+      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056247/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056250/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n_Pie.jpg'],
+      position: 'Jefe de Prensa',
+    },
+  ];
 
   currentAdministratorIndex = 0;
   currentCardIndex = 0;
 
-
   get currentAdministrator(): Administrator {
     return this.administrators[this.currentAdministratorIndex];
+  }
+
+  currentAdministratorFirstImage(): string {
+    return this.administrators[this.currentAdministratorIndex].imageUrl[0];
+  }
+
+  currentAdministratorSecondImage(): string {
+    return this.administrators[this.currentAdministratorIndex].imageUrl[1];
   }
 
   updateCurrentAdministrator(index: number): void {
@@ -69,24 +66,22 @@ export class AdministratorsComponent implements OnInit {
   }
 
   buttonConfig: ButtonConfig = {
-      label: 'Ver info del Administrador',
-      action: () => {
-        this.openModal(this.currentAdministratorIndex);
-      },
-      type: 'button',
-      class: 'btn-primary',
-      fontSize: '1rem',
-    };
+    label: 'Ver info del Administrador',
+    action: () => {
+      this.openModal();
+    },
+    type: 'button',
+    class: 'btn-primary',
+    fontSize: '1rem',
+  };
 
-    openModal(index: number): void {
-      this.updateCurrentAdministrator(index);
-      const modal = document.getElementById('modal');
+  openModal(): void {
+    const modal = document.getElementById('modal');
 
-      if (modal) {
-        modal.style.display = 'block';
-      }
+    if (modal) {
+      modal.style.display = 'block';
     }
-
+  }
 
   closeModal(): void {
     const modal = document.getElementById('modal');
@@ -96,11 +91,14 @@ export class AdministratorsComponent implements OnInit {
   }
 
   nextCard(): void {
-    this.currentCardIndex = (this.currentCardIndex + 1) % this.administrators.length;
+    this.currentCardIndex =
+      (this.currentCardIndex + 1) % this.administrators.length;
   }
 
   prevCard(): void {
-    this.currentCardIndex = (this.currentCardIndex - 1 + this.administrators.length) % this.administrators.length;
+    this.currentCardIndex =
+      (this.currentCardIndex - 1 + this.administrators.length) %
+      this.administrators.length;
   }
 
   ngOnInit(): void {

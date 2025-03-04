@@ -2,7 +2,7 @@
   <div class="team-administrators__banner">
     <div class="team-administrators__slider" style="--quantity: 4">
       <div class="team-administrators__item" *ngFor="let administrator of administrators; let i = index" [style.--position]="i + 1" (mouseenter)="updateCurrentAdministrator(i)">
-        <img [src]="administrator.imageUrl" alt="">
+        <img [src]="administrator.imageUrl[0]" alt="Administrador">
       </div>
     </div>
     <div class="team-administrators__content">
@@ -11,18 +11,17 @@
       </h1>
       <div class="team-administrators__data-administrator">
         <h2>{{currentAdministrator.name}}</h2>
-        <p class="team-administrators__data-administrator__age"><b>Edad: {{currentAdministrator.age}}</b></p>
         <p class="team-administrators__data-administrator__position">Ocupación en el club: {{currentAdministrator.position}}</p>
         <app-button class="team-administrators__button" [config]="buttonConfig">Ver más</app-button>
       </div>
-      <div class="team-administrators__model" [style.backgroundImage]="'url(' + currentAdministrator.imageUrl + ')'"></div>
+      <div class="team-administrators__model" [style.backgroundImage]="'url(' + currentAdministratorFirstImage() + ')'"></div>
     </div>
   </div>
 
   <div class="team-administrators__cards-mobile">
     <div class="team-administrators__cards-mobile__content">
       <div class="team-administrators__cards-mobile__content__card" *ngFor="let administrator of administrators; let i = index" [class.active]="i === currentCardIndex">
-        <div class="top-card" [style.backgroundImage]="'url(' + administrator.imageUrl + ')'"></div>
+        <div class="top-card" [style.backgroundImage]="'url(' + administrator.imageUrl[0] + ')'"></div>
         <div class="bottom-card">
           <div class="card-content">
             <span class="card-title">{{administrator.name}}</span>
@@ -41,7 +40,7 @@
   <div class="team-administrators__modal" id="modal">
     <div class="team-administrators__modal__content">
       <div class="team-administrators__modal__image">
-        <img class="team-administrators__modal__image__img" [src]="currentAdministrator.imageUrl" id="modalImage" alt="">
+        <img class="team-administrators__modal__image__img" [src]="currentAdministratorSecondImage()" id="modalImage" alt="Administrador">
       </div>
       <div class="team-administrators__modal__data">
         <section class="team-administrators__modal__data-administrator">
@@ -52,9 +51,6 @@
             <div class="description">
               <h3>Descripción:</h3>
               <p>{{currentAdministrator.description}}</p>
-            </div>
-            <div class="team-administrators__modal__data-administrator__age">
-              <h3>Edad: </h3> <p>{{currentAdministrator.age}}</p>
             </div>
           </div>
           <div class="team-administrators__modal__data-administrator__position" id="modalPosition">
