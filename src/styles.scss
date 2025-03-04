@@ -43,6 +43,12 @@ html {
     font-display: swap;
 }
 
+@font-face {
+  font-family: "Passion One";
+    src: url("/fonts/passion-one.woff") format("woff"),
+        url("/fonts/passion-one.ttf") format("truetype");
+    font-display: swap;
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: "Nunito", "Helvetica Neue", sans-serif; }
