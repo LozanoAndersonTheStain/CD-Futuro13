@@ -1,8 +1,8 @@
 <main class="team-teachers">
   <div class="team-teachers__banner">
-    <div class="team-teachers__slider" style="--quantity: 6">
+    <div class="team-teachers__slider" style="--quantity: 7">
       <div class="team-teachers__item" *ngFor="let teacher of teachers; let i = index" [style.--position]="i + 1" (mouseenter)="updateCurrentTeacher(i)">
-        <img [src]="teacher.imageUrl" alt="">
+        <img [src]="teacher.imageUrl[0]" alt="Teacher">
       </div>
     </div>
     <div class="team-teachers__content">
@@ -11,14 +11,13 @@
       </h1>
       <div class="team-teachers__data-teacher">
         <h2>{{currentTeacher.name}}</h2>
-        <p><b>Edad: {{currentTeacher.age}}</b></p>
         <p>Profesor de las categorías:</p>
         <ul>
           <li *ngFor="let category of currentTeacher.categories">{{category}}</li>
         </ul>
         <app-button class="team-teachers__button" [config]="buttonConfig">Ver más</app-button>
       </div>
-      <div class="team-teachers__model" [style.backgroundImage]="'url(' + currentTeacher.imageUrl + ')'"></div>
+      <div class="team-teachers__model" [style.backgroundImage]="'url(' + currentTeacherFirstImage + ')'"></div>
     </div>
   </div>
 
@@ -29,7 +28,6 @@
         <div class="bottom-card">
           <div class="card-content">
             <span class="card-title">{{teacher.name}}</span>
-            <p class="card-txt">Edad: {{teacher.age}}</p>
             <app-button class="card-btn" [config]="buttonConfig">Ver más</app-button>
           </div>
         </div>
@@ -44,7 +42,7 @@
   <div class="team-teachers__modal" id="modal">
     <div class="team-teachers__modal__content">
       <div class="team-teachers__modal__image">
-        <img class="team-teachers__modal__image__img" [src]="currentTeacher.imageUrl" id="modalImage" alt="">
+        <img class="team-teachers__modal__image__img" [src]="currentTeacherSecondImage" id="modalImage" alt="Teacher">
       </div>
       <div class="team-teachers__modal__data">
         <section class="team-teachers__modal__data-teacher">
@@ -57,17 +55,16 @@
               <p>{{currentTeacher.description}}</p>
             </div>
             <div class="team-teachers__modal__data-teacher__age">
-              <h3>Edad: </h3> <p>{{currentTeacher.age}}</p>
             </div>
           </div>
           <div class="team-teachers__modal__data-teacher__categories" id="modalCategories">
-            <h3>Categorías</h3>
+            <h3>Categorías a cargo</h3>
             <ul>
-              <li *ngFor="let category of currentTeacher.categories">Categoría: {{category}}</li>
+              <li *ngFor="let category of currentTeacher.categories">{{category}}</li>
             </ul>
           </div>
           <div class="team-teachers__modal__data-teacher__torunaments">
-            <h3>Torneos en lo que ha participado</h3>
+            <h3>Torneos en los que ha participado</h3>
             <ul>
               <li *ngFor="let tournament of currentTeacher.tournaments">Torneo: {{tournament}}</li>
             </ul>

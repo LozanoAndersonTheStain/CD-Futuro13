@@ -59,8 +59,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: min(1400px, 100vw);
-    height: max-content;
-    padding-bottom: 18px;
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -69,6 +68,7 @@
   }
 
   &__title {
+    top: 6rem;
     font-family: 'ICA Rubrik';
     font-size: 15em;
     line-height: 1em;
@@ -106,11 +106,11 @@
   &__model {
     width: 28rem;
     height: 70vh;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -69%);
-    background-size: auto 130%;
+    transform: translateX(-50%);
+    background-size: auto 116%;
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 1;
@@ -133,7 +133,7 @@
       background-color: var(--tertiary-color);
       color: var(--quaternary-color);
       margin: 6% auto;
-      width: 53%;
+      width: 70%;
       max-width: 900px;
       position: relative;
       display: flex;
