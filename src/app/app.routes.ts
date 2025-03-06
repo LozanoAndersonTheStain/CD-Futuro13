@@ -23,6 +23,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '/', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'join-us', component: JoinUsComponent },
   { path: 'about', component: AboutComponent },
