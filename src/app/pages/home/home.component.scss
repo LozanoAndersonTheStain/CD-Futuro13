@@ -8,6 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
+  background-attachment: fixed;
 
   /* First Section */
 
@@ -144,22 +145,24 @@
     }
 
     .home__content__sponsorship__plan__description {
-      width: 50%;
+      width: 60%;
       display: flex;
       justify-content: center;
       flex-direction: row-reverse;
       align-items: center;
-      gap: 2rem;
+      gap: 3.5rem;
 
       .home__content__sponsorship__plan__text {
         display: flex;
         text-align: center;
-        font-weight: 400;
-        font-size: 1.2rem;
+        font-weight: 500;
+        font-size: 1.3rem;
         margin-bottom: 1rem;
         flex-direction: column;
         align-items: center;
         gap: 4rem;
+        text-align: start;
+
 
         .home__content__sponsorship__plan__button {
           height: 3rem;
