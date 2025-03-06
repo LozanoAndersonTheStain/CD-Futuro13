@@ -26,7 +26,6 @@ export class MissionComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/CD-Futuro13/about/vision',
     icon: 'arrow_forward',
     iconPosition: 'right'
   };

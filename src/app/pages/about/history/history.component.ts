@@ -27,7 +27,6 @@ export class HistoryComponent implements OnInit {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/CD-Futuro13/about/mission',
     icon: 'arrow_forward'
   };
 
