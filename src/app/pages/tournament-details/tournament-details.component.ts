@@ -3,16 +3,22 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TournamentStateService } from '../../services/tournament-state.service';
 import { Subscription } from 'rxjs';
-import { ButtonComponent } from "../../components/button/button.component";
+import { ButtonComponent } from '../../components/button/button.component';
 import { ButtonConfig } from '../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-tournament-details',
-  imports: [CommonModule, ButtonComponent, RouterModule, MatIconModule, MatProgressSpinnerModule],
+  imports: [
+    CommonModule,
+    ButtonComponent,
+    RouterModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+  ],
   templateUrl: './tournament-details.component.html',
-  styleUrls: ['./tournament-details.component.scss']
+  styleUrls: ['./tournament-details.component.scss'],
 })
 export class TournamentDetailsComponent implements OnInit, OnDestroy {
   tournament: any;
@@ -35,7 +41,7 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
     fontSize: '1rem',
     href: '/CD-Futuro13/tournaments',
     icon: 'arrow_back',
-    iconPosition: 'left'
+    iconPosition: 'left',
   };
 
   navigateToTournaments(): void {
@@ -43,11 +49,27 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
-      this.tournament = tournament;
-      this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
-      this.isLoading = false;
-    });
+    if (typeof sessionStorage !== 'undefined') {
+      const storedTournament = sessionStorage.getItem('selectedTournament');
+      if (storedTournament) {
+        this.tournament = JSON.parse(storedTournament);
+        this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
+        this.isLoading = false;
+      } else {
+        this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
+          this.tournament = tournament;
+          this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
+          this.isLoading = false;
+          sessionStorage.setItem('selectedTournament', JSON.stringify(tournament));
+        });
+      }
+    } else {
+      this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
+        this.tournament = tournament;
+        this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
+        this.isLoading = false;
+      });
+    }
   }
 
   ngOnDestroy(): void {
