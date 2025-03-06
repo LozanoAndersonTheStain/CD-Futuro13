@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TournamentStateService } from '../../services/tournament-state.service';
@@ -28,7 +28,8 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
 
   constructor(
     private tournamentStateService: TournamentStateService,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) {}
 
   buttonConfig: ButtonConfig = {
@@ -39,13 +40,12 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    href: '/CD-Futuro13/tournaments',
     icon: 'arrow_back',
     iconPosition: 'left',
   };
 
   navigateToTournaments(): void {
-    this.router.navigate(['/CD-Futuro13/tournaments']);
+    this.location.back();
   }
 
   ngOnInit(): void {
