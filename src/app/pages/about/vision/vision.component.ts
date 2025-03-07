@@ -31,7 +31,7 @@ export class VisionComponent implements OnInit {
   };
 
   navigateToMission(): void {
-    this.router.navigate(['/CD-Futuro13/about/mission']);
+    this.router.navigate(['/about/mission']);
   }
 
   ngOnInit(): void {
