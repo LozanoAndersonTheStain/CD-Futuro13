@@ -36,18 +36,18 @@ html {
 
 @font-face {
   font-family: "Nunito";
-    src: url("public/fonts/nunito.woff") format("woff"),
-        url("public/fonts/nunito.ttf") format("truetype"),
-        url("public/fonts/nunito-italic.woff") format("woff"),
-        url("public/fonts/nunito-italic.ttf") format("truetype");
-    font-display: swap;
+  src: url("/assets/fonts/nunito.woff") format("woff"),
+       url("/assets/fonts/nunito.ttf") format("truetype"),
+       url("/assets/fonts/nunito-italic.woff") format("woff"),
+       url("/assets/fonts/nunito-italic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Passion One";
-    src: url("public/fonts/passion-one.woff") format("woff"),
-        url("public/fonts/passion-one.ttf") format("truetype");
-    font-display: swap;
+  src: url("/assets/fonts/passion-one.woff") format("woff"),
+       url("/assets/fonts/passion-one.ttf") format("truetype");
+  font-display: swap;
 }
 
 html, body { height: 100%; }
