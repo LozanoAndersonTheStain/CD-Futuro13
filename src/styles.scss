@@ -36,17 +36,17 @@ html {
 
 @font-face {
   font-family: "Nunito";
-    src: url("fonts/nunito.woff") format("woff"),
-        url("fonts/nunito.ttf") format("truetype"),
-        url("fonts/nunito-italic.woff") format("woff"),
-        url("fonts/nunito-italic.ttf") format("truetype");
+    src: url("public/fonts/nunito.woff") format("woff"),
+        url("public/fonts/nunito.ttf") format("truetype"),
+        url("public/fonts/nunito-italic.woff") format("woff"),
+        url("public/fonts/nunito-italic.ttf") format("truetype");
     font-display: swap;
 }
 
 @font-face {
   font-family: "Passion One";
-    src: url("fonts/passion-one.woff") format("woff"),
-        url("fonts/passion-one.ttf") format("truetype");
+    src: url("public/fonts/passion-one.woff") format("woff"),
+        url("public/fonts/passion-one.ttf") format("truetype");
     font-display: swap;
 }
 
