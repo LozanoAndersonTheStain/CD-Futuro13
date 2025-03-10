@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CD Futuro 13</title>
+    <script>
+        const path = window.location.pathname;
+        const redirectPath = path === '/' ? '/home' : path;
+        sessionStorage.setItem('redirect', redirectPath);
+        window.location.href = '/';
+    </script>
+</head>
+<body>
+    Redireccionando...
+</body>
+</html>
