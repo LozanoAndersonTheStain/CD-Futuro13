@@ -18,7 +18,7 @@ export class AwardsComponent implements OnInit {
       title: 'Premios y Reconocimientos',
       description: 'Conoce los logros y reconocimientos que ha obtenido el club en su trayectoria.',
       buttonLabel: 'Ver Premios',
-      buttonHref: '/CD-Futuro13/awards/player-awards',
+      buttonHref: '/awards/player-awards',
       icon: 'arrow_forward'
     },
     {
@@ -26,7 +26,7 @@ export class AwardsComponent implements OnInit {
       title: 'Copas',
       description: 'Revive los momentos más emocionantes de los torneos y copas en los que ha participado el club.',
       buttonLabel: 'Ver Torneos',
-      buttonHref: '/CD-Futuro13/awards/trophy-room',
+      buttonHref: '/awards/trophy-room',
       icon: 'arrow_forward'
     }
   ];
