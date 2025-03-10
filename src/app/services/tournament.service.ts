@@ -1,46 +1,61 @@
 import { Injectable, NgZone } from '@angular/core';
 import { Database, ref, onValue, query, orderByChild, equalTo } from '@angular/fire/database';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TournamentService {
-  constructor(private db: Database, private ngZone: NgZone) {}
+  private tournamentsSubject = new BehaviorSubject<any[]>([]);
+  tournaments$ = this.tournamentsSubject.asObservable();
 
-  getTournaments(): Observable<any[]> {
+  constructor(private db: Database, private ngZone: NgZone) {
+    this.initTournamentsListener();
+  }
+
+  private initTournamentsListener() {
     const tournamentsRef = ref(this.db, 'tournaments');
-    return new Observable(observer => {
+    onValue(tournamentsRef, snapshot => {
       this.ngZone.run(() => {
-        onValue(tournamentsRef, snapshot => {
-          const tournaments = snapshot.val();
-          observer.next(tournaments ? Object.keys(tournaments).map(key => ({ id: key, ...tournaments[key] })) : []);
-        });
+        const tournaments = snapshot.val();
+        this.tournamentsSubject.next(
+          tournaments ? Object.keys(tournaments).map(key => ({ id: key, ...tournaments[key] })) : []
+        );
       });
     });
   }
 
+  getTournaments(): Observable<any[]> {
+    return this.tournaments$;
+  }
+
   getTournamentById(id: string): Observable<any> {
-    const tournamentRef = ref(this.db, `tournaments/${id}`);
     return new Observable(observer => {
-      this.ngZone.run(() => {
-        onValue(tournamentRef, snapshot => {
+      const tournamentRef = ref(this.db, `tournaments/${id}`);
+      const unsubscribe = onValue(tournamentRef, snapshot => {
+        this.ngZone.run(() => {
           const tournament = snapshot.val();
           observer.next(tournament ? { id, ...tournament } : null);
         });
       });
+      return () => unsubscribe();
     });
   }
 
   getMatchesByTournamentId(tournamentId: string): Observable<any[]> {
-    const matchesRef = query(ref(this.db, 'matches'), orderByChild('tournamentId'), equalTo(tournamentId));
     return new Observable(observer => {
-      this.ngZone.run(() => {
-        onValue(matchesRef, snapshot => {
+      const matchesRef = query(
+        ref(this.db, 'matches'),
+        orderByChild('tournamentId'),
+        equalTo(tournamentId)
+      );
+      const unsubscribe = onValue(matchesRef, snapshot => {
+        this.ngZone.run(() => {
           const matches = snapshot.val();
           observer.next(matches ? Object.keys(matches).map(key => ({ id: key, ...matches[key] })) : []);
         });
       });
+      return () => unsubscribe();
     });
   }
 }
