@@ -34,17 +34,15 @@
               "src/assets",
               "src/404.html",
               "src/.htaccess",
-              "src/CNAME"
+              "src/CNAME",
+              "src/.nojekyll"
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "outputMode": "browser"
           },
           "configurations": {
             "production": {
@@ -101,7 +99,9 @@
               },
               "src/favicon.png",
               "src/assets",
-              "src/404.html"
+              "src/404.html",
+              "src/CNAME",
+              "src/.nojekyll"
             ],
             "styles": [
               "src/styles.scss"
@@ -112,9 +112,11 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://corporaciondeportivafuturo13.com/",
+            "baseHref": "/",
             "name": "LozanoAndersonTheStain",
-            "email": "adslozanov@gmail.com"
+            "email": "adslozanov@gmail.com",
+            "noBuild": false,
+            "noSilent": true
           }
         }
       }
