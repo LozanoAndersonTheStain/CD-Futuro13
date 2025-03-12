@@ -6,7 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
-  height: 100%;
+  height: auto;
 
   .tournament__container__button {
     padding: 1rem;
@@ -29,11 +29,12 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border: 1px solid var(--quaternary-color);
 
     th, td {
       padding: 10px;
       text-align: center;
-      border: 1px solid var(--quaternary-color);
+      border-bottom: 1px solid var(--quaternary-color);
     }
 
     th {
@@ -50,8 +51,9 @@
 
     td img {
       width: 40px;
-      height: 40px;
+      height: 45px;
       margin-right: 10px;
+      object-fit: contain;
     }
 
     .team {
@@ -62,8 +64,9 @@
 
       .team-logo {
         width: 40px;
-        height: 40px;
+        height: 45px;
         margin-right: 10px;
+        object-fit: contain;
       }
     }
 
@@ -109,8 +112,7 @@
       }
 
       td img {
-        width: 30px;
-        height: 30px;
+        display: none;
       }
     }
   }
