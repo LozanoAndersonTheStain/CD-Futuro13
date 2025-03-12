@@ -1,4 +1,4 @@
-<a [href]="config.href || 'javascript:void(0)'" [ngClass]="config.class" [ngStyle]="{'font-size': config.fontSize}" (click)="config.action()">
+<a [attr.href]="config.href || null" [ngClass]="config.class" [ngStyle]="{'font-size': config.fontSize}" (click)="$event.preventDefault(); config.action()">
   <button [type]="config.type || 'button'" [disabled]="config.disabled">
     <ng-container *ngIf="config.icon && iconPosition === 'left'">
       <mat-icon>{{ config.icon }}</mat-icon>
