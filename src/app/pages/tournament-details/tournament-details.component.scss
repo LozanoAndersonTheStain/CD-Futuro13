@@ -29,12 +29,14 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    border: 1px solid var(--quaternary-color);
+
+    tr {
+      border: 1px solid var(--quaternary-color);
+    }
 
     th, td {
       padding: 10px;
       text-align: center;
-      border-bottom: 1px solid var(--quaternary-color);
     }
 
     th {
@@ -61,6 +63,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      margin: 1rem;
 
       .team-logo {
         width: 40px;
@@ -98,17 +101,21 @@
 
   @media screen and (max-width: 768px) {
     &__title {
-      font-size: 1.5rem;
+      font-size: 1rem;;
     }
 
     &__table {
       th, td {
         padding: 5px;
-        font-size: 14px;
+        font-size: 0.6rem;
       }
 
-      td span {
-        font-size: 1rem;
+      th {
+        font-size: 0.7rem;
+      }
+
+      td span, .vs, .result {
+        font-size: 0.7rem;
       }
 
       td img {

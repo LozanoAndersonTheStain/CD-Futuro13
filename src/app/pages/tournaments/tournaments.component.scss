@@ -6,7 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
-  height: 100%;
+  height: auto;
 
   &__container {
     width: 100%;
@@ -24,7 +24,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     gap: 20px;
   }
 
