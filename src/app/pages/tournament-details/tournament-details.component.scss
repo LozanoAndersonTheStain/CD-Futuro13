@@ -105,6 +105,10 @@
     }
 
     &__table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+
       th, td {
         padding: 5px;
         font-size: 0.6rem;
