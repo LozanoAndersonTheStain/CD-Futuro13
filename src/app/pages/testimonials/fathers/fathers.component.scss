@@ -51,6 +51,10 @@
     cursor: pointer;
     position: relative;
     transition: 0.7s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     &.active {
       width: 460px !important;
@@ -100,14 +104,15 @@ h2 {
   font-family: "Jost", sans-serif;
   font-size: 30px;
   font-weight: 700;
-  text-align: left;
   text-transform: uppercase;
   color: var(--quaternary-color);
   position: absolute;
   top: 50%;
-  left: -10%;
-  transform: rotate(270deg);
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(270deg);
   transition: 0.7s ease;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .details {
@@ -116,16 +121,21 @@ h2 {
   left: 20px;
   z-index: 2;
 
+  h3,
+  p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+
   h3 {
     font-family: "Jost", sans-serif;
     font-size: 20px;
     font-weight: 700;
     text-align: left;
     line-height: 30px;
-    text-align: left;
     color: var(--quaternary-color);
     text-transform: uppercase;
-    transition: 0.7s ease;
     display: none;
   }
 
@@ -135,11 +145,26 @@ h2 {
     font-weight: 700;
     text-align: left;
     line-height: 25px;
-    text-align: left;
     color: var(--quaternary-color);
     text-transform: uppercase;
-    transition: 0.7s ease;
     display: none;
+  }
+}
+
+.father-testimonials__images__img.active .details {
+  h3,
+  p {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h3 {
+    transition-delay: 0.2s;
+  }
+
+  p {
+    transition-delay: 0.4s;
   }
 }
 
@@ -147,17 +172,20 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem 0 0 0;
-  color: var(--tertiary-color);
-  position: absolute;
-  bottom: 0;
+  padding: 1.2rem;
+  bottom: 2rem;
+  left: 0;
   width: 100%;
+  z-index: 10;
 
   & p {
     font-size: 1.3rem;
     font-weight: 550;
     text-align: center;
     width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
   }
 }
 
@@ -168,11 +196,15 @@ h2 {
 @media screen and (max-width: 768px) {
   .fathers-testimonials {
     height: auto;
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
 
     &__title {
       text-align: center;
 
       & h1 {
+        font-size: 1.8rem;
         width: 70%;
       }
     }

@@ -8,10 +8,10 @@
   background-color: var(--background-color);
   height: 100vh;
 
-    &__container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .__content {
@@ -50,6 +50,10 @@
       cursor: pointer;
       position: relative;
       transition: 0.7s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
 
       &.active {
         width: 460px !important;
@@ -58,11 +62,6 @@
 
       &.active h2 {
         display: none;
-      }
-
-      &.active .details p,
-      &.active .details h3 {
-        display: block;
       }
 
       &::after {
@@ -75,7 +74,6 @@
         background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
         border-radius: 0 0 6px 6px;
         pointer-events: none;
-
       }
     }
 
@@ -100,14 +98,15 @@
     font-family: "Jost", sans-serif;
     font-size: 30px;
     font-weight: 700;
-    text-align: left;
     text-transform: uppercase;
     color: var(--quaternary-color);
     position: absolute;
     top: 50%;
-    left: -10%;
-    transform: rotate(270deg);
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg);
     transition: 0.7s ease;
+    margin: 0;
+    white-space: nowrap;
   }
 
   .details {
@@ -116,29 +115,48 @@
     left: 20px;
     z-index: 2;
 
+    h3, p {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
     h3 {
       font-family: "Jost", sans-serif;
       font-size: 20px;
       font-weight: 700;
       text-align: left;
       line-height: 30px;
-      text-align: left;
       color: var(--quaternary-color);
       text-transform: uppercase;
-      transition: 0.7s ease;
       display: none;
     }
 
     p {
+      font-family: "Jost", sans-serif;
       font-size: 16px;
       font-weight: 700;
       text-align: left;
       line-height: 25px;
-      text-align: left;
       color: var(--quaternary-color);
       text-transform: uppercase;
-      transition: 0.7s ease;
       display: none;
+    }
+  }
+
+  .player-testimonials__images__img.active .details {
+    h3, p {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h3 {
+      transition-delay: 0.2s;
+    }
+
+    p {
+      transition-delay: 0.4s;
     }
   }
 
@@ -146,17 +164,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.2rem 0 0 0;
-    color: var(--tertiary-color);
-    position: absolute;
-    bottom: 0;
+    padding: 1.2rem;
+    bottom: 2rem;
+    left: 0;
     width: 100%;
+    z-index: 10;
 
     & p {
       font-size: 1.3rem;
       font-weight: 550;
       text-align: center;
       width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
     }
   }
 
@@ -168,22 +189,26 @@
 @media screen and (max-width: 768px) {
   .players-testimonials {
     height: auto;
+    min-height: 100vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
 
-      &__title {
-        text-align: center;
+    &__title {
+      text-align: center;
 
-        & h1 {
-          width: 70%;
-        }
+      & h1 {
+        font-size: 1.8rem;
+        width: 70%;
       }
+    }
 
-      .players-testimonials__info {
-        display: none;
-      }
+    .players-testimonials__info {
+      display: none;
+    }
 
-      .accordion {
-        display: flex;
-        justify-content: center;
+    .accordion {
+      display: flex;
+      justify-content: center;
 
       mat-accordion {
         margin: 2rem;
@@ -222,4 +247,3 @@
     }
   }
 }
-
