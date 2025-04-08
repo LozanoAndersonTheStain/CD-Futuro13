@@ -1,20 +1,12 @@
 <main>
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item" *ngFor="let slide of visibleSlides" (click)="openModal(slide)">
-        <figure>
-          <img [src]="slide.image" [alt]="slide.name" loading="lazy">
-        </figure>
-      </div>
-    </div>
-
-    <button class="carousel-control-prev" (click)="getPrev()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-compact-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 20l-3 -8l3 -8" /></svg>
-    </button>
-    <button class="carousel-control-next" (click)="getNext()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-compact-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11 4l3 8l-3 8" /></svg>
-    </button>
-  </div>
+  <swiper-container slides-per-view="6" navigation="true" pagination="true" autoplay="true" loop="true" speed="500"
+    space-between="10">
+    <swiper-slide *ngFor="let slide of slidesData" (click)="openModal(slide)">
+      <figure class="container-slide-image">
+        <img [src]="slide.image" [alt]="slide.name" loading="lazy">
+      </figure>
+    </swiper-slide>
+  </swiper-container>
 
   <!-- Modal -->
   <div class="modal" [class.show]="isModalOpen" (click)="closeModal()">

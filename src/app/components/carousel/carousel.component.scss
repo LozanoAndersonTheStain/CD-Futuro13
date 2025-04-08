@@ -1,67 +1,53 @@
-.carousel {
-  display: flex;
-  align-items: center;
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
-  .carousel-inner {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-  }
+:host ::ng-deep {
 
-  .carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  figure {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-
-  img {
-    width: 18rem;
-    height: 15rem;
-    object-fit: cover;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 23%;
-    transform: translateY(-50%);
-    color: var(--primary-color);
-    border: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.3rem;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
-  }
-
-  .carousel-control-prev svg,
-  .carousel-control-next svg {
-    display: flex;
-    justify-content: center;
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #ff6b35 !important;
+    background-color: rgba(0, 0, 0, 0.627);
     width: 2.5rem;
     height: 2.5rem;
+    border-radius: 50%;
+
+    &::after {
+      font-size: 1.5rem;
+    }
   }
 
-  button {
-    margin: 1rem;
+  .swiper-pagination-bullet {
+    background: #ff6b35 !important;
   }
 }
+
+swiper-container {
+  width: 100%;
+  height: 300px;
+}
+
+swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
+}
+
+.container-slide-image {
+  cursor: pointer;
+  width: 280px;
+  height: 300px;
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+}
+
 
 .modal {
   display: none;
@@ -87,7 +73,6 @@
   }
 
   .close {
-    display: none;
     color: var(--primary-color);
     position: absolute;
     top: 10px;
@@ -109,44 +94,26 @@
     width: 20rem;
     height: auto;
     transition: transform 0.3s ease;
-  }
 
-  .modal-image:hover {
-    transform: scale(1.3);
+    &:hover {
+      transform: scale(1.3);
+    }
   }
 }
 
-/* Media Queries */
-
 @media (max-width: 768px) {
-  .carousel {
-    img {
-      width: 13rem;
-      height: 11rem;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      top: 18%;
-      background-color: rgba(0, 0, 0, 0.627);
-      color: var(--quaternary-color);
-    }
-
-    .carousel-control-prev svg,
-    .carousel-control-next svg {
-      width: 1.8rem;
-      height: 1.8rem;
-      margin: 0.2rem;
-    }
+  swiper-container {
+    height: 200px;
   }
 
-  .modal {
-    .modal-content {
-      padding: 0.5rem;
-    }
+  .container-slide-image {
+    width: 180px;
+    height: 200px;
 
-    .modal-image {
-      width: 15rem;
+    img {
+      width: 200px;
+      height: 220px;
+      transition: transform 0.3s ease;
     }
   }
 }
