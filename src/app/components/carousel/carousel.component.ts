@@ -103,8 +103,9 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   currentIndex: number = 0;
   slidesToShow: number = 6;
 
-  isModalOpen = false;
-  selectedImage: { image: string; name: string } | null = null;
+  currentSlide = 0;
+  translateX = 0;
+  slideWidth = 180;
 
   ngOnInit(): void {}
 
@@ -112,10 +113,10 @@ export class CarouselComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const swiperEl = document.querySelector('swiper-container') as any;
-
-      if (swiperEl) {
-        const swiperParams = {
+      // Desktop Swiper
+      const desktopSwiper = document.querySelector('.desktop-slider') as any;
+      if (desktopSwiper) {
+        const desktopParams = {
           slidesPerView: 6,
           spaceBetween: 10,
           navigation: true,
@@ -128,19 +129,29 @@ export class CarouselComponent implements OnInit, AfterViewInit {
           },
           loop: true,
         };
+        Object.assign(desktopSwiper, desktopParams);
+        desktopSwiper.initialize();
+      }
 
-        Object.assign(swiperEl, swiperParams);
-        swiperEl.initialize();
+      // Mobile Swiper
+      const mobileSwiper = document.querySelector('.mobile-slider') as any;
+      if (mobileSwiper) {
+        const mobileParams = {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          navigation: true,
+          pagination: {
+            clickable: true,
+          },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          loop: true,
+        };
+        Object.assign(mobileSwiper, mobileParams);
+        mobileSwiper.initialize();
       }
     }
-  }
-  openModal(slide: { image: string; name: string }): void {
-    this.selectedImage = slide;
-    this.isModalOpen = true;
-  }
-
-  closeModal(): void {
-    this.isModalOpen = false;
-    this.selectedImage = null;
   }
 }

@@ -1,18 +1,21 @@
 <main>
+  <!-- Desktop Slider -->
   <swiper-container slides-per-view="6" navigation="true" pagination="true" autoplay="true" loop="true" speed="500"
-    space-between="10">
-    <swiper-slide *ngFor="let slide of slidesData" (click)="openModal(slide)">
+    space-between="10" class="desktop-slider">
+    <swiper-slide *ngFor="let slide of slidesData">
       <figure class="container-slide-image">
         <img [src]="slide.image" [alt]="slide.name" loading="lazy">
       </figure>
     </swiper-slide>
   </swiper-container>
 
-  <!-- Modal -->
-  <div class="modal" [class.show]="isModalOpen" (click)="closeModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-      <span class="close" (click)="closeModal()">&times;</span>
-      <img [src]="selectedImage?.image" [alt]="selectedImage?.name" class="modal-image" loading="lazy">
-    </div>
-  </div>
+  <!-- Mobile Slider -->
+  <swiper-container class="mobile-slider" slides-per-view="1" navigation="true" pagination="true" autoplay="true"
+    loop="true" speed="500" space-between="0">
+    <swiper-slide *ngFor="let slide of slidesData">
+      <figure class="mobile-slide-image">
+        <img [src]="slide.image" [alt]="slide.name" loading="lazy">
+      </figure>
+    </swiper-slide>
+  </swiper-container>
 </main>
