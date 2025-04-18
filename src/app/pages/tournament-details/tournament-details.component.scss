@@ -1,11 +1,9 @@
 .tournament-details {
-  background-image:
-  linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
-  url(../../../../public/assets/tournament_background_image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
+  background-attachment: fixed;
   height: auto;
 
   .tournament__container__button {
@@ -34,7 +32,8 @@
       border: 1px solid var(--quaternary-color);
     }
 
-    th, td {
+    th,
+    td {
       padding: 10px;
       text-align: center;
     }
@@ -101,7 +100,8 @@
 
   @media screen and (max-width: 768px) {
     &__title {
-      font-size: 1rem;;
+      font-size: 1rem;
+      ;
     }
 
     &__table {
@@ -109,7 +109,8 @@
       overflow-x: auto;
       display: block;
 
-      th, td {
+      th,
+      td {
         padding: 5px;
         font-size: 0.6rem;
       }
@@ -118,7 +119,9 @@
         font-size: 0.7rem;
       }
 
-      td span, .vs, .result {
+      td span,
+      .vs,
+      .result {
         font-size: 0.7rem;
       }
 
