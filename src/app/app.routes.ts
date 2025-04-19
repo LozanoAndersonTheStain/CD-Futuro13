@@ -20,6 +20,7 @@ import { TournamentsComponent } from './pages/tournaments/tournaments.component'
 import { TournamentDetailsComponent } from './pages/tournament-details/tournament-details.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { YearTournamentsComponent } from './pages/tournaments/year-tournaments/year-tournaments.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -40,6 +41,7 @@ export const routes: Routes = [
   { path: 'awards/trophy-room', component: NotContentPageComponent },
   { path: 'awards/player-awards', component: NotContentPageComponent },
   { path: 'tournaments', component: TournamentsComponent },
+  { path: 'tournaments/:year', component: YearTournamentsComponent },
   { path: 'tournament-details', component: TournamentDetailsComponent },
   { path: 'categories', component: CategoriesComponent },
   { path: 'contact', component: ContactComponent },
