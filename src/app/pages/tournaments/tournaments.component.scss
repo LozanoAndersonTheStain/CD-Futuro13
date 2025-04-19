@@ -1,15 +1,16 @@
 .tournaments {
   background-image:
-  linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
-  url(../../../../public/assets/tournament_background_image.jpg);
+    linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
+    url(../../../../public/assets/tournament_background_image.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
-  height: auto;
+  background-attachment: fixed;
 
   &__container {
     width: 100%;
+    height: 61vh;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -33,7 +34,7 @@
     height: 300px;
     background-size: cover;
     background-position: center;
-    background-color: var(--quaternary-color);
+    background-color: var(--tertiary-color);
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
@@ -45,13 +46,18 @@
 
     h2 {
       margin: 0 0 10px;
-      font-size: 1.5rem;
+      font-size: 2.8rem;
       color: var(--primary-color);
     }
 
     p {
       margin: 0;
       font-size: 1.1rem;
+      color: var(--quaternary-color);
+    }
+
+    .tournament-names {
+      margin-bottom: 0.5rem;
       color: var(--quaternary-color);
     }
 
@@ -84,7 +90,7 @@
 
   @media screen and (max-width: 768px) {
     &__title {
-      font-size: 1.5rem;
+      font-size: 2em;
     }
 
     &__grid {
