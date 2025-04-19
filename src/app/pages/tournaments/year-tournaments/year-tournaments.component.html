@@ -1,0 +1,28 @@
+<main class="tournaments">
+  <div class="tournaments__container">
+    <div class="tournament__container__button">
+      <app-button class="tournament__button" [config]="buttonConfig">
+        <mat-icon class="icon">{{ buttonConfig.icon }}</mat-icon>
+        {{ buttonConfig.label }}
+      </app-button>
+    </div>
+    <h1 class="tournaments__title">Torneos - {{ year }}</h1>
+    <ng-container *ngIf="isLoading; else content">
+      <div class="loading">
+        <mat-spinner></mat-spinner>
+        <p>Cargando...</p>
+      </div>
+    </ng-container>
+    <ng-template #content>
+      <div class="tournaments__grid">
+        <div class="tournaments__card" *ngFor="let tournament of tournaments" (click)="navigateToTournament(tournament)"
+          [style.backgroundImage]="'url(' + tournament.imageTournament +')'">
+          <div class="overlay">
+            <h2>{{ tournament.title }}</h2>
+            <p>{{ tournament.category }}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</main>
