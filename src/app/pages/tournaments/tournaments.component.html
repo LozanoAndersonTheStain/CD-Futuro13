@@ -3,19 +3,24 @@
     <h1 class="tournaments__title">Torneos</h1>
     <ng-container *ngIf="isLoading; else content">
       <div class="loading">
-        <mat-spinner></mat-spinner> <!-- Spinner de Angular Material para mostrar la carga -->
+        <mat-spinner></mat-spinner>
         <p>Cargando...</p>
       </div>
     </ng-container>
     <ng-template #content>
-    <div class="tournaments__grid">
-      <div class="tournaments__card" *ngFor="let tournament of tournaments" (click)="navigateToTournament(tournament)" [style.backgroundImage]="'url(' + tournament.imageTournament +')'">
-        <div class="overlay">
-          <h2>{{ tournament.title }}</h2>
-          <p>{{ tournament.category }}</p>
+      <div class="tournaments__grid">
+        <div class="tournaments__card" *ngFor="let year of tournamentsByYear | keyvalue"
+          (click)="navigateToYearTournaments(year.key)"
+          [style.backgroundImage]="'url(../../../../public/assets/tournament_background_image.jpg)'">
+          <div class="overlay">
+            <h2>{{ year.key }}</h2>
+            <div class="tournament-names">
+              <span>{{ year.value[0]?.title }}</span>
+            </div>
+            <p>{{ year.value.length }} torneos</p>
+          </div>
         </div>
       </div>
-    </div>
     </ng-template>
   </div>
 </main>
