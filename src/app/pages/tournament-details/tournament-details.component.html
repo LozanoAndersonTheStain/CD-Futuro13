@@ -1,4 +1,5 @@
-<main class="tournament-details">
+<main class="tournament-details"
+  [style.backgroundImage]="'linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)), url(' + tournament?.imageTournament + ')'">
   <div class="tournament__container__button">
     <app-button class="tournament__button" [config]="buttonConfig">
       <mat-icon class="icon">{{ buttonConfig.icon }}</mat-icon>
