@@ -5,22 +5,12 @@
         <div class="sponsors-slider__title">
           <h2>Nuestros Aliados</h2>
         </div>
-        <div class="sponsors-slider__slider">
-          <ng-container *ngFor="let sponsor of sponsors">
-            <div class="sponsors-slider__slider__item">
-              <img [src]="sponsor.image" [alt]="sponsor.name" />
+        <div class="slider" [style.--quantity]="sponsors.length" [style.--width]="'200px'" [style.--height]="'150px'">
+          <div class="list">
+            <div class="item" *ngFor="let sponsor of sponsors; let i = index" [style.--position]="i + 1">
+              <img [src]="sponsor.image" [alt]="sponsor.name">
             </div>
-          </ng-container>
-          <ng-container *ngFor="let sponsor of sponsors">
-            <div class="sponsors-slider__slider__item">
-              <img [src]="sponsor.image" [alt]="sponsor.name" />
-            </div>
-          </ng-container>
-          <ng-container *ngFor="let sponsor of sponsors">
-            <div class="sponsors-slider__slider__item">
-              <img [src]="sponsor.image" [alt]="sponsor.name" />
-            </div>
-          </ng-container>
+          </div>
         </div>
       </div>
     </div>
