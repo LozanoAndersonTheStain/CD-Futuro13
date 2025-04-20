@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './sponsors-slider.component.html',
   styleUrls: ['./sponsors-slider.component.scss']
 })
-export class SponsorsSliderComponent implements OnInit {
+export class SponsorsSliderComponent {
   sponsors = [
     { name: 'Sponsor 1', image: 'assets/logos_sponsors/sponsor1.svg' },
     { name: 'Sponsor 2', image: 'assets/logos_sponsors/sponsor2.svg' },
@@ -21,8 +21,4 @@ export class SponsorsSliderComponent implements OnInit {
     { name: 'Sponsor 9', image: 'assets/logos_sponsors/sponsor9.svg' },
     { name: 'Sponsor 10', image: 'assets/logos_sponsors/sponsor10.svg' }
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
