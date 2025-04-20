@@ -1,0 +1,29 @@
+<main class="gallery-details">
+  <div class="gallery-details__container">
+    <button class="gallery-details__back-btn" (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+      <span>Volver a la lista</span>
+    </button>
+    <h1 class="gallery-details__title">Galería - {{ year }}</h1>
+
+    <ng-container *ngIf="isLoading; else content">
+      <div class="loading">
+        <mat-spinner></mat-spinner>
+        <p>Cargando imágenes...</p>
+      </div>
+    </ng-container>
+
+    <ng-template #content>
+      <div class="sliders-container">
+        <div class="slider" *ngFor="let row of imageRows; let i = even" [attr.reverse]="i ? 'true' : null"
+          [style.--quantity]="row.length" [style.--width]="'200px'" [style.--height]="'200px'">
+          <div class="list">
+            <div class="item" *ngFor="let image of row; let j = index" [style.--position]="j + 1">
+              <img [src]="image" [alt]="'Gallery image ' + year">
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</main>
