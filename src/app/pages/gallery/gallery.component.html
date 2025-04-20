@@ -1,0 +1,20 @@
+<main class="gallery">
+  <div class="gallery__container">
+    <h1 class="gallery__title">Momentos Futuro 13</h1>
+    <ng-container *ngIf="isLoading; else content">
+      <div class="loading">
+        <mat-spinner></mat-spinner>
+        <p>Cargando...</p>
+      </div>
+    </ng-container>
+
+    <ng-template #content>
+      <div class="gallery__grid">
+        <div class="gallery__card" *ngFor="let card of galleryCards" (click)="navigateToDetails(card.year)">
+          <h2 class="gallery__card-title">Galería {{ card.year }}</h2>
+          <p class="gallery__card-description">{{ card.totalImages }} imágenes</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</main>
