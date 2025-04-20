@@ -21,6 +21,8 @@ import { TournamentDetailsComponent } from './pages/tournament-details/tournamen
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { YearTournamentsComponent } from './pages/tournaments/year-tournaments/year-tournaments.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import { GalleryDetailsComponent } from './pages/gallery-details/gallery-details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -44,6 +46,8 @@ export const routes: Routes = [
   { path: 'tournaments/:year', component: YearTournamentsComponent },
   { path: 'tournament-details', component: TournamentDetailsComponent },
   { path: 'categories', component: CategoriesComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:year', component: GalleryDetailsComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: ErrorPageComponent },
 ];
