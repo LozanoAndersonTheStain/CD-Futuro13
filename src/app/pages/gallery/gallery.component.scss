@@ -10,10 +10,13 @@
 
   &__container {
     width: 100%;
-    max-width: 1200px;
-    height: 100vh;
+    max-width: 1300px;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
   }
 
   &__title {
@@ -25,7 +28,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin-bottom: 20px;
   }
 
   &__card {
