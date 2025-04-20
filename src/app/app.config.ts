@@ -7,11 +7,13 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { routes } from './app.routes';
 import { ButtonReturnComponent } from './components/button-return/button-return.component';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideHttpClient(),
     provideClientHydration(withEventReplay()),
     provideAnimationsAsync(),
     provideFirebaseApp(() => {
