@@ -1,0 +1,19 @@
+<div class="media-modal">
+  <button class="media-modal__close-button" (click)="close()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <div class="media-modal__content">
+    <ng-container *ngIf="data.isVideo; else imageContent">
+      <div class="media-modal__video-container">
+        <video [src]="data.url" controls autoplay>
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </ng-container>
+    <ng-template #imageContent>
+      <div class="media-modal__image-container">
+        <img [src]="data.url" [alt]="'Media content'" />
+      </div>
+    </ng-template>
+  </div>
+</div>
