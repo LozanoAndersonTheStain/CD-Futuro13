@@ -1,15 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-
-interface GalleryData {
-  [key: string]: {
-    images: string[];
-  };
-}
+import { GalleryData } from '../interfaces/gallery.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GalleryService {
   constructor(private http: HttpClient) {}
@@ -18,9 +13,14 @@ export class GalleryService {
     return this.http.get<GalleryData>('assets/data/gallery.json');
   }
 
-  getImagesByYear(year: string): Observable<string[]> {
-    return this.getAllGalleryData().pipe(
-      map(data => data[year]?.images || [])
+  getMediaByYear(
+    year: string
+  ): Observable<{ images: string[]; videos: string[] }> {
+    return this.http.get<GalleryData>('assets/data/gallery.json').pipe(
+      map((data) => ({
+        images: data[year]?.images || [],
+        videos: data[year]?.videos || [],
+      }))
     );
   }
 }
