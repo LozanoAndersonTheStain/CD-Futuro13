@@ -4,6 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { GalleryService } from '../../services/gallery.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MediaRow } from '../../interfaces/gallery.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { MediaModalComponent } from '../../components/media-modal/media-modal.component';
 
 @Component({
   selector: 'app-gallery-details',
@@ -14,36 +17,68 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class GalleryDetailsComponent implements OnInit {
   year: string = '';
-  imageRows: string[][] = [];
+  mediaRows: MediaRow[] = [];
   isLoading = true;
-  readonly IMAGES_PER_ROW = 6;
+  readonly ITEMS_PER_ROW = 6;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private galleryService: GalleryService
+    private galleryService: GalleryService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit() {
     this.year = this.route.snapshot.paramMap.get('year') || '';
-    this.loadImages();
+    this.loadMedia();
   }
 
-  private loadImages() {
-    this.galleryService.getImagesByYear(this.year).subscribe((images) => {
-      this.createImageRows(images);
+  private loadMedia() {
+    this.galleryService.getMediaByYear(this.year).subscribe((media) => {
+      this.createMediaRows(media.images, media.videos);
       this.isLoading = false;
     });
   }
 
-  private createImageRows(images: string[]) {
-    this.imageRows = [];
-    for (let i = 0; i < images.length; i += this.IMAGES_PER_ROW) {
-      this.imageRows.push(images.slice(i, i + this.IMAGES_PER_ROW));
+  private createMediaRows(images: string[], videos: string[]) {
+    const allMedia = [
+      ...images.map((url) => ({ type: 'image' as const, url })),
+      ...videos.map((url) => ({ type: 'video' as const, url })),
+    ];
+
+    this.mediaRows = [];
+    for (let i = 0; i < allMedia.length; i += this.ITEMS_PER_ROW) {
+      const rowItems = allMedia.slice(i, i + this.ITEMS_PER_ROW);
+      this.mediaRows.push({
+        type: rowItems[0].type,
+        urls: rowItems.map((item) => item.url),
+      });
     }
   }
 
   goBack() {
     this.router.navigate(['/gallery']);
+  }
+
+  isVideo(url: string): boolean {
+    return (
+      url.toLowerCase().endsWith('.mp4') ||
+      url.toLowerCase().endsWith('.webm') ||
+      url.toLowerCase().endsWith('.ogg')
+    );
+  }
+
+  openMedia(url: string): void {
+    this.dialog.open(MediaModalComponent, {
+      width: '100%',
+      height: '100%',
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      panelClass: 'fullscreen-modal',
+      data: {
+        url,
+        isVideo: this.isVideo(url)
+      }
+    });
   }
 }
