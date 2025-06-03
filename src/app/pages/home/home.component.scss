@@ -1,9 +1,7 @@
 .home {
   background-image:
     linear-gradient(var(--background-color) 100%, rgba(0, 0, 0, 0)),
-    /* Capa de color con transparencia */
     url(../../../../public/assets/imagen_de_fondo.jpg);
-  /* Capa de imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,7 +118,6 @@
     font-weight: 600;
     width: 440px;
     text-align: justify;
-
   }
 
   /* Third Section */
@@ -166,7 +163,6 @@
         align-items: center;
         gap: 4rem;
         text-align: start;
-
 
         .home__content__sponsorship__plan__button {
           height: 3rem;
@@ -288,9 +284,126 @@
     }
   }
 
-
-
   /* Media Queries */
+
+  @media (max-width: 1400px) {
+    .home__content__information__text__paragraph-second {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .home__content__sponsorship_plan {
+      .home__content__sponsorship__plan__description {
+        width: 75%;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .home {
+      .home__content__information__text__paragraph-second {
+        width: 90%;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .home__content__sponsorship_plan {
+        .home__content__sponsorship__plan__description {
+          width: 80%;
+        }
+      }
+
+      .home__content__information__text__paragraph {
+        width: 90%;
+      }
+
+      .home__content__information__slogan__text {
+        width: 380px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .home {
+      .home__title {
+        font-size: 4rem;
+      }
+
+      .logo {
+        width: 18rem;
+      }
+
+      .home__content__information__text__paragraph {
+        width: 100%;
+      }
+
+      .home__content__sponsorship_plan {
+        .home__content__sponsorship__plan__description {
+          width: 90%;
+          gap: 2rem;
+        }
+      }
+
+      .home__content__information-third {
+        padding: 8rem;
+      }
+
+      .home__content__sponsorship_plan {
+        .home__content__sponsorship__plan__description {
+          gap: 2rem;
+
+          .home__content__sponsorship__plan__text {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    .home__content__title {
+      .home__title {
+        font-size: 4rem;
+      }
+    }
+
+    .home__content__information {
+      gap: 2rem;
+      padding: 2rem;
+
+      .logo {
+        width: 16rem;
+      }
+
+      .home__content__information__text {
+        .home__content__information__text__title {
+          font-size: 1.4rem;
+        }
+
+        .home__content__information__text__paragraph {
+          font-size: 1.1rem;
+          width: 100%;
+          text-align: justify;
+          line-height: 1.5;
+        }
+      }
+    }
+
+
+  }
+
+  @media (min-width: 769px) and (max-width: 880px) {
+    .home__content__information {
+      .logo {
+        width: 14rem;
+      }
+
+      .home__content__information__text {
+        .home__content__information__text__paragraph {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
 
   @media (max-width: 768px) {
     .home__title {
@@ -414,6 +527,160 @@
       gap: 2rem;
     }
 
+    .home__content__sponsorship_plan {
+      .home__content__sponsorship__plan__description {
+        width: 95%;
 
+        .home__content__sponsorship__plan__text {
+          font-size: 1.1rem;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .home__title {
+      font-size: 2.5rem;
+      padding: 1.5rem;
+    }
+
+    .home__content__information {
+      padding: 1rem;
+
+      .home__content__information__text {
+        .home__content__information__text__title {
+          font-size: 1.3rem;
+        }
+
+        .home__content__information__text__paragraph {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .home__content__information-second {
+      .home__content__information__text-second {
+        .home__content__information__text__title-second {
+          font-size: 1.8rem;
+        }
+
+        .home__content__information__text__paragraph-second {
+          font-size: 0.9rem;
+        }
+      }
+
+      .home__content__information__slogan {
+        .home__content__information__slogan__text {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .home__content__sponsorship_plan {
+      .home__content__sponsorship__plan__title {
+        font-size: 1.3rem;
+      }
+
+      .home__content__sponsorship__plan__description {
+        width: 100%;
+
+        .home__content__sponsorship__plan__text {
+          font-size: 1rem;
+          gap: 1.5rem;
+
+          .home__content__sponsorship__plan__button {
+            width: 14rem;
+
+            .sponsorship-button {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .modal {
+      &__content {
+        width: 90%;
+        height: 35rem;
+
+        .home__content__sponsorship__plan__text__message {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    .home__title {
+      font-size: 2rem;
+      padding: 1.2rem;
+    }
+
+    .home__content__information {
+      .home__content__information__text {
+        .home__content__information__text__title {
+          font-size: 1.2rem;
+        }
+
+        .home__content__information__text__paragraph {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .home__content__information-second {
+      .home__content__information__text-second {
+        .home__content__information__text__title-second {
+          font-size: 1.6rem;
+        }
+
+        .home__content__information__text__paragraph-second {
+          font-size: 0.85rem;
+        }
+      }
+
+      .home__content__information__slogan {
+        .home__content__information__slogan__text {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .home__content__sponsorship_plan {
+      .home__content__sponsorship__plan__title {
+        font-size: 1.2rem;
+      }
+
+      .home__content__sponsorship__plan__description {
+        .home__content__sponsorship__plan__text {
+          font-size: 0.9rem;
+
+          .home__content__sponsorship__plan__button {
+            width: 12rem;
+
+            .sponsorship-button {
+              font-size: 0.85rem;
+              padding: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .modal {
+      &__content {
+        height: 30rem;
+
+        .home__content__sponsorship__plan__text__message {
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
   }
 }
