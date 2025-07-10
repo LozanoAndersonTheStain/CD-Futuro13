@@ -34,6 +34,7 @@
     from {
       transform: perspective(1000px) rotateX(-13deg) rotateY(0deg);
     }
+
     to {
       transform: perspective(1000px) rotateX(-13deg) rotateY(360deg);
     }
@@ -42,8 +43,7 @@
   &__item {
     position: absolute;
     inset: 0 0 0 0;
-    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(500px);
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px);
   }
 
   &__item img {
@@ -234,6 +234,7 @@
       border-radius: 20px;
       overflow: hidden;
       transition: box-shadow 0.3s ease, border 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
       &.active {
         display: block;
@@ -260,6 +261,8 @@
         transition: height 0.3s ease;
         background-color: var(--tertiary-color);
         position: relative;
+        align-items: center;
+        justify-content: center;
       }
 
       &:hover .top-card {
@@ -278,16 +281,23 @@
       }
 
       .card-content {
-        padding-top: 16%;
+        padding-top: 14px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: #fff;
+        text-align: center;
 
         .card-title {
+          padding: 0 20px 0 20px;
           font-weight: 700;
-          font-size: 1.4rem;
+          font-size: 1.3rem;
+          line-height: 1.3;
+          margin-bottom: 15px;
+          word-wrap: break-word;
+          hyphens: auto;
+          max-width: 100%;
         }
 
         .card-txt {
@@ -310,20 +320,82 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      padding: 10px;
+      padding: 20px 30px;
+      gap: 40px;
 
       button {
         background-color: var(--primary-color);
         color: #fff;
         border: none;
-        padding: 10px;
+        padding: 12px 20px;
         cursor: pointer;
-        border-radius: 5px;
+        border-radius: 8px;
         transition: background-color 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+        flex: 1;
 
         &:hover {
           background-color: var(--secondary-color);
         }
+      }
+    }
+  }
+
+  // Vista Tablet
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .team-teachers {
+      height: 100%;
+    }
+
+    &__banner {
+      display: none;
+    }
+
+    &__cards-mobile {
+      display: block;
+      height: 100vh;
+      overflow-y: auto;
+
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        padding: 2rem 40px;
+        max-width: 800px;
+        margin: 0 auto;
+        justify-items: center;
+      }
+
+      &__content__card {
+        width: 100%;
+        max-width: 300px;
+
+        &.active,
+        &:not(.active) {
+          display: block;
+        }
+
+        .card-content {
+          .card-title {
+            font-size: 1.2rem;
+            padding: 15px 15px 0 15px;
+          }
+
+          .card-txt {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+          }
+
+          .card-btn {
+            font-size: 10px;
+            margin-top: 10%;
+          }
+        }
+      }
+
+      &__controls {
+        display: none;
       }
     }
   }

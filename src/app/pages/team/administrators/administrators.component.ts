@@ -20,28 +20,40 @@ export class AdministratorsComponent implements OnInit {
       name: 'Cristino Álvarez Moreno ',
       description:
         'Como Presidente del Club, Cristino lidera la planificación y supervisión de todas las actividades. Su visión estratégica y dedicación aseguran el crecimiento y éxito del club, guiando tanto a jugadores como a staff hacia objetivos comunes con excelencia y compromiso.',
-      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056245/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n_Pie.jpg'],
+      imageUrl: [
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n.jpg',
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056245/Cristino_%C3%81lvarez_Moreno_Administraci%C3%B3n_Pie.jpg',
+      ],
       position: 'Presidente del Club',
     },
     {
       name: 'Leisy Julie Parra Palacios',
       description:
         'En su rol de Gestora Social, Leisy se encarga de fortalecer los lazos entre el club y la comunidad. Con creatividad y empatía, organiza eventos especiales y promueve iniciativas que fomentan la inclusión y el desarrollo social a través del deporte.',
-      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n_Pie.jpg'],
+      imageUrl: [
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n.jpg',
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Leisy_Julie_Parra_Palacios_Administraci%C3%B3n_Pie.jpg',
+      ],
       position: 'Gestora Social',
     },
     {
       name: 'Maria Camila Vélez Vélez',
       description:
         'Como Secretaria, Maria Camila es el pilar administrativo del club. Su organización y atención al detalle garantizan que las operaciones diarias fluyan sin problemas, apoyando tanto a directivos como a miembros del equipo con eficiencia y profesionalismo.',
-      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n_Pie.jpg'],
+      imageUrl: [
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n.jpg',
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056246/Maria_Camila_V%C3%A9lez_V%C3%A9lez_Administraci%C3%B3n_Pie.jpg',
+      ],
       position: 'Secretaria',
     },
     {
       name: 'Jhon Fernando Restrepo Garcia',
       description:
         'En el cargo de Jefe de Prensa, Jhon Fernando maneja la comunicación y la imagen del club. Con habilidades estratégicas y creatividad, asegura que las noticias, logros y eventos del club sean difundidos de manera efectiva, fortaleciendo su presencia en medios y redes sociales.',
-      imageUrl: ['https://res.cloudinary.com/dy6jglszo/image/upload/v1741056247/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n.jpg', 'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056250/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n_Pie.jpg'],
+      imageUrl: [
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056247/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n.jpg',
+        'https://res.cloudinary.com/dy6jglszo/image/upload/v1741056250/Jhon_Fernando_Restrepo_Garcia_Administraci%C3%B3n_Pie.jpg',
+      ],
       position: 'Jefe de Prensa',
     },
   ];
@@ -68,6 +80,8 @@ export class AdministratorsComponent implements OnInit {
   buttonConfig: ButtonConfig = {
     label: 'Ver info del Administrador',
     action: () => {
+      // Sincronizar el índice actual con la tarjeta activa
+      this.currentAdministratorIndex = this.currentCardIndex;
       this.openModal();
     },
     type: 'button',
@@ -93,12 +107,16 @@ export class AdministratorsComponent implements OnInit {
   nextCard(): void {
     this.currentCardIndex =
       (this.currentCardIndex + 1) % this.administrators.length;
+    // Sincronizar también el administrador actual
+    this.currentAdministratorIndex = this.currentCardIndex;
   }
 
   prevCard(): void {
     this.currentCardIndex =
       (this.currentCardIndex - 1 + this.administrators.length) %
       this.administrators.length;
+    // Sincronizar también el administrador actual
+    this.currentAdministratorIndex = this.currentCardIndex;
   }
 
   ngOnInit(): void {

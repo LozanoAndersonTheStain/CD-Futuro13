@@ -24,7 +24,7 @@
   <div class="team-teachers__cards-mobile">
     <div class="team-teachers__cards-mobile__content">
       <div class="team-teachers__cards-mobile__content__card" *ngFor="let teacher of teachers; let i = index" [class.active]="i === currentCardIndex">
-        <div class="top-card" [style.backgroundImage]="'url(' + teacher.imageUrl + ')'"></div>
+        <div class="top-card" [style.backgroundImage]="'url(' + teacher.imageUrl[0] + ')'"></div>
         <div class="bottom-card">
           <div class="card-content">
             <span class="card-title">{{teacher.name}}</span>
