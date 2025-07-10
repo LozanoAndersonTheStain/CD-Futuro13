@@ -11,18 +11,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
 
       - name: Build
-        run: npm run build -- --base-href=/CD-Futuro13/
+        run: ng build --configuration production --base-href=/CD-Futuro13/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
