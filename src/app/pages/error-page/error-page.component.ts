@@ -1,26 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonReturnComponent } from "../../components/button-return/button-return.component";
-import { Meta, Title } from '@angular/platform-browser';
+import { ButtonReturnComponent } from '../../components/button-return/button-return.component';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-error-page',
   templateUrl: './error-page.component.html',
   styleUrls: ['./error-page.component.scss'],
-  imports: [ButtonReturnComponent]
+  imports: [ButtonReturnComponent],
 })
 export class ErrorPageComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-  ) {}
+  constructor(private metaTagsService: MetaTagsService) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('Página no encontrada - CD Futuro 13');
-    this.metaService.addTags([
-      { name: 'description', content: 'La página que buscas no se encuentra disponible en CD Futuro 13.' },
-      { name: 'keywords', content: 'CD Futuro 13, página no encontrada, error 404' },
-      { name: 'author', content: 'CD Futuro 13' },
-      { name: 'robots', content: 'noindex, nofollow' }
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Página no encontrada',
+      description: 'Lo sentimos, la página que buscas no existe. Vuelve a la página principal.',
+      keywords: 'CD Futuro 13, error, página no encontrada, 404',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/error',
+      type: 'website',
+    });
   }
 }

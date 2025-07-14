@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardConfig } from '../../interfaces/card.interface';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../../components/card/card.component';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-team',
@@ -13,8 +13,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class TeamComponent implements OnInit {
   constructor(
-    private titleService: Title,
-    private metaService: Meta
+    private metaTagsService: MetaTagsService
   ) {}
 
   cardConfigs: CardConfig[] = [
@@ -37,18 +36,12 @@ export class TeamComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Equipo');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Conoce a los profesionales que están detrás de la formación de nuestros jóvenes y a los responsables de la gestión y administración del club.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, deporte, formación, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Equipo',
+      description: 'Conoce a los profesionales que están detrás de la formación de nuestros jóvenes y a los responsables de la gestión y administración del club.',
+      keywords: 'CD Futuro 13, deporte, formación, jóvenes, comuna 13, equipo, profesores',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/team',
+      type: 'website'
+    });
   }
 }

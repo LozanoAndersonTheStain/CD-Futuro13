@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TournamentService } from '../../services/tournament.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 interface TournamentsByYear {
   [key: string]: any[];
@@ -22,7 +23,8 @@ export class TournamentsComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private tournamentService: TournamentService
+    private tournamentService: TournamentService,
+    private metaTagsService: MetaTagsService
   ) {}
 
   ngOnInit(): void {
@@ -30,6 +32,16 @@ export class TournamentsComponent implements OnInit {
       this.tournaments = data;
       this.groupTournamentsByYear();
       this.isLoading = false;
+    });
+
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Torneos',
+      description:
+        'Descubre los torneos de CD Futuro 13, sus fechas y detalles. Participa y forma parte de nuestra comunidad deportiva.',
+      keywords:
+        'CD Futuro 13, torneos, fechas, detalles, participar, comunidad deportiva',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/tournaments',
+      type: 'website',
     });
   }
 

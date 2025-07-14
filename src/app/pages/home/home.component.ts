@@ -7,6 +7,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { ButtonConfig } from '../../interfaces/button.interface';
 import { SponsorsSliderComponent } from "../../components/sponsors-slider/sponsors-slider.component";
 import { RudePiggyComponent } from "../../components/rude-piggy/rude-piggy.component";
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-home',
@@ -37,25 +38,19 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(
-    private titleService: Title,
-    private metaService: Meta,
+    private metaTagsService: MetaTagsService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Home');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, deporte, formación, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Club Deportivo de la Comuna 13',
+      description: 'CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín. Únete a nuestra familia deportiva y construye un futuro lleno de oportunidades.',
+      keywords: 'CD Futuro 13, club deportivo, fútbol, comuna 13, Medellín, formación deportiva, jóvenes, deporte transformación social',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/home',
+      image: 'https://lozanoandersonthestain.github.io/CD-Futuro13/assets/logo.svg',
+      type: 'website'
+    });
   }
 
   isModalOpen = false;

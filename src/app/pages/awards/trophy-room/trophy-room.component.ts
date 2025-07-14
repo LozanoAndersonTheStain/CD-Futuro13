@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Trophy } from '../../../interfaces/trophy.interface';
-import { Title, Meta } from '@angular/platform-browser';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-trophy-room',
@@ -122,28 +122,23 @@ export class TrophyRoomComponent implements OnInit {
   visibleTrophies: Trophy[] = [];
 
   constructor(
-      @Inject(PLATFORM_ID)
-        private platformId: Object,
-        private metaTitle: Title,
-        private metaService: Meta
-    ) {}
+    @Inject(PLATFORM_ID)
+    private platformId: Object,
+    private metaTagsService: MetaTagsService
+  ) {}
 
   ngOnInit(): void {
     this.updateVisibleTrophies();
 
-    this.metaTitle.setTitle('CD Futuro 13 - Trofeos y Copas');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Conoce los trofeos y copas que hemos obtenido en nuestra trayectoria como club en los diferentes torneos.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, premios, reconocimientos, copas, torneos',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Sala de Trofeos',
+      description:
+        'Descubre los logros y trofeos de CD Futuro 13, un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.',
+      keywords:
+        'CD Futuro 13, sala de trofeos, logros, comuna 13, Medellín, formación deportiva, jóvenes',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/awards/trophy-room',
+      type: 'website',
+    });
   }
 
   updateVisibleTrophies(): void {

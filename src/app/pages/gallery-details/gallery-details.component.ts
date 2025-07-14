@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MediaRow } from '../../interfaces/gallery.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { MediaModalComponent } from '../../components/media-modal/media-modal.component';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-gallery-details',
@@ -25,12 +26,21 @@ export class GalleryDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private galleryService: GalleryService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private metaTagsService: MetaTagsService
   ) {}
 
   ngOnInit() {
     this.year = this.route.snapshot.paramMap.get('year') || '';
     this.loadMedia();
+
+    this.metaTagsService.updateTags({
+      title: `CD Futuro 13 - Galería ${this.year}`,
+      description: `Explora la galería de fotos y videos del año ${this.year} de CD Futuro 13. Conoce nuestros logros y experiencias en el fútbol.`,
+      keywords: `CD Futuro 13, galería, fotos, videos, fútbol, logros, ${this.year}`,
+      url: `https://lozanoandersonthestain.github.io/CD-Futuro13/gallery/${this.year}`,
+      type: 'website',
+    });
   }
 
   private loadMedia() {
@@ -77,8 +87,8 @@ export class GalleryDetailsComponent implements OnInit {
       panelClass: 'fullscreen-modal',
       data: {
         url,
-        isVideo: this.isVideo(url)
-      }
+        isVideo: this.isVideo(url),
+      },
     });
   }
 }

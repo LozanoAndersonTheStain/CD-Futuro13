@@ -1,13 +1,14 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { PlayerAward } from '../../../interfaces/player-award.interface';
-import { Meta, Title } from '@angular/platform-browser';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Meta, Title } from '@angular/platform-browser';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-player-awards',
   imports: [CommonModule],
   templateUrl: './player-awards.component.html',
-  styleUrl: './player-awards.component.scss'
+  styleUrl: './player-awards.component.scss',
 })
 export class PlayerAwardsComponent implements OnInit {
   playerAward: PlayerAward[] = [
@@ -21,9 +22,9 @@ export class PlayerAwardsComponent implements OnInit {
       assistance: 5,
       award: {
         nameAward: 'Mejor Jugador',
-        year: 2023
+        year: 2023,
       },
-      position: 'Delantero'
+      position: 'Delantero',
     },
     {
       nameCategory: 'Sub 8',
@@ -35,9 +36,9 @@ export class PlayerAwardsComponent implements OnInit {
       assistance: 5,
       award: {
         nameAward: 'Mejor Arquero',
-        year: 2024
+        year: 2024,
       },
-      position: 'Arquero'
+      position: 'Arquero',
     },
     {
       nameCategory: 'Sub 6',
@@ -49,9 +50,9 @@ export class PlayerAwardsComponent implements OnInit {
       assistance: 3,
       award: {
         nameAward: 'Figura del Partido',
-        year: 2025
+        year: 2025,
       },
-      position: 'Arquero'
+      position: 'Arquero',
     },
     {
       nameCategory: 'Sub 12',
@@ -63,9 +64,9 @@ export class PlayerAwardsComponent implements OnInit {
       assistance: 8,
       award: {
         nameAward: 'Mejor Jugador del Torneo',
-        year: 2022
+        year: 2022,
       },
-      position: 'Medio Campista'
+      position: 'Medio Campista',
     },
     {
       nameCategory: 'Sub 10',
@@ -77,10 +78,10 @@ export class PlayerAwardsComponent implements OnInit {
       assistance: 5,
       award: {
         nameAward: 'Mejor Jugador',
-        year: 2023
+        year: 2023,
       },
-      position: 'Delantero'
-    }
+      position: 'Delantero',
+    },
   ];
 
   currentPlayerAwardIndex = 0;
@@ -89,26 +90,20 @@ export class PlayerAwardsComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID)
     private platformId: Object,
-    private metaTitle: Title,
-    private metaService: Meta
+    private metaTagsService: MetaTagsService
   ) {}
 
   ngOnInit(): void {
     this.updateVisiblePlayerAward();
-
-    this.metaTitle.setTitle('CD Futuro 13 - Premios de Jugadores');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Conoce los reconocimientos obtenidos por nuestros jugadores a lo largo de nuestras participaciones en torneos.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, premios, reconocimientos, torneos, juveniles, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Premios a Jugadores',
+      description:
+        'Conoce los premios y reconocimientos que han recibido nuestros jugadores por su destacada actuación en los partidos.',
+      keywords:
+        'CD Futuro 13, premios, jugadores, futbol, reconocimiento, comuna 13',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/awards/player-awards',
+      type: 'website',
+    });
   }
 
   updateVisiblePlayerAward(): void {
@@ -126,7 +121,10 @@ export class PlayerAwardsComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       const isMobile = window.innerWidth <= 768;
       const itemsToShow = isMobile ? 1 : 3;
-      if (this.currentPlayerAwardIndex + itemsToShow < this.playerAward.length) {
+      if (
+        this.currentPlayerAwardIndex + itemsToShow <
+        this.playerAward.length
+      ) {
         this.currentPlayerAwardIndex++;
         this.updateVisiblePlayerAward();
       }

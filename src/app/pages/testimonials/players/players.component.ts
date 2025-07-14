@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Testimonial } from '../../../interfaces/testimonial.interface';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   standalone: true,
   imports: [CommonModule, MatExpansionModule],
   templateUrl: './players.component.html',
-  styleUrl: './players.component.scss'
+  styleUrl: './players.component.scss',
 })
 export class PlayersComponent {
   players: Testimonial[] = [
@@ -62,11 +63,22 @@ export class PlayersComponent {
     },
   ];
 
+  constructor(private metaTagsService: MetaTagsService) {}
+
   currentPlayerIndex = Math.floor(this.players.length / 2);
 
   updateCurrentPlayer(index: number): void {
     this.currentPlayerIndex = index;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Testimonios de Jugadores',
+      description:
+        'Descubre las historias inspiradoras de nuestros jugadores en CD Futuro 13. Conoce cómo el fútbol ha transformado sus vidas y les ha enseñado valores importantes.',
+      keywords: 'CD Futuro 13, testimonios, jugadores, fútbol, valores',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/testimonials/players',
+      type: 'website',
+    });
+  }
 }

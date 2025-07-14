@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Testimonial } from '../../../interfaces/testimonial.interface';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-fathers',
   imports: [CommonModule, MatExpansionModule],
   templateUrl: './fathers.component.html',
-  styleUrls: ['./fathers.component.scss']
+  styleUrls: ['./fathers.component.scss'],
 })
 export class FathersComponent implements OnInit {
   fathers: Testimonial[] = [
@@ -62,11 +63,23 @@ export class FathersComponent implements OnInit {
     },
   ];
 
+  constructor(private metaTagsService: MetaTagsService) {}
+
   currentFatherIndex = Math.floor(this.fathers.length / 2);
 
   updateCurrentFather(index: number): void {
     this.currentFatherIndex = index;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Testimonios de Padres',
+      description:
+        'Descubre los testimonios de padres que han visto el impacto positivo de CD Futuro 13 en sus hijos. Conoce sus historias y experiencias.',
+      keywords:
+        'CD Futuro 13, testimonios, padres, impacto positivo, historias, experiencias',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/testimonials/fathers',
+      type: 'website',
+    });
+  }
 }

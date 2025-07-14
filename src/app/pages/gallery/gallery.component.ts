@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Router } from '@angular/router';
 import { GalleryService } from '../../services/gallery.service';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-gallery',
@@ -17,17 +18,27 @@ export class GalleryComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private galleryService: GalleryService
+    private galleryService: GalleryService,
+    private metaTagsService: MetaTagsService
   ) {}
 
   ngOnInit() {
-    this.galleryService.getAllGalleryData().subscribe(data => {
+    this.galleryService.getAllGalleryData().subscribe((data) => {
       this.galleryCards = Object.entries(data).map(([year, yearData]) => ({
         year,
         images: yearData.images,
-        totalImages: yearData.images.length
+        totalImages: yearData.images.length,
       }));
       this.isLoading = false;
+    });
+
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Galería',
+      description:
+        'Descubre la galería de fotos de CD Futuro 13. Conoce nuestros logros y experiencias en el fútbol.',
+      keywords: 'CD Futuro 13, galería, fotos, fútbol, logros',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/gallery',
+      type: 'website',
     });
   }
 

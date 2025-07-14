@@ -7,6 +7,7 @@ import { ButtonComponent } from '../../components/button/button.component';
 import { ButtonConfig } from '../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-tournament-details',
@@ -29,7 +30,8 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
   constructor(
     private tournamentStateService: TournamentStateService,
     private router: Router,
-    private location: Location
+    private location: Location,
+    private metaTagsService: MetaTagsService
   ) {}
 
   buttonConfig: ButtonConfig = {
@@ -53,23 +55,54 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
       const storedTournament = sessionStorage.getItem('selectedTournament');
       if (storedTournament) {
         this.tournament = JSON.parse(storedTournament);
-        this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
+        this.matches = this.tournament?.matches
+          ? Object.values(this.tournament.matches)
+          : [];
         this.isLoading = false;
       } else {
-        this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
-          this.tournament = tournament;
-          this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
-          this.isLoading = false;
-          sessionStorage.setItem('selectedTournament', JSON.stringify(tournament));
-        });
+        this.subscription =
+          this.tournamentStateService.selectedTournament$.subscribe(
+            (tournament) => {
+              this.tournament = tournament;
+              this.matches = this.tournament?.matches
+                ? Object.values(this.tournament.matches)
+                : [];
+              this.isLoading = false;
+              sessionStorage.setItem(
+                'selectedTournament',
+                JSON.stringify(tournament)
+              );
+            }
+          );
       }
     } else {
-      this.subscription = this.tournamentStateService.selectedTournament$.subscribe((tournament) => {
-        this.tournament = tournament;
-        this.matches = this.tournament?.matches ? Object.values(this.tournament.matches) : [];
-        this.isLoading = false;
-      });
+      this.subscription =
+        this.tournamentStateService.selectedTournament$.subscribe(
+          (tournament) => {
+            this.tournament = tournament;
+            this.matches = this.tournament?.matches
+              ? Object.values(this.tournament.matches)
+              : [];
+            this.isLoading = false;
+          }
+        );
     }
+
+    this.metaTagsService.updateTags({
+      title: `CD Futuro 13 - Detalles del Torneo ${
+        this.tournament?.name || ''
+      }`,
+      description: `Detalles del torneo ${
+        this.tournament?.name || ''
+      } de CD Futuro 13. Conoce los partidos, resultados y más.`,
+      keywords: `CD Futuro 13, torneo, ${
+        this.tournament?.name || ''
+      }, detalles, partidos, resultados`,
+      url: `https://lozanoandersonthestain.github.io/CD-Futuro13/tournaments/${
+        this.tournament?.id || ''
+      }`,
+      type: 'website',
+    });
   }
 
   ngOnDestroy(): void {

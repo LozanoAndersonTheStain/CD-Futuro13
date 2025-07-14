@@ -4,7 +4,7 @@ import { ButtonComponent } from '../../../components/button/button.component';
 import { ButtonConfig } from '../../../interfaces/button.interface';
 import { Teachers } from '../../../interfaces/teachers.interface';
 import { MatIconModule } from '@angular/material/icon';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-teachers',
@@ -13,7 +13,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './teachers.component.scss',
 })
 export class TeachersComponent implements OnInit {
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(private metaTagsService: MetaTagsService) {}
 
   teachers: Teachers[] = [
     {
@@ -167,19 +167,14 @@ export class TeachersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Profesores');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Conoce a los profesores de CD Futuro 13, quienes se encargan de formar a los jóvenes en las diferentes categorías del club.',
-      },
-      {
-        name: 'keywords',
-        content:
-          'CD Futuro 13, profesores, categorías, formación, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Profesores',
+      description:
+        'Conoce a los profesores de CD Futuro 13, quienes se encargan de formar a los jóvenes en las diferentes categorías del club.',
+      keywords:
+        'CD Futuro 13, profesores, categorías, formación, jóvenes, comuna 13, entrenadores',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/team/teachers',
+      type: 'website',
+    });
   }
 }

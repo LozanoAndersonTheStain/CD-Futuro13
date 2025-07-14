@@ -1,32 +1,25 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-join-us',
   imports: [CommonModule],
   templateUrl: './join-us.component.html',
-  styleUrl: './join-us.component.scss'
+  styleUrl: './join-us.component.scss',
 })
 export class JoinUsComponent implements OnInit {
-  constructor(
-    private titleService: Title,
-    private metaService: Meta,
-  ) {}
+  constructor(private metaTagsService: MetaTagsService) {}
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Únete');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Unete a CD Futuro 13 para formar parte de un club en el cual no solo aprenderas deporte, sino que tambien te formaras como persona.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, deporte, formación, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Únete',
+      description:
+        'Únete a CD Futuro 13 y forma parte de nuestra familia deportiva. Descubre cómo puedes participar en nuestras categorías y actividades.',
+      keywords:
+        'CD Futuro 13, únete, inscripciones, categorías, familia deportiva, participar',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/join-us',
+      type: 'website',
+    });
   }
 }

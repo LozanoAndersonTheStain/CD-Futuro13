@@ -3,8 +3,7 @@ import { ButtonComponent } from "../../../components/button/button.component";
 import { ButtonConfig } from '../../../interfaces/button.interface';
 import { Router, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { Title, Meta } from '@angular/platform-browser';
-
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-history',
@@ -14,39 +13,31 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class HistoryComponent implements OnInit {
   constructor(
-    private titleService: Title,
-    private metaService: Meta,
+    private metaTagsService: MetaTagsService,
     private router: Router
   ) {}
 
   buttonConfig: ButtonConfig = {
-    label: 'Ver Misión',
+    label: 'Conocer Misión',
     action: () => {
       this.navigateToMission();
     },
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
-    icon: 'arrow_forward'
   };
+
+  ngOnInit(): void {
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Historia',
+      description: 'La historia de CD Futuro 13 es una historia de superación y esfuerzo. Conoce más sobre nosotros aquí.',
+      keywords: 'CD Futuro 13, historia, conocer, jóvenes, comuna 13, origen, fundación',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/about/history',
+      type: 'website'
+    });
+  }
 
   navigateToMission(): void {
     this.router.navigate(['/about/mission']);
-  }
-
-  ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Historia');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'La historia de CD Futuro 13 es una historia de superación y esfuerzo. Conoce más sobre nosotros aquí.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, historia, conocer, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
   }
 }

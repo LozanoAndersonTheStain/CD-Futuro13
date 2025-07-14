@@ -3,7 +3,7 @@ import { ButtonComponent } from "../../../components/button/button.component";
 import { Router, RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonConfig } from '../../../interfaces/button.interface';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaTagsService } from '../../../services/meta-tags.service';
 
 @Component({
   selector: 'app-mission',
@@ -13,8 +13,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class MissionComponent implements OnInit {
   constructor(
-    private titleService: Title,
-    private metaService: Meta,
+    private metaTagsService: MetaTagsService,
     private router: Router
   ) {}
 
@@ -51,18 +50,12 @@ export class MissionComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Misión');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Conoce la misión que tiene CD Futuro 13 con los jóvenes de la comuna 13.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, misión, conocer, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Misión',
+      description: 'Nuestra misión es formar jóvenes íntegros a través del deporte, promoviendo valores y brindando oportunidades de crecimiento personal y social.',
+      keywords: 'CD Futuro 13, misión, formación, jóvenes, valores, deporte, comuna 13',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/about/mission',
+      type: 'website'
+    });
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardComponent } from "../../components/card/card.component";
 import { CommonModule } from '@angular/common';
 import { CardConfig } from '../../interfaces/card.interface';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaTagsService } from '../../services/meta-tags.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -12,8 +12,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class TestimonialsComponent implements OnInit {
   constructor(
-    private titleService: Title,
-    private metaService: Meta
+    private metaTagsService: MetaTagsService
   ) {}
 
   cardConfigs: CardConfig[] = [
@@ -36,18 +35,12 @@ export class TestimonialsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.titleService.setTitle('CD Futuro 13 - Testimonios');
-    this.metaService.addTags([
-      {
-        name: 'description',
-        content:
-          'Descubre las opiniones de padres y alumnos sobre la formación y experiencias en CD Futuro 13. Conoce cómo el club ha impactado positivamente en sus vidas.',
-      },
-      {
-        name: 'keywords',
-        content: 'CD Futuro 13, testimonios, formación, jóvenes, comuna 13',
-      },
-      { name: 'author', content: 'CD Futuro 13' },
-    ]);
+    this.metaTagsService.updateTags({
+      title: 'CD Futuro 13 - Testimonios',
+      description: 'Descubre las opiniones de padres y alumnos sobre la formación y experiencias en CD Futuro 13. Conoce cómo el club ha impactado positivamente en sus vidas.',
+      keywords: 'CD Futuro 13, testimonios, formación, jóvenes, comuna 13, padres, alumnos',
+      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/testimonials',
+      type: 'website'
+    });
   }
 }
