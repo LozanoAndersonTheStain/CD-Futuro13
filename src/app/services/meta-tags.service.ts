@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface MetaTagsConfig {
   title: string;
@@ -19,12 +20,15 @@ export class MetaTagsService {
 
   constructor(
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   updateTags(config: MetaTagsConfig): void {
-    // Limpiar meta tags anteriores
-    this.clearPreviousTags();
+    // Limpiar meta tags anteriores solo en el browser
+    if (isPlatformBrowser(this.platformId)) {
+      this.clearPreviousTags();
+    }
 
     // Establecer título
     this.titleService.setTitle(config.title);
@@ -64,9 +68,9 @@ export class MetaTagsService {
       }
     });
   }
-
+ 
   private clearPreviousTags(): void {
-    // Remover meta tags anteriores
+    // Remover meta tags anteriores solo en el browser
     const tagsToRemove: string[] = [
       'description', 'keywords', 'author', 'robots',
       'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'
