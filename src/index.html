@@ -1,15 +1,28 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>CD Futuro 13 - Club Deportivo de la Comuna 13</title>
   <base href="/">
   <script>
     (function () {
+      // Verificar si hay una ruta guardada desde 404.html
+      const urlParams = new URLSearchParams(window.location.search);
+      const savedPath = urlParams.get('path');
+
+      if (savedPath) {
+        // Remover el parámetro de la URL y navegar a la ruta guardada
+        const newUrl = window.location.origin + savedPath;
+        history.replaceState(null, null, newUrl);
+        return;
+      }
+
+      // Lógica original para redirigir a /home
       const path = window.location.pathname;
       const baseHref = document.querySelector('base').getAttribute('href') || '/';
-      if (path === baseHref || path === '') {
-        window.location.href = baseHref + 'home';
+      if (path === baseHref || path === '' || path === '/') {
+        history.replaceState(null, null, baseHref + 'home');
       }
     })();
   </script>
@@ -17,14 +30,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.png">
 
   <!-- Meta tags para redes sociales -->
-  <meta name="description" content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
+  <meta name="description"
+    content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
   <meta name="keywords" content="CD Futuro 13, club deportivo, fútbol, comuna 13, Medellín, formación deportiva">
   <meta name="author" content="CD Futuro 13">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="CD Futuro 13 - Club Deportivo de la Comuna 13">
-  <meta property="og:description" content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
+  <meta property="og:description"
+    content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
   <meta property="og:image" content="https://lozanoandersonthestain.github.io/CD-Futuro13/assets/logo.svg">
   <meta property="og:url" content="https://lozanoandersonthestain.github.io/CD-Futuro13/">
   <meta property="og:site_name" content="CD Futuro 13">
@@ -33,7 +48,8 @@
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CD Futuro 13 - Club Deportivo de la Comuna 13">
-  <meta name="twitter:description" content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
+  <meta name="twitter:description"
+    content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
   <meta name="twitter:image" content="https://lozanoandersonthestain.github.io/CD-Futuro13/assets/logo.svg">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">

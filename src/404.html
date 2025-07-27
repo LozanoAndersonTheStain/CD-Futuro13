@@ -5,13 +5,21 @@
   <meta charset="utf-8">
   <title>CD Futuro 13</title>
   <script>
-    sessionStorage.setItem('redirect', window.location.pathname);
-    window.location.href = '/';
+    // Guarda la ruta actual
+    const path = window.location.pathname;
+    const search = window.location.search;
+    const hash = window.location.hash;
+
+    // Redirige a index.html con la ruta como parámetro
+    const redirectUrl = window.location.origin + '/?' +
+      'path=' + encodeURIComponent(path + search + hash);
+
+    window.location.replace(redirectUrl);
   </script>
 </head>
 
 <body>
-  Redireccionando...
+  <p>Redireccionando...</p>
 </body>
 
 </html>
