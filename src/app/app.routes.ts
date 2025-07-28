@@ -27,6 +27,7 @@ import { GalleryDetailsComponent } from './pages/gallery-details/gallery-details
 export const routes: Routes = [
   // Redirigir la raíz exacta a /home
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '/' , redirectTo: '/home', pathMatch: 'full' },
 
   // Rutas principales
   { path: 'home', component: HomeComponent },
