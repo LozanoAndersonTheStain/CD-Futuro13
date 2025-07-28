@@ -90,7 +90,7 @@ export class CategoriesComponent implements OnInit {
         'Descubre las diferentes categorías deportivas de CD Futuro 13, desde Sub-4 hasta Sub-17 y la categoría femenina. Cada una diseñada para el desarrollo integral de nuestros jóvenes.',
       keywords:
         'CD Futuro 13, categorías, sub-4, sub-6, sub-8, sub-10, sub-12, sub-15, sub-17, femenina, fútbol infantil',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/categories',
+      url: 'https://corporaciondeportivafuturo13.com/categories',
       type: 'website',
     });
   }

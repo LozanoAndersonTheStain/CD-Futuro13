@@ -51,7 +51,7 @@ export class AboutComponent implements OnInit {
         'Conoce más sobre CD Futuro 13, un club deportivo que busca impactar positivamente en la vida de los jóvenes y sus familias a través del deporte.',
       keywords:
         'CD Futuro 13, deporte, sobre nosotros, jóvenes, comuna 13, historia, misión, visión',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/about',
+      url: 'https://corporaciondeportivafuturo13.com/about',
       type: 'website',
     });
   }

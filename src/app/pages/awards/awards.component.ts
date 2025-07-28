@@ -38,10 +38,12 @@ export class AwardsComponent implements OnInit {
   ngOnInit(): void {
     this.metaTagsService.updateTags({
       title: 'CD Futuro 13 - Copas y Reconocimientos',
-      description: 'Conoce cuales han sido los reconocimientos que se han obtenido no solo por el club si no por nuestros jugadores en los partidos, ademas conoceras sobre las copas que hemos obtenido en nuestra trayectoria como club en los diferentes torneos.',
-      keywords: 'CD Futuro 13, premios, reconocimientos, copas, torneos, logros',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/awards',
-      type: 'website'
+      description:
+        'Conoce cuales han sido los reconocimientos que se han obtenido no solo por el club si no por nuestros jugadores en los partidos, ademas conoceras sobre las copas que hemos obtenido en nuestra trayectoria como club en los diferentes torneos.',
+      keywords:
+        'CD Futuro 13, premios, reconocimientos, copas, torneos, logros',
+      url: 'https://corporaciondeportivafuturo13.com/awards',
+      type: 'website',
     });
   }
 }

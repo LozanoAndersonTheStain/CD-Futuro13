@@ -173,7 +173,7 @@ export class TeachersComponent implements OnInit {
         'Conoce a los profesores de CD Futuro 13, quienes se encargan de formar a los jóvenes en las diferentes categorías del club.',
       keywords:
         'CD Futuro 13, profesores, categorías, formación, jóvenes, comuna 13, entrenadores',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/team/teachers',
+      url: 'https://corporaciondeportivafuturo13.com/team/teachers',
       type: 'website',
     });
   }

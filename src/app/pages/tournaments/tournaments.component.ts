@@ -40,7 +40,7 @@ export class TournamentsComponent implements OnInit {
         'Descubre los torneos de CD Futuro 13, sus fechas y detalles. Participa y forma parte de nuestra comunidad deportiva.',
       keywords:
         'CD Futuro 13, torneos, fechas, detalles, participar, comunidad deportiva',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/tournaments',
+      url: 'https://corporaciondeportivafuturo13.com/tournaments',
       type: 'website',
     });
   }

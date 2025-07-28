@@ -98,7 +98,7 @@ export class TournamentDetailsComponent implements OnInit, OnDestroy {
       keywords: `CD Futuro 13, torneo, ${
         this.tournament?.name || ''
       }, detalles, partidos, resultados`,
-      url: `https://lozanoandersonthestain.github.io/CD-Futuro13/tournaments/${
+      url: `https://corporaciondeportivafuturo13.com/tournaments/${
         this.tournament?.id || ''
       }`,
       type: 'website',

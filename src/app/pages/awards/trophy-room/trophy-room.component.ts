@@ -136,7 +136,7 @@ export class TrophyRoomComponent implements OnInit {
         'Descubre los logros y trofeos de CD Futuro 13, un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.',
       keywords:
         'CD Futuro 13, sala de trofeos, logros, comuna 13, Medellín, formación deportiva, jóvenes',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/awards/trophy-room',
+      url: 'https://corporaciondeportivafuturo13.com/awards/trophy-room',
       type: 'website',
     });
   }

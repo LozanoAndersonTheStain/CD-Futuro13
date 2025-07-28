@@ -36,7 +36,7 @@ export class VisionComponent implements OnInit {
         'Nuestra visión es ser reconocidos como un club deportivo líder en la formación de jóvenes talentosos y comprometidos con su comunidad.',
       keywords:
         'CD Futuro 13, visión, liderazgo, formación, jóvenes, comunidad, talento',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/about/vision',
+      url: 'https://corporaciondeportivafuturo13.com/about/vision',
       type: 'website',
     });
   }

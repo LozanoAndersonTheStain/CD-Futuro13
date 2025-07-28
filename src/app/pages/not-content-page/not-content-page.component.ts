@@ -17,7 +17,7 @@ export class NotContentPageComponent implements OnInit {
       description:
         'El contenido que buscas no está disponible en este momento. Estamos trabajando para traerte la mejor información.',
       keywords: 'CD Futuro 13, contenido no disponible, en construcción',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/not-content',
+      url: 'https://corporaciondeportivafuturo13.com/not-content',
       type: 'website',
     });
   }

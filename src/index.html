@@ -18,11 +18,11 @@
         return;
       }
 
-      // Lógica original para redirigir a /home
+      // Solo redirigir si estamos exactamente en la raíz
       const path = window.location.pathname;
-      const baseHref = document.querySelector('base').getAttribute('href') || '/';
-      if (path === baseHref || path === '' || path === '/') {
-        history.replaceState(null, null, baseHref + 'home');
+      if (path === '/') {
+        // Permitir que Angular Router maneje la redirección
+        console.log('En la raíz - Angular Router manejará la redirección');
       }
     })();
   </script>
@@ -40,8 +40,8 @@
   <meta property="og:title" content="CD Futuro 13 - Club Deportivo de la Comuna 13">
   <meta property="og:description"
     content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
-  <meta property="og:image" content="https://lozanoandersonthestain.github.io/CD-Futuro13/assets/logo.svg">
-  <meta property="og:url" content="https://lozanoandersonthestain.github.io/CD-Futuro13/">
+  <meta property="og:image" content="https://corporaciondeportivafuturo13.com/assets/logo.svg">
+  <meta property="og:url" content="https://corporaciondeportivafuturo13.com/">
   <meta property="og:site_name" content="CD Futuro 13">
   <meta property="og:locale" content="es_CO">
 
@@ -50,7 +50,7 @@
   <meta name="twitter:title" content="CD Futuro 13 - Club Deportivo de la Comuna 13">
   <meta name="twitter:description"
     content="CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.">
-  <meta name="twitter:image" content="https://lozanoandersonthestain.github.io/CD-Futuro13/assets/logo.svg">
+  <meta name="twitter:image" content="https://corporaciondeportivafuturo13.com/assets/logo.svg">
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

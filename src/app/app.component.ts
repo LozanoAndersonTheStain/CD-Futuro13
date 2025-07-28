@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
         'CD Futuro 13 es un club deportivo comprometido con la formación de jóvenes íntegros en la Comuna 13 de Medellín.',
       keywords:
         'CD Futuro 13, deporte, formación, jóvenes, comuna 13, fútbol, Medellín',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/',
+      url: 'https://corporaciondeportivafuturo13.com/',
       type: 'website',
     });
   }

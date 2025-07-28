@@ -15,7 +15,7 @@ export interface MetaTagsConfig {
   providedIn: 'root'
 })
 export class MetaTagsService {
-  private baseUrl = 'https://lozanoandersonthestain.github.io/CD-Futuro13';
+  private baseUrl = 'https://corporaciondeportivafuturo13.com';
   private defaultImage = `${this.baseUrl}/assets/logo.svg`;
 
   constructor(
@@ -68,7 +68,7 @@ export class MetaTagsService {
       }
     });
   }
- 
+
   private clearPreviousTags(): void {
     // Remover meta tags anteriores solo en el browser
     const tagsToRemove: string[] = [

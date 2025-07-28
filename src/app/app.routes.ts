@@ -25,29 +25,45 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GalleryDetailsComponent } from './pages/gallery-details/gallery-details.component';
 
 export const routes: Routes = [
+  // Redirigir la raíz exacta a /home
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '', component: HomeComponent },
+
+  // Rutas principales
   { path: 'home', component: HomeComponent },
   { path: 'join-us', component: JoinUsComponent },
+
+  // Rutas de "Sobre Nosotros"
   { path: 'about', component: AboutComponent },
   { path: 'about/history', component: HistoryComponent },
   { path: 'about/mission', component: MissionComponent },
   { path: 'about/vision', component: VisionComponent },
+
+  // Rutas del equipo
   { path: 'team', component: TeamComponent },
   { path: 'team/teachers', component: TeachersComponent },
   { path: 'team/administrators', component: AdministratorsComponent },
+
+  // Rutas de testimonios
   { path: 'testimonials', component: TestimonialsComponent },
   { path: 'testimonials/fathers', component: FathersComponent },
   { path: 'testimonials/players', component: PlayersComponent },
+
+  // Rutas de premios (temporalmente deshabilitadas)
   { path: 'awards', component: NotContentPageComponent },
   { path: 'awards/trophy-room', component: NotContentPageComponent },
   { path: 'awards/player-awards', component: NotContentPageComponent },
+
+  // Rutas de torneos
   { path: 'tournaments', component: TournamentsComponent },
   { path: 'tournaments/:year', component: YearTournamentsComponent },
   { path: 'tournament-details', component: TournamentDetailsComponent },
+
+  // Otras rutas
   { path: 'categories', component: CategoriesComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'gallery/:year', component: GalleryDetailsComponent },
   { path: 'contact', component: ContactComponent },
+
+  // Ruta catch-all para manejar 404s - DEBE SER LA ÚLTIMA
   { path: '**', component: ErrorPageComponent },
 ];

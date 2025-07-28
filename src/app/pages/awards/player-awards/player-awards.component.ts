@@ -101,7 +101,7 @@ export class PlayerAwardsComponent implements OnInit {
         'Conoce los premios y reconocimientos que han recibido nuestros jugadores por su destacada actuación en los partidos.',
       keywords:
         'CD Futuro 13, premios, jugadores, futbol, reconocimiento, comuna 13',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/awards/player-awards',
+      url: 'https://corporaciondeportivafuturo13.com/awards/player-awards',
       type: 'website',
     });
   }

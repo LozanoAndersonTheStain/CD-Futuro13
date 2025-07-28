@@ -122,10 +122,12 @@ export class AdministratorsComponent implements OnInit {
   ngOnInit(): void {
     this.metaTagsService.updateTags({
       title: 'CD Futuro 13 - Administradores',
-      description: 'Un equipo de administradores que se encargan de la gestión y organización de CD Futuro 13.',
-      keywords: 'CD Futuro 13, deporte, administración, jovenes, comuna 13, gestión',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/team/administrators',
-      type: 'website'
+      description:
+        'Un equipo de administradores que se encargan de la gestión y organización de CD Futuro 13.',
+      keywords:
+        'CD Futuro 13, deporte, administración, jovenes, comuna 13, gestión',
+      url: 'https://corporaciondeportivafuturo13.com/team/administrators',
+      type: 'website',
     });
   }
 }

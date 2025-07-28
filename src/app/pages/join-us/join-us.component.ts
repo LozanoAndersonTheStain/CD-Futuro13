@@ -18,7 +18,7 @@ export class JoinUsComponent implements OnInit {
         'Únete a CD Futuro 13 y forma parte de nuestra familia deportiva. Descubre cómo puedes participar en nuestras categorías y actividades.',
       keywords:
         'CD Futuro 13, únete, inscripciones, categorías, familia deportiva, participar',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/join-us',
+      url: 'https://corporaciondeportivafuturo13.com/join-us',
       type: 'website',
     });
   }

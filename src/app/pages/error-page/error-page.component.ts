@@ -14,9 +14,10 @@ export class ErrorPageComponent implements OnInit {
   ngOnInit(): void {
     this.metaTagsService.updateTags({
       title: 'CD Futuro 13 - Página no encontrada',
-      description: 'Lo sentimos, la página que buscas no existe. Vuelve a la página principal.',
+      description:
+        'Lo sentimos, la página que buscas no existe. Vuelve a la página principal.',
       keywords: 'CD Futuro 13, error, página no encontrada, 404',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/error',
+      url: 'https://corporaciondeportivafuturo13.com/error',
       type: 'website',
     });
   }

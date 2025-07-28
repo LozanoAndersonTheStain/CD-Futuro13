@@ -37,7 +37,7 @@ export class GalleryComponent implements OnInit {
       description:
         'Descubre la galería de fotos de CD Futuro 13. Conoce nuestros logros y experiencias en el fútbol.',
       keywords: 'CD Futuro 13, galería, fotos, fútbol, logros',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/gallery',
+      url: 'https://corporaciondeportivafuturo13.com/gallery',
       type: 'website',
     });
   }

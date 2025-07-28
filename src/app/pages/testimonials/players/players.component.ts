@@ -77,7 +77,7 @@ export class PlayersComponent {
       description:
         'Descubre las historias inspiradoras de nuestros jugadores en CD Futuro 13. Conoce cómo el fútbol ha transformado sus vidas y les ha enseñado valores importantes.',
       keywords: 'CD Futuro 13, testimonios, jugadores, fútbol, valores',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/testimonials/players',
+      url: 'https://corporaciondeportivafuturo13.com/testimonials/players',
       type: 'website',
     });
   }

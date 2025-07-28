@@ -78,7 +78,7 @@ export class FathersComponent implements OnInit {
         'Descubre los testimonios de padres que han visto el impacto positivo de CD Futuro 13 en sus hijos. Conoce sus historias y experiencias.',
       keywords:
         'CD Futuro 13, testimonios, padres, impacto positivo, historias, experiencias',
-      url: 'https://lozanoandersonthestain.github.io/CD-Futuro13/testimonials/fathers',
+      url: 'https://corporaciondeportivafuturo13.com/testimonials/fathers',
       type: 'website',
     });
   }
