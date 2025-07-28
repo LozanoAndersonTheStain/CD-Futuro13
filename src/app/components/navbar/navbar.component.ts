@@ -16,6 +16,7 @@ export class NavbarComponent implements OnInit {
   @ViewChild('menuTrigger') menuTrigger!: MatMenuTrigger;
 
   isMobile = false;
+  private submenuTimeout: any;
 
   constructor(
     private router: Router,
@@ -51,6 +52,33 @@ export class NavbarComponent implements OnInit {
   closeMenu() {
     if (this.menuTrigger) {
       this.menuTrigger.closeMenu();
+    }
+  }
+
+  // Métodos para manejar el delay del submenu
+  onSubmenuMouseEnter(event: Event) {
+    if (this.submenuTimeout) {
+      clearTimeout(this.submenuTimeout);
+      this.submenuTimeout = null;
+    }
+  }
+
+  onSubmenuMouseLeave(event: Event) {
+    this.submenuTimeout = setTimeout(() => {
+      // El submenu se ocultará después de 500ms
+      const submenu = event.target as HTMLElement;
+      if (submenu) {
+        submenu.style.opacity = '0';
+        submenu.style.visibility = 'hidden';
+        submenu.style.pointerEvents = 'none';
+      }
+    }, 500);
+  }
+
+  onMenuItemMouseEnter(event: Event) {
+    if (this.submenuTimeout) {
+      clearTimeout(this.submenuTimeout);
+      this.submenuTimeout = null;
     }
   }
 }

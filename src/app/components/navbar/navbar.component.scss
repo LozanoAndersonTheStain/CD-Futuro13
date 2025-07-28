@@ -4,6 +4,7 @@
   padding: 1rem;
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; // Asegurar que el header esté por encima
 
   .nav__container {
     display: flex;
@@ -86,19 +87,20 @@
           .submenu {
             display: none;
             position: absolute;
-            top: calc(100% + 10px);
+            top: calc(100% + 5px);
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--quaternary-color);
             color: #000;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             border-radius: 0.5rem;
             overflow: hidden;
-            z-index: 1000;
+            z-index: 9999; // Z-index muy alto para estar sobre todo
             min-width: 200px;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            pointer-events: none;
 
             &::before {
               content: '';
@@ -111,6 +113,7 @@
               border-left: 8px solid transparent;
               border-right: 8px solid transparent;
               border-bottom: 8px solid var(--quaternary-color);
+              z-index: 10000;
             }
 
             .submenu-item {
@@ -135,11 +138,26 @@
             }
           }
 
+          // Estados del submenu con delay
           &:hover .submenu {
             display: block;
             opacity: 1;
             visibility: visible;
             transform: translateX(-50%) translateY(0);
+            pointer-events: auto;
+            animation: fadeInSubmenu 0.3s ease-out forwards;
+          }
+
+          // Mantener el submenu visible cuando se hace hover sobre él
+          .submenu:hover {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+          }
+
+          // Delay para ocultar el submenu
+          &:not(:hover) .submenu {
+            animation: fadeOutSubmenu 1.5s ease-out 2.5s forwards;
           }
 
           .arrow {
@@ -183,11 +201,49 @@
   }
 }
 
+// Animaciones para el submenu
+@keyframes fadeInSubmenu {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@keyframes fadeOutSubmenu {
+  from {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: none;
+  }
+}
+
+// Asegurar que el submenu esté siempre por encima de otros elementos
+.nav__item.has-submenu .submenu {
+  position: fixed !important;
+  z-index: 10000 !important;
+}
+
 // Estilos para el menú móvil
 ::ng-deep .mat-mdc-menu-panel {
   min-width: 250px !important;
   max-width: 300px !important;
   margin-top: 0.5rem;
+  z-index: 9999 !important;
 
   .mat-mdc-menu-content {
     padding: 0.5rem 0;
