@@ -30,7 +30,11 @@
               },
               "src/favicon.png",
               "src/assets",
-              "src/404.html",
+              {
+                "glob": "404.html",
+                "input": "src",
+                "output": "/"
+              },
               "src/.htaccess",
               "src/CNAME",
               "src/.nojekyll"
@@ -108,11 +112,12 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/",
+            "baseHref": "https://corporaciondeportivafuturo13.com/",
             "name": "LozanoAndersonTheStain",
             "email": "adslozanov@gmail.com",
             "noBuild": false,
-            "noSilent": true
+            "noSilent": true,
+            "cname": "corporaciondeportivafuturo13.com"
           }
         }
       }

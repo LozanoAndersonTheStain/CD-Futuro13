@@ -7,23 +7,18 @@
   <base href="/">
   <script>
     (function () {
-      // Verificar si hay una ruta guardada desde 404.html
+      // Solo manejar rutas guardadas desde 404.html
       const urlParams = new URLSearchParams(window.location.search);
       const savedPath = urlParams.get('path');
 
       if (savedPath) {
-        // Remover el parámetro de la URL y navegar a la ruta guardada
-        const newUrl = window.location.origin + savedPath;
-        history.replaceState(null, null, newUrl);
+        // Navegar a la ruta guardada y limpiar la URL
+        window.history.replaceState(null, null, savedPath);
         return;
       }
 
-      // Solo redirigir si estamos exactamente en la raíz
-      const path = window.location.pathname;
-      if (path === '/') {
-        // Permitir que Angular Router maneje la redirección
-        console.log('En la raíz - Angular Router manejará la redirección');
-      }
+      // Para debugging - ver qué está pasando
+      console.log('Index.html cargado - Ruta actual:', window.location.pathname);
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
