@@ -11,59 +11,23 @@
       const currentSearch = window.location.search;
       const currentHash = window.location.hash;
 
-      console.log('404.html cargado - Ruta original:', currentPath);
+      console.log('404.html cargado - Ruta:', currentPath);
 
-      // Limpiar la ruta eliminando barras duplicadas y slash final
-      let cleanPath = currentPath
-        .replace(/\/+/g, '/') // Reemplazar múltiples slashes por uno solo
-        .replace(/\/$/, ''); // Eliminar slash final excepto para la raíz
-
-      // Si la ruta limpia está vacía, es la raíz
-      if (!cleanPath || cleanPath === '/') {
-        console.log('Ruta raíz detectada - redirigiendo a /home');
-        window.location.replace(window.location.origin + '/home' + currentSearch + currentHash);
+      // NO redirigir si ya estamos en la raíz para evitar bucles infinitos
+      if (currentPath === '/' || currentPath === '') {
+        console.log('En la raíz - redirigiendo a /home después de 2 segundos');
+        setTimeout(() => {
+          window.location.href = window.location.origin + '/home';
+        }, 2000);
         return;
       }
 
-      // Lista de rutas válidas de tu aplicación
-      const validRoutes = [
-        '/home',
-        '/join-us',
-        '/about',
-        '/about/history',
-        '/about/mission',
-        '/about/vision',
-        '/team',
-        '/team/teachers',
-        '/team/administrators',
-        '/testimonials',
-        '/testimonials/fathers',
-        '/testimonials/players',
-        '/awards',
-        '/awards/trophy-room',
-        '/awards/player-awards',
-        '/tournaments',
-        '/categories',
-        '/gallery',
-        '/contact'
-      ];
+      // Para otras rutas, usar el método de parámetros
+      const fullPath = currentPath + currentSearch + currentHash;
+      console.log('Redirigiendo ruta:', fullPath);
 
-      // Verificar si es una ruta dinámica válida
-      const isDynamicRoute = /^\/tournaments\/\d{4}$/.test(cleanPath) || // /tournaments/2024
-        /^\/gallery\/\d{4}$/.test(cleanPath);       // /gallery/2024
-
-      // Si es una ruta válida o dinámica, redirigir con el parámetro
-      if (validRoutes.includes(cleanPath) || isDynamicRoute) {
-        console.log('Ruta válida detectada:', cleanPath);
-        const fullPath = cleanPath + currentSearch + currentHash;
-        const redirectUrl = window.location.origin + '/?p=' + encodeURIComponent(fullPath);
-        console.log('Redirigiendo a:', redirectUrl);
-        window.location.replace(redirectUrl);
-      } else {
-        // Para rutas no válidas, redirigir al home
-        console.log('Ruta no válida, redirigiendo al home');
-        window.location.replace(window.location.origin + '/home');
-      }
+      const redirectUrl = window.location.origin + '/?path=' + encodeURIComponent(fullPath);
+      window.location.replace(redirectUrl);
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,8 +57,7 @@
   <div class="loading-container">
     <div class="loading-card">
       <div class="icon-container">
-        <svg class="logo-icon" width="80" height="80" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="white" />
         </svg>
       </div>
@@ -237,7 +200,6 @@
         opacity: 0;
         transform: translateY(30px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
@@ -245,12 +207,9 @@
     }
 
     @keyframes float {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0px);
       }
-
       50% {
         transform: translateY(-10px);
       }
