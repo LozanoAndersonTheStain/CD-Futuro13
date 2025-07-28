@@ -12,17 +12,27 @@
       const savedPath = urlParams.get('path');
 
       if (savedPath) {
-        // Remover el parámetro de la URL y navegar a la ruta guardada
+        // Limpiar la URL y navegar a la ruta guardada
         const newUrl = window.location.origin + savedPath;
-        history.replaceState(null, null, newUrl);
+        window.history.replaceState(null, null, newUrl);
+
+        // Remover el parámetro de la URL actual
+        const cleanUrl = window.location.origin + window.location.pathname + window.location.hash;
+        window.history.replaceState(null, null, cleanUrl);
         return;
       }
 
-      // Solo redirigir si estamos exactamente en la raíz
-      const path = window.location.pathname;
-      if (path === '/') {
-        // Permitir que Angular Router maneje la redirección
-        console.log('En la raíz - Angular Router manejará la redirección');
+      // Manejo especial para GitHub Pages con dominio personalizado
+      const isGitHubPages = window.location.hostname.includes('github.io');
+      const isCustomDomain = window.location.hostname === 'corporaciondeportivafuturo13.com';
+
+      if (isCustomDomain || isGitHubPages) {
+        const path = window.location.pathname;
+
+        // Solo redirigir si estamos exactamente en la raíz y no hay hash
+        if (path === '/' && !window.location.hash) {
+          console.log('Permitiendo que Angular Router maneje la redirección a /home');
+        }
       }
     })();
   </script>
@@ -55,6 +65,6 @@
 
 <body class="mat-typography" ngcm="">
   <app-root></app-root>
-<link rel="modulepreload" href="chunk-F3QLLWSF.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-KEM6GBCZ.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-F3QLLWSF.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-2H7GEBGP.js" type="module"></script></body>
 
 </html>
