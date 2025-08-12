@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:application",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/cd-futuro13",
             "index": "src/index.html",
@@ -42,13 +42,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "customWebpackConfig": {
-              "path": "./webpack.config.js",
-              "mergeRules": {
-                "externals": "replace"
-              }
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -64,30 +58,18 @@
                   "maximumError": "16kb"
                 }
               ],
-              "outputHashing": "all",
-              "customWebpackConfig": {
-                "path": "./webpack.config.js",
-                "mergeRules": {
-                  "externals": "replace"
-                }
-              }
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "customWebpackConfig": {
-                "path": "./webpack.config.js",
-                "mergeRules": {
-                  "externals": "replace"
-                }
-              }
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "buildTarget": "CD-Futuro13:build:production"
