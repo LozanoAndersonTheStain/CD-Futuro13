@@ -33,7 +33,7 @@ export class YearTournamentsComponent implements OnInit {
   isLoading = true;
   selectedType: 'all' | 'copa' | 'liga' = 'all';
   currentTournamentType: string = '';
-  hasSpecificTypeFilter: boolean = false; // Nueva propiedad para el template
+  hasSpecificTypeFilter: boolean = false;
 
   buttonConfig: ButtonConfig = {
     label: 'Volver a la lista de torneos',
@@ -46,7 +46,7 @@ export class YearTournamentsComponent implements OnInit {
   };
 
   constructor(
-    public route: ActivatedRoute, // Cambiado a public
+    public route: ActivatedRoute,
     private router: Router,
     private tournamentService: TournamentService,
     private tournamentStateService: TournamentStateService,
@@ -116,8 +116,23 @@ export class YearTournamentsComponent implements OnInit {
     this.router.navigate(['/tournament-details']);
   }
 
+  // Método actualizado para obtener las claves ordenadas numéricamente
   getCategoryKeys(): string[] {
-    return Object.keys(this.groupedTournaments);
+    const keys = Object.keys(this.groupedTournaments);
+
+    return keys.sort((a, b) => {
+      // Extraer el número de la categoría (ej: "Sub 7" -> 7)
+      const extractNumber = (category: string): number => {
+        const match = category.match(/\d+/);
+        return match ? parseInt(match[0], 10) : 0;
+      };
+
+      const numA = extractNumber(a);
+      const numB = extractNumber(b);
+
+      // Ordenar numéricamente
+      return numA - numB;
+    });
   }
 
   getTournamentTypeTitle(): string {
