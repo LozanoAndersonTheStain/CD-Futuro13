@@ -130,7 +130,8 @@
             "email": "adslozanov@gmail.com",
             "noBuild": false,
             "noSilent": true,
-            "cname": "corporaciondeportivafuturo13.com"
+            "cname": "corporaciondeportivafuturo13.com",
+            "dir": "dist/cd-futuro13"
           }
         }
       }
