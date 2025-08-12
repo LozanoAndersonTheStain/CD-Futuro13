@@ -1,0 +1,1817 @@
+{
+  "tournaments": {
+    "copa-kalley-asobdim-2025": {
+      "tournamentInfo": {
+        "name": "Copa Kalley Asobdim",
+        "year": 2025,
+        "description": "Torneo oficial Copa Kalley Asobdim 2025",
+        "startDate": "2025-01-01",
+        "endDate": "2025-12-31",
+        "status": "active"
+      },
+      "categories": {
+        "sub-7": {
+          "category": "Sub 7",
+          "imageTournament": "",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808091/Futuro13/Escudos%20SUB%207/1_CD_EL_VERGEL_fhdrfa.png",
+                "name": "El Vergel"
+              },
+              "result": "0 - 1"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808095/Futuro13/Escudos%20SUB%207/2_CD_ATALANTA_fof3nw.png",
+                "name": "CD Atalanta"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 4"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808092/Futuro13/Escudos%20SUB%207/3_ACADEMIA_COSAC_qlnlax.png",
+                "name": "Academia Cosac"
+              },
+              "result": "5 - 3"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808107/Futuro13/Escudos%20SUB%207/4_REAL_ACADEMIA_DE_FUTBOL_gsd6gp.png",
+                "name": "Real Academia"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 0"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808093/Futuro13/Escudos%20SUB%207/5_ASOBDIM_m52oia.png",
+                "name": "Asobdim"
+              },
+              "result": "2 - 2"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808093/Futuro13/Escudos%20SUB%207/6_PINOS_CLUB_clqczm.png",
+                "name": "Pinos Club"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 4"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808093/Futuro13/Escudos%20SUB%207/7_FUTURO_ANTIOQUIA_WONDER_nyxdce.png",
+                "name": "Futuro Antioquia Wonder"
+              },
+              "result": "3 - 1"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808095/Futuro13/Escudos%20SUB%207/8_SAN_JOS%C3%89_DE_LAS_VEGAS_rcgwca.png",
+                "name": "San José de Las Vegas"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 2"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808095/Futuro13/Escudos%20SUB%207/9_SEMILLERO_MANRIQUE_gtqmx4.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "1 - 5"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808091/Futuro13/Escudos%20SUB%207/10_ESTUDIANTES_DEL_FUTBOL_ivvvle.png",
+                "name": "Estudiantes del Futbol"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808090/Futuro13/Escudos%20SUB%207/11_CORPORACI%C3%93N_GREMIO_BELLO_ugzx5m.png",
+                "name": "Gremio Bello"
+              },
+              "result": "0 - 0"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808092/Futuro13/Escudos%20SUB%207/12_CD_PAISAS_DEL_FUTURO_czox2c.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match14": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808094/Futuro13/Escudos%20SUB%207/13_SOCCER_CITY_li8vgj.png",
+                "name": "Soccer City"
+              },
+              "result": "0 - 0"
+            },
+            "match15": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808089/Futuro13/Escudos%20SUB%207/15_FUTURO_ANTIOQUIA_REGOL_ce4msc.png",
+                "name": "Futuro Antioquia Regol"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "year": 2025
+        },
+        "sub-8": {
+          "category": "Sub 8",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1747956340/Sub8_gtbond.jpg",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808166/Futuro13/Escudos%20SUB%208/1_CD_PAISAS_DEL_FUTURO_jfw4wr.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "result": "8 - 1"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808173/Futuro13/Escudos%20SUB%208/3_CORPORACI%C3%93N_REAL_CONCEJO_rbkpxf.png",
+                "name": "Corp. Real Concejo"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 4"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808176/Futuro13/Escudos%20SUB%208/4_CF_SANTIAGO_LONDO%C3%91O_cboncf.png",
+                "name": "CF Santiago Londoño"
+              },
+              "result": "10 - 0"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808174/Futuro13/Escudos%20SUB%208/5_FUTURO_ANTIOQUIA_WONDER_codbtb.png",
+                "name": "Futuro Antioquia Wonder"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 12"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808175/Futuro13/Escudos%20SUB%208/6_CLUB_DE_FUTBOL_FELIPE_CHAVARRIA_vxaidc.png",
+                "name": "CF Felipe Chavarria"
+              },
+              "result": "2 - 3"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808188/Futuro13/Escudos%20SUB%208/7_REYES_DE_LA_CANCHA_sppbgf.png",
+                "name": "Reyes de La Cancha"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 7"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808182/Futuro13/Escudos%20SUB%208/8_PARIS_SPORT_CLUB_jcznog.png",
+                "name": "Paris Sport Club"
+              },
+              "result": "11 - 0"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808181/Futuro13/Escudos%20SUB%208/9_ALEGRIA_FC_whqh6p.png",
+                "name": "Alegria FC"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 4"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808168/Futuro13/Escudos%20SUB%208/10_ESTUDIANTES_DEL_FUTBOL_wlt6pd.png",
+                "name": "Estudiantes del Futbol"
+              },
+              "result": "12 - 0"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808169/Futuro13/Escudos%20SUB%208/11_GENIOS_BLANQUIZAL_qxkmfv.png",
+                "name": "Genios Blanquizal"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808171/Futuro13/Escudos%20SUB%208/12_CD_ATALANTA_j3xzxo.png",
+                "name": "CD Atalanta"
+              },
+              "result": "0 - 0"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808169/Futuro13/Escudos%20SUB%208/13_ACADEMIA_DIM_ocv25b.png",
+                "name": "Academia DIM"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808172/Futuro13/Escudos%20SUB%208/14_TALENTOS_DE_MI_BARRIO_sucmpn.png",
+                "name": "Talentos de Mi Barrio"
+              },
+              "result": "0 - 0"
+            },
+            "match1-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808171/Futuro13/Escudos%20SUB%208/15_CD_AURES_ghl40a.png",
+                "name": "CD Aures"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808173/Futuro13/Escudos%20SUB%208/16_CD_LAS_ESMERALDAS_d0v5io.png",
+                "name": "CD Las Esmeraldas"
+              },
+              "result": "0 - 0"
+            },
+            "match1-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808175/Futuro13/Escudos%20SUB%208/17_ESCUELA_ESTUDIANTES_bqssn6.png",
+                "name": "Escuela Estudiantes"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "year": 2025
+        },
+        "sub-9": {
+          "category": "Sub 9",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1747962470/Sub9-Sub10_m3l0zf.jpg",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808179/Futuro13/Escudos%20SUB%209/1_CORPORACI%C3%93N_SAN_ISIDRO_dc5z8h.png",
+                "name": "Corp. San Isidro"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 7"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808180/Futuro13/Escudos%20SUB%209/2_CD_LAS_ESMERALDAS_ia72ll.png",
+                "name": "CD Las Esmeraldas"
+              },
+              "result": "3 - 2"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808179/Futuro13/Escudos%20SUB%209/3_CD_SABA_djlb60.png",
+                "name": "CD Saba"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "4 - 3"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808185/Futuro13/Escudos%20SUB%209/4_CD_ATALANTA_gkspz7.png",
+                "name": "CD Atalanta"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 8"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808181/Futuro13/Escudos%20SUB%209/5_SAN_JOS%C3%89_DE_LAS_VEGAS_wrc0uk.png",
+                "name": "San Jose de Las Vegas"
+              },
+              "result": "6 - 4"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808190/Futuro13/Escudos%20SUB%209/6_FRONTINO_FC_qhlxwm.png",
+                "name": "Frontino FC"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "5 - 7"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808184/Futuro13/Escudos%20SUB%209/7_ESTUDIANTES_DEL_FUTBOL_i7g3qb.png",
+                "name": "Estudiantes del Futbol"
+              },
+              "result": "5 - 1"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808184/Futuro13/Escudos%20SUB%209/8_SEMILLAS_DE_PAZ_ztc2zz.png",
+                "name": "Semillas de Paz"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "5 - 1"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808184/Futuro13/Escudos%20SUB%209/9_COSDECOL_GRANIZAL_mnjfop.png",
+                "name": "Cosdecol Granizal"
+              },
+              "result": "8 - 4"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808176/Futuro13/Escudos%20SUB%209/10_CD_ANIBAL_EUSSE_ebvqng.png",
+                "name": "CD Anibal Eusse"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "3 - 5"
+            },
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808178/Futuro13/Escudos%20SUB%209/11_PRADO_FC_opy4qy.png",
+                "name": "Prado FC"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "year": 2025
+        },
+        "sub-10": {
+          "category": "Sub 10",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1747962470/Sub9-Sub10_m3l0zf.jpg",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808187/Futuro13/Escudos%20SUB%2010/1_SEMILLAS_DE_PAZ_zm4rja.png",
+                "name": "Semillas de Paz"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 3"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808190/Futuro13/Escudos%20SUB%2010/2_SEMILLERO_MANRIQUE_tqvqmu.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "1 - 3"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808199/Futuro13/Escudos%20SUB%2010/3_EL_SOCORRO_FC_hajhy0.png",
+                "name": "El Socorro FC"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "8 - 5"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808195/Futuro13/Escudos%20SUB%2010/4_CLUB_DE_FUTBOL_FELIPE_CHAVARRIA_plad80.png",
+                "name": "CF Felipe Chavarria"
+              },
+              "result": "3 - 3"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808199/Futuro13/Escudos%20SUB%2010/5_CORPORACI%C3%93N_DEPORTIVA_PRODIGIOS_e17zai.png",
+                "name": "Corp. Dep. Prodigios"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "6 - 0"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808209/Futuro13/Escudos%20SUB%2010/6_SALVADOR_FC_eqcynz.png",
+                "name": "Salvador FC"
+              },
+              "result": "6 - 4"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808209/Futuro13/Escudos%20SUB%2010/7_CD_AFI_ixsfxk.png",
+                "name": "CD AFI"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "6 - 3"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808202/Futuro13/Escudos%20SUB%2010/8_CD_LA_LADERA_hs65vr.png",
+                "name": "CD La Ladera"
+              },
+              "result": "0 - 2"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808186/Futuro13/Escudos%20SUB%2010/10_ESCUELA_BELEN_LA_NUBIA_z2a1d2.png",
+                "name": "Escuela Belen La Nubia"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "3 - 3"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808185/Futuro13/Escudos%20SUB%2010/11_CD_PACHO_MATURANA_l8m7ag.png",
+                "name": "CD Pacho Maturana"
+              },
+              "result": "0 - 4"
+            },
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808188/Futuro13/Escudos%20SUB%2010/12_ACADEMIA_DIM_ljofnz.png",
+                "name": "Academia DIM"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "4 - 0"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808187/Futuro13/Escudos%20SUB%2010/13_FUDECOL_DORLAN_PABON_zk1idy.png",
+                "name": "Fuecol Dorlan Pabon"
+              },
+              "result": "1 - 1"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808191/Futuro13/Escudos%20SUB%2010/14_CD_MAS_QUE_VENCEDORES_o34tdc.png",
+                "name": "CD Mas Que Vencedores"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "7 - 1"
+            },
+            "match1-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808187/Futuro13/Escudos%20SUB%2010/15_CLUB_SAO_PABLO_epwqte.png",
+                "name": "Club San Pablo"
+              },
+              "result": "4 - 0"
+            },
+            "match1-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808188/Futuro13/Escudos%20SUB%2010/16_FUTURO_ANTIOQUIA_REGOL_asfa7g.png",
+                "name": "Futuro Antioquia Regol"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 2"
+            },
+            "match1-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808189/Futuro13/Escudos%20SUB%2010/17_CD_SOL_DE_ORIENTE_rpo1vk.png",
+                "name": "CD Sol de Oriente"
+              },
+              "result": "5 - 1"
+            },
+            "match1-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808192/Futuro13/Escudos%20SUB%2010/18_CLUB_SANBER_raz51j.png",
+                "name": "Club Sanber"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 2"
+            },
+            "match1-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808191/Futuro13/Escudos%20SUB%2010/19_CD_PAISAS_DEL_FUTURO_xd3aap.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "result": "4 - 1"
+            },
+            "match1-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808195/Futuro13/Escudos%20SUB%2010/20_SOCCER_CITY_ovd47l.png",
+                "name": "Soccer City"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808193/Futuro13/Escudos%20SUB%2010/21_CD_WILSON_AMADO_pjpkie.png",
+                "name": "CD Wilson Amado"
+              },
+              "result": "0 - 0"
+            },
+            "match2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808193/Futuro13/Escudos%20SUB%2010/22_CORPORACI%C3%93N_CERRO_kdghnu.png",
+                "name": "Corporacion Cerro"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match2-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808198/Futuro13/Escudos%20SUB%2010/23_ACADEMIA_ROBLE_ad7fzx.png",
+                "name": "CD Academia Robles"
+              },
+              "result": "0 - 0"
+            },
+            "match2-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808197/Futuro13/Escudos%20SUB%2010/24_CORPORACI%C3%93N_PALADINES_punjas.png",
+                "name": "Corp. Dep. Paladines"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match2-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808212/Futuro13/Escudos%20SUB%2010/25_EL_BOSQUE_FC_sssiru.png",
+                "name": "El Bosque FC"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "year": 2025
+        },
+        "sub-11-fase-1": {
+          "category": "Sub 11",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1743472448/Sub11_r84vpj.jpg",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808118/Futuro13/Escudos%20SUB%2011/1_CD_SOL_DE_ORIENTE_nrbkat.png",
+                "name": "CD Sol de Oriente"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 1"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808120/Futuro13/Escudos%20SUB%2011/2_SEMILLERO_MANRIQUE_xtxauc.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "0 - 3"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808121/Futuro13/Escudos%20SUB%2011/3_ESTUDIANTES_DEL_FUTBOL_emprqz.png",
+                "name": "Estudiantes del Futbol"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "3 - 6"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808135/Futuro13/Escudos%20SUB%2011/4_CD_ORMEDIS_MADERA_ozimcu.png",
+                "name": "CD Ormedis Madera"
+              },
+              "result": "3 - 4"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808125/Futuro13/Escudos%20SUB%2011/5_CF_SANTIAGO_LONDO%C3%91O_hsnw5s.png",
+                "name": "CF Santiago Londoño"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "4 - 2"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808126/Futuro13/Escudos%20SUB%2011/6_CD_LA_LADERA_wwy4kg.png",
+                "name": "CD La Ladera"
+              },
+              "result": "2 - 1"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808126/Futuro13/Escudos%20SUB%2011/7_CD_PAISAS_DEL_FUTURO_w7wslv.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "3 - 2"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808140/Futuro13/Escudos%20SUB%2011/8_LA_CRUZ_gi6nuf.png",
+                "name": "La Cruz"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "9 - 1"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808132/Futuro13/Escudos%20SUB%2011/9_ABC_FUTBOL_BASE_pvhank.png",
+                "name": "ABC Futbol Base"
+              },
+              "result": "2 - 2"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808129/Futuro13/Escudos%20SUB%2011/10_DEPORTIVO_BAHIA_cnh5zq.png",
+                "name": "Deportivo Bahia"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "6 - 2"
+            },
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808136/Futuro13/Escudos%20SUB%2011/11_EL_BOSQUE_FC_v9u5t0.png",
+                "name": "El Bosque FC"
+              },
+              "result": "2 - 6"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808123/Futuro13/Escudos%20SUB%2011/12_EL_SOCORRO_FC_qbi1dc.png",
+                "name": "El Socorro FC"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "4 - 0"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808123/Futuro13/Escudos%20SUB%2011/13_CORPORACI%C3%93N_PALADINES_z4ae4g.png",
+                "name": "Corp. Dep. Paladines"
+              },
+              "result": "2 - 7"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "phase": "Primera Fase",
+          "year": 2025
+        },
+        "sub-11-fase-2": {
+          "category": "Sub 11",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1743472448/Sub11_r84vpj.jpg",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753671006/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/1000095812_oer2ab.png",
+                "name": "Atletico Real Toro"
+              },
+              "result": "3 - 0"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753671006/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/1000097140_xpvqrs.png",
+                "name": "Futuro Antioquia Wonder"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 1"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753671535/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/11_CD_CINFODEC_cm4ngw_bqoqhq.png",
+                "name": "Cinfodec"
+              },
+              "result": "1 - 3"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753671766/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/4_CF_SANTIAGO_LONDO%C3%91O_cboncf_pdddsu.png",
+                "name": "Santiago Londoño Mañe"
+              },
+              "result": "4 - 2"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753672045/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/3_ABC_FUTBOL_BASE_PRIMO_kehkq7_we3fy5.png",
+                "name": "ABC Futbol Base Primo"
+              },
+              "result": "3 - 2"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753672305/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/21_CD_WILSON_AMADO_pjpkie_b0zvq1.png",
+                "name": "C.D. Wilson Amado"
+              },
+              "result": "0 - 0"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753672436/Futuro13/Escudos%20SUB%2011%20-%20Fase%202/17_ESCUELA_BELEN_LA_NUBIA_wy0ogy_szerav.png",
+                "name": "Escuela Belen La Nubia"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim - Sub 11/Segunda Fase",
+          "phase": "Segunda Fase",
+          "year": 2025
+        },
+        "sub-12": {
+          "category": "Sub 12",
+          "imageTournament": "",
+          "matches": {
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808139/Futuro13/Escudos%20SUB%2012/1_CHIMINANGOS_LA_LIBERTAD_cmxqfi.png",
+                "name": "Chiminangos La Libertad"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 3"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808151/Futuro13/Escudos%20SUB%2012/2_CD_AFI_o9esbr.png",
+                "name": "CD AFI"
+              },
+              "result": "0 - 0"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808160/Futuro13/Escudos%20SUB%2012/3_ABC_ZONA_43A_PRIMO_kehkq7.png",
+                "name": "ABC Zona 43A Primo"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 3"
+            },
+            "match1-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808146/Futuro13/Escudos%20SUB%2012/4_SEMILLERO_MANRIQUE_gsjbq7.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "2 - 3"
+            },
+            "match1-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808158/Futuro13/Escudos%20SUB%2012/5_COLORADO_FC_d2s7vs.png",
+                "name": "Colorado FC"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 3"
+            },
+            "match1-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808147/Futuro13/Escudos%20SUB%2012/6_BUHO_ACADEMIA_FC_ry2nte.png",
+                "name": "Búho Academia FC"
+              },
+              "result": "2 - 1"
+            },
+            "match1-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808149/Futuro13/Escudos%20SUB%2012/7_PRADO_FC_vknmxy.png",
+                "name": "Prado FC"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 3"
+            },
+            "match1-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808151/Futuro13/Escudos%20SUB%2012/8_LA_34_SAN_BLAS_cp6jqw.png",
+                "name": "La 34 San Blas"
+              },
+              "result": "3 - 1"
+            },
+            "match1-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808153/Futuro13/Escudos%20SUB%2012/9_THE_GUNNER_S_wy1d64.png",
+                "name": "The Gunner´s"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 1"
+            },
+            "match1-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808135/Futuro13/Escudos%20SUB%2012/10_EL_SOCORRO_FC_xhrsln.png",
+                "name": "El Socorro"
+              },
+              "result": "1 - 2"
+            },
+            "match2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808142/Futuro13/Escudos%20SUB%2012/11_CD_CINFODEC_cm4ngw.png",
+                "name": "CD Cinfodec"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 2"
+            },
+            "match2-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808136/Futuro13/Escudos%20SUB%2012/12_CORPORACI%C3%93N_REAL_CONCEJO_rztriq.png",
+                "name": "CORP. Real Consejo"
+              },
+              "result": "2 - 1"
+            },
+            "match2-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808138/Futuro13/Escudos%20SUB%2012/13_SEMILLAS_DE_PAZ_k95sn9.png",
+                "name": "Semillas de Paz"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 4"
+            },
+            "match2-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741989282/Futuro13/Escudos%20SUB%2012/14_SUE%C3%91OS_DEL_BALON_FC_jxuo8l.png",
+                "name": "Sueños Del Balon FC"
+              },
+              "result": "2 - 4"
+            },
+            "match2-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808146/Futuro13/Escudos%20SUB%2012/15_SOCCER_SMART_cn0v0t.png",
+                "name": "Soccer Smart"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "5 - 7"
+            },
+            "match2-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808138/Futuro13/Escudos%20SUB%2012/16_CLUB_DE_FUTBOL_FELIPE_CHAVARRIA_g1obju.png",
+                "name": "CF Felipe Chavarria"
+              },
+              "result": "6 - 3"
+            },
+            "match2-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808140/Futuro13/Escudos%20SUB%2012/17_ESCUELA_BELEN_LA_NUBIA_wy0ogy.png",
+                "name": "Escuela Belen La Nubia"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 4"
+            },
+            "match2-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808141/Futuro13/Escudos%20SUB%2012/18_CD_PAISAS_DEL_FUTURO_wfmbpo.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "result": "8 - 0"
+            },
+            "match2-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808150/Futuro13/Escudos%20SUB%2012/19_CD_BELENCITO_hvvr7t.png",
+                "name": "CD Belencito"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "3 - 6"
+            },
+            "match2-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808143/Futuro13/Escudos%20SUB%2012/20_CANTERA_SAN_BLAS_sibisg.png",
+                "name": "Cantera San Blas"
+              },
+              "result": "0 - 0"
+            },
+            "match3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808142/Futuro13/Escudos%20SUB%2012/22_FUTURO_ANTIOQUIA_REGOL_qaqvfu.png",
+                "name": "Futuro Antioquia Regol"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match3-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808143/Futuro13/Escudos%20SUB%2012/23_ARRIEROS_ENVIGADO_yxtjrp.png",
+                "name": "Arrieros Envigado"
+              },
+              "result": "0 - 0"
+            },
+            "match3-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808146/Futuro13/Escudos%20SUB%2012/24_NICO_FUTBOL_f0n8xk.png",
+                "name": "Nico Futbol"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match3-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741893350/Futuro13/Escudos%20SUB%2012/logo_qiwk82.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808145/Futuro13/Escudos%20SUB%2012/25_FUDECOL_DORLAN_PABON_jgdkfw.png",
+                "name": "Fudecol Dorlan Pabon"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "year": 2025
+        },
+        "sub-13-fase-1": {
+          "category": "Sub 13",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741887336/sub13_fzxegd.jpg",
+          "matches": {
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808164/Futuro13/Escudos%20SUB%2013/1_REYES_DE_LA_CANCHA_svdkmn.png",
+                "name": "Reyes de La Cancha"
+              },
+              "result": "0 - 3"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808161/Futuro13/Escudos%20SUB%2013/2_ESCUELA_DE_FUTBOL_DEMUBE_eezbhg.png",
+                "name": "Escuela de Futbol Demube"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 0"
+            },
+            "match1-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808162/Futuro13/Escudos%20SUB%2013/3_CD_PAISAS_DEL_FUTURO_kqxymz.png",
+                "name": "CD Paisas Del Futuro"
+              },
+              "result": "3 - 7"
+            },
+            "match1-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808165/Futuro13/Escudos%20SUB%2013/4_FORJADORES_DE_SUE%C3%91OS_r8ka2w.png",
+                "name": "Forjafores de Sueños"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "5 - 2"
+            },
+            "match1-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808163/Futuro13/Escudos%20SUB%2013/5_SEMILLERO_MANRIQUE_wn6kl8.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "2 - 2"
+            },
+            "match1-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808163/Futuro13/Escudos%20SUB%2013/6_ASOBDIM_bc98ei.png",
+                "name": "Asobdim"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 4"
+            },
+            "match1-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808175/Futuro13/Escudos%20SUB%2013/7_DEPORTIVO_BAHIA_hrqazz.png",
+                "name": "Deportivo Bahia"
+              },
+              "result": "1 - 5"
+            },
+            "match1-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808173/Futuro13/Escudos%20SUB%2013/8_CD_BELENCITO_gxddyk.png",
+                "name": "CD Belencito"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 2"
+            },
+            "match1-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "",
+                "name": "C.D. Barrio San Fernando"
+              },
+              "result": "3 - 5"
+            },
+            "match1-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808152/Futuro13/Escudos%20SUB%2013/10_CLUB_DE_FUTBOL_FELIPE_CHAVARRIA_wiqwsp.png",
+                "name": "CF Felipe Chavarria"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 1"
+            },
+            "match2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808155/Futuro13/Escudos%20SUB%2013/11_JUVENTUS_FC_kgigwf.png",
+                "name": "Juventus FC"
+              },
+              "result": "0 - 8"
+            },
+            "match2-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808158/Futuro13/Escudos%20SUB%2013/12_ABC_LA_CANCHA_PRIMO_uo7yo8.png",
+                "name": "ABC LA Cancha Primo"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 2"
+            },
+            "match2-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808159/Futuro13/Escudos%20SUB%2013/13_PROYECCIONES_FC_ad3lqv.png",
+                "name": "Proyeciones FC"
+              },
+              "result": "3 - 1"
+            },
+            "match2-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808161/Futuro13/Escudos%20SUB%2013/14_CD_ATALANTA_skhrte.png",
+                "name": "CD Atalanta"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 0"
+            },
+            "match2-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741808165/Futuro13/Escudos%20SUB%2013/15_AGUILAS_FC_rszfmd.png",
+                "name": "Aguilas FC"
+              },
+              "result": "1 - 6"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "phase": "Primera Fase",
+          "year": 2025
+        },
+        "sub-13-fase-2": {
+          "category": "Sub 13",
+          "imageTournament": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741887336/sub13_fzxegd.jpg",
+          "matches": {
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675634/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/10_EL_SOCORRO_FC_xhrsln_eh8q2u.png",
+                "name": "Socorro"
+              },
+              "result": "4 - 2"
+            },
+            "match2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675703/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/10_DEPORTIVO_BAHIA_cnh5zq_kjrdck.png",
+                "name": "Deportivo Bahia"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675901/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/2_SEMILLERO_MANRIQUE_xtxauc_pldq0s.png",
+                "name": "Semillero Manrique"
+              },
+              "result": "0 - 0"
+            },
+            "match4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753716597/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/7_REYES_DE_LA_CANCHA_sppbgf_hute42.png",
+                "name": "Reyes de La Cancha"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675907/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/24_NICO_FUTBOL_f0n8xk_kzakew.png",
+                "name": "Nico Futbol"
+              },
+              "result": "0 - 0"
+            },
+            "match6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1754453906/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/PASION_SANTA_MARGARITA_fs5xhn.png",
+                "name": "Pasion Santa Margarita"
+              },
+              "result": "3 - 4"
+            },
+            "match7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753716730/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/9_COSDECOL_GRANIZAL_mnjfop_w9aizd.png",
+                "name": "Corporacion Acosol Granizal"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675904/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/16_CLUB_DE_FUTBOL_FELIPE_CHAVARRIA_g1obju_sj309b.png",
+                "name": "CF Felipe Echavarria"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1753675911/Futuro13/Escudos%20Sub%2013%20-%20Fase%202/19_CD_BELENCITO_hvvr7t_oaupwu.png",
+                "name": "C.D. Belencito"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "4 - 0"
+            }
+          },
+          "title": "Copa Kalley Asobdim",
+          "phase": "Segunda Fase",
+          "year": 2025
+        }
+      }
+    }
+  },
+  "tournaments1": {
+    "liga-antioquia-2025": {
+      "tournamentInfo": {
+        "name": "Liga Antioquia",
+        "year": 2025,
+        "description": "Liga departamental de Antioquia 2025",
+        "startDate": "2025-02-01",
+        "endDate": "2025-11-30",
+        "status": "active"
+      },
+      "categories": {
+        "sub-17": {
+          "category": "Sub 17",
+          "imageTournament": "",
+          "matches": {
+            "match0": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987308/Futuro13/Liga/1_COLEGIO_SAN_IGNACIO_cgoual.png",
+                "name": "Colegio San Ignacio"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 6"
+            },
+            "match0-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987305/Futuro13/Liga/2_C.D._SUE%C3%91OS_DE_FUTBOL_ilvclt.png",
+                "name": "Sueños de Futbol"
+              },
+              "result": "6 - 2"
+            },
+            "match0-2": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987301/Futuro13/Liga/3_C.D._ATLETHICO_BELLO_q8uzep.png",
+                "name": "CD Atletico Bello"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "1 - 3"
+            },
+            "match0-3": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Ganado",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987305/Futuro13/Liga/4_TALENTO_ANTIOQUE%C3%91O_y3uwb7.png",
+                "name": "Talento Antioqueño"
+              },
+              "result": "0 - 3"
+            },
+            "match0-4": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987303/Futuro13/Liga/5_MODO_FUTBOL_eubwwb.png",
+                "name": "Modo Futbol"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 5"
+            },
+            "match0-5": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "finished": "Empate",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987299/Futuro13/Liga/6_SOCCER_CITY_qfbyui.png",
+                "name": "CD Soccer City"
+              },
+              "result": "1 - 1"
+            },
+            "match0-6": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987302/Futuro13/Liga/7_SOCCER_ANTIOQUIA_igckdc.png",
+                "name": "CD Soccer Antioquia"
+              },
+              "finished": "Perdido",
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "2 - 5"
+            },
+            "match0-7": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987304/Futuro13/Liga/8_REAL_SOCCER_ALAMOS_uqxs4y.png",
+                "name": "Real Soccer Alamos"
+              },
+              "result": "0 - 0"
+            },
+            "match0-8": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987303/Futuro13/Liga/10_LEONES_DEL_FUTURO_uxvgx7.png",
+                "name": "Leones de Futuro"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match0-9": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987301/Futuro13/Liga/11_ALCAZARES_SPORTS_a5o5np.png",
+                "name": "Alcazares Sports"
+              },
+              "result": "0 - 0"
+            },
+            "match1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987306/Futuro13/Liga/12_ZONA_SUR_jv2ehj.png",
+                "name": "Zona Sur"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "result": "0 - 0"
+            },
+            "match1-1": {
+              "awayTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1741898816/Futuro13/Escudos%20SUB%2013/logo_mws3lv.svg",
+                "name": "Futuro 13"
+              },
+              "homeTeam": {
+                "logo": "https://res.cloudinary.com/dy6jglszo/image/upload/v1748987301/Futuro13/Liga/13_AGUILAS_F.C._zhpssn.png",
+                "name": "Aguilas FC"
+              },
+              "result": "0 - 0"
+            }
+          },
+          "title": "Liga Antioquia - Sub 13",
+          "year": 2025
+        }
+      }
+    }
+  }
+}
