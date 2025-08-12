@@ -1,13 +1,15 @@
+declare const process: any;
+
 export const environment = {
-  production: false,
+  production: process.env['NG_APP_PRODUCTION'] === 'true',
   firebase: {
-    apiKey: 'AIzaSyAOOaZSnEEX3tOtAeJTrjBKEfgUKTTbDuM',
-    authDomain: 'cdfuturo13-tournaments-508a5.firebaseapp.com',
-    databaseURL: 'https://cdfuturo13-tournaments-508a5-default-rtdb.firebaseio.com/',
-    projectId: 'cdfuturo13-tournaments-508a5',
-    storageBucket: 'cdfuturo13-tournaments-508a5.appspot.com',
-    messagingSenderId: '727305330413',
-    appId: '1:727305330413:web:890bf930a977a6a4eeb6e4',
-    measurementId: 'G-YYTBFTM8Y7'
+    apiKey: process.env['NG_APP_FIREBASE_API_KEY'],
+    authDomain: process.env['NG_APP_FIREBASE_AUTH_DOMAIN'],
+    databaseURL: process.env['NG_APP_FIREBASE_DATABASE_URL'],
+    projectId: process.env['NG_APP_FIREBASE_PROJECT_ID'],
+    storageBucket: process.env['NG_APP_FIREBASE_STORAGE_BUCKET'],
+    messagingSenderId: process.env['NG_APP_FIREBASE_MESSAGING_SENDER_ID'],
+    appId: process.env['NG_APP_FIREBASE_APP_ID'],
+    measurementId: process.env['NG_APP_FIREBASE_MEASUREMENT_ID']
   }
 };
