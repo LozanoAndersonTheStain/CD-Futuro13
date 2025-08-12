@@ -5,8 +5,16 @@ import { TournamentService } from '../../services/tournament.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MetaTagsService } from '../../services/meta-tags.service';
 
-interface TournamentsByYear {
-  [key: string]: any[];
+interface TournamentInfo {
+  name: string;
+  year: number;
+  description: string;
+  startDate: string;
+  endDate: string;
+  status: string;
+  tournamentId: string;
+  type: 'copa' | 'liga';
+  categoriesCount: number;
 }
 
 @Component({
@@ -18,7 +26,7 @@ interface TournamentsByYear {
 })
 export class TournamentsComponent implements OnInit {
   tournaments: any[] = [];
-  tournamentsByYear: TournamentsByYear = {};
+  tournamentInfos: TournamentInfo[] = [];
   isLoading = true;
 
   constructor(
@@ -28,11 +36,7 @@ export class TournamentsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.tournamentService.getTournaments().subscribe((data) => {
-      this.tournaments = data;
-      this.groupTournamentsByYear();
-      this.isLoading = false;
-    });
+    this.loadTournamentInfos();
 
     this.metaTagsService.updateTags({
       title: 'CD Futuro 13 - Torneos',
@@ -45,18 +49,44 @@ export class TournamentsComponent implements OnInit {
     });
   }
 
-  private groupTournamentsByYear(): void {
-    this.tournamentsByYear = this.tournaments.reduce((acc, tournament) => {
-      const year = tournament.year || '2025';
-      if (!acc[year]) {
-        acc[year] = [];
-      }
-      acc[year].push(tournament);
-      return acc;
-    }, {});
+  private loadTournamentInfos(): void {
+    // Usar el nuevo método del servicio que lee desde Firebase
+    this.tournamentService.getTournamentInfos().subscribe(tournamentInfos => {
+      this.tournamentInfos = tournamentInfos;
+      this.isLoading = false;
+    });
   }
 
-  navigateToYearTournaments(year: string): void {
-    this.router.navigate(['/tournaments', year]);
+  navigateToTournament(tournamentInfo: TournamentInfo): void {
+    // Navegar a los torneos del año específico con filtro de tipo
+    this.router.navigate(['/tournaments', tournamentInfo.year], {
+      queryParams: { type: tournamentInfo.type }
+    });
+  }
+
+  getStatusText(status: string): string {
+    switch (status) {
+      case 'active':
+        return 'En curso';
+      case 'upcoming':
+        return 'Próximamente';
+      case 'finished':
+        return 'Finalizado';
+      default:
+        return 'Desconocido';
+    }
+  }
+
+  getStatusClass(status: string): string {
+    switch (status) {
+      case 'active':
+        return 'status-active';
+      case 'upcoming':
+        return 'status-upcoming';
+      case 'finished':
+        return 'status-finished';
+      default:
+        return 'status-unknown';
+    }
   }
 }

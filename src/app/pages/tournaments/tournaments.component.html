@@ -9,15 +9,41 @@
     </ng-container>
     <ng-template #content>
       <div class="tournaments__grid">
-        <div class="tournaments__card" *ngFor="let year of tournamentsByYear | keyvalue"
-          (click)="navigateToYearTournaments(year.key)"
+        <div class="tournaments__card" *ngFor="let tournamentInfo of tournamentInfos"
+          (click)="navigateToTournament(tournamentInfo)"
           [style.backgroundImage]="'url(../../../../public/assets/tournament_background_image.jpg)'">
           <div class="overlay">
-            <h2>{{ year.key }}</h2>
-            <div class="tournament-names">
-              <span>{{ year.value[0]?.title }}</span>
+            <div class="tournament-header">
+              <h2>{{ tournamentInfo.name }}</h2>
+              <span class="tournament-year">{{ tournamentInfo.year }}</span>
             </div>
-            <p>{{ year.value.length }} torneos</p>
+
+            <div class="tournament-info">
+              <p class="tournament-description">{{ tournamentInfo.description }}</p>
+
+              <div class="tournament-details">
+                <div class="detail-item">
+                  <span class="label">Categorías:</span>
+                  <span class="value">{{ tournamentInfo.categoriesCount }}</span>
+                </div>
+
+                <div class="detail-item">
+                  <span class="label">Inicio:</span>
+                  <span class="value">{{ tournamentInfo.startDate | date:'dd/MM/yyyy' }}</span>
+                </div>
+
+                <div class="detail-item">
+                  <span class="label">Fin:</span>
+                  <span class="value">{{ tournamentInfo.endDate | date:'dd/MM/yyyy' }}</span>
+                </div>
+              </div>
+
+              <div class="tournament-status">
+                <span class="status-badge" [ngClass]="getStatusClass(tournamentInfo.status)">
+                  {{ getStatusText(tournamentInfo.status) }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
