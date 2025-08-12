@@ -23,6 +23,66 @@
     color: var(--primary-color);
   }
 
+  // Nuevos estilos para filtros
+  .tournament-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .filter-btn {
+      padding: 0.7rem 1.2rem;
+      border: 2px solid var(--primary-color);
+      background: transparent;
+      color: var(--primary-color);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      font-size: 0.9rem;
+
+      &:hover {
+        background: var(--primary-color);
+        color: var(--background-color);
+      }
+
+      &.active {
+        background: var(--primary-color);
+        color: var(--background-color);
+      }
+    }
+  }
+
+  // Nuevos estilos para secciones de categorías
+  .category-section {
+    margin-bottom: 2rem;
+
+    .category-title {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: var(--primary-color);
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  // Nuevos estilos para botón de regreso
+  .tournament__container__button {
+    margin-bottom: 1rem;
+
+    .tournament__button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -39,10 +99,20 @@
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    position: relative; // Nuevo para posicionar badges
 
     &:hover {
       transform: scale(1.05);
     }
+
+    // Nuevos bordes para tipos de torneo
+    // &[data-tournament-type="copa"] {
+    //   border: 3px solid #4CAF50;
+    // }
+
+    // &[data-tournament-type="liga"] {
+    //   border: 3px solid #2196F3;
+    // }
 
     h2 {
       margin: 0 0 10px;
@@ -50,10 +120,37 @@
       color: var(--primary-color);
     }
 
+    // Nuevo estilo para h3
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      color: var(--primary-color);
+    }
+
     p {
       margin: 0;
       font-size: 1.1rem;
       color: var(--quaternary-color);
+    }
+
+    // Nuevo badge para tipo de torneo
+    .tournament-type-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: white;
+
+      &.type-copa {
+        background: #4CAF50;
+      }
+
+      &.type-liga {
+        background: #2196F3;
+      }
     }
 
     .overlay {
@@ -65,6 +162,11 @@
       flex-direction: column;
       justify-content: center;
       padding: 20px;
+      position: relative; // Nuevo para posicionar contenido
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
     }
   }
 
@@ -83,9 +185,42 @@
     }
   }
 
+  // Nuevo mensaje cuando no hay datos
+  .no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    text-align: center;
+
+    p {
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      opacity: 0.7;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     &__title {
       font-size: 1.5rem;
+    }
+
+    // Nuevos estilos responsive para filtros
+    .tournament-filters {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+
+      .filter-btn {
+        width: 80%;
+        max-width: 250px;
+      }
+    }
+
+    // Nuevo responsive para títulos de categoría
+    .category-title {
+      font-size: 1.4rem;
     }
 
     &__grid {
@@ -94,6 +229,41 @@
 
     &__card {
       height: 200px;
+
+      // Nuevos estilos responsive para h3 y badge
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .tournament-type-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+      }
+    }
+
+    // Nuevo responsive para botón
+    .tournament__container__button {
+      text-align: center;
+    }
+  }
+
+  // Nuevos estilos para móviles pequeños
+  @media screen and (max-width: 480px) {
+    &__container {
+      padding: 15px;
+    }
+
+    .tournament-filters .filter-btn {
+      width: 90%;
+      padding: 0.6rem 1rem;
+    }
+
+    &__card {
+      height: 180px;
+
+      .overlay {
+        padding: 15px;
+      }
     }
   }
 }

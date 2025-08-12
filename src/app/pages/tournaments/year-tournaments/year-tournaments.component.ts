@@ -9,6 +9,10 @@ import { ButtonConfig } from '../../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { Location } from '@angular/common';
 
+interface GroupedTournaments {
+  [key: string]: any[];
+}
+
 @Component({
   selector: 'app-year-tournaments',
   standalone: true,
@@ -23,11 +27,16 @@ import { Location } from '@angular/common';
 })
 export class YearTournamentsComponent implements OnInit {
   tournaments: any[] = [];
+  filteredTournaments: any[] = [];
+  groupedTournaments: GroupedTournaments = {};
   year: string = '';
   isLoading = true;
+  selectedType: 'all' | 'copa' | 'liga' = 'all';
+  currentTournamentType: string = '';
+  hasSpecificTypeFilter: boolean = false; // Nueva propiedad para el template
 
   buttonConfig: ButtonConfig = {
-    label: 'Volver a la lista de años',
+    label: 'Volver a la lista de torneos',
     action: () => this.location.back(),
     type: 'button',
     class: 'btn-primary',
@@ -37,7 +46,7 @@ export class YearTournamentsComponent implements OnInit {
   };
 
   constructor(
-    private route: ActivatedRoute,
+    public route: ActivatedRoute, // Cambiado a public
     private router: Router,
     private tournamentService: TournamentService,
     private tournamentStateService: TournamentStateService,
@@ -46,16 +55,85 @@ export class YearTournamentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.year = this.route.snapshot.params['year'];
+
+    // Verificar si hay filtro de tipo en los query params
+    const typeFilter = this.route.snapshot.queryParams['type'];
+    this.hasSpecificTypeFilter = !!(typeFilter && (typeFilter === 'copa' || typeFilter === 'liga'));
+
+    if (this.hasSpecificTypeFilter) {
+      this.selectedType = typeFilter;
+      this.currentTournamentType = typeFilter === 'copa' ? 'Copa Kalley' : 'Liga Antioquia';
+    }
+
+    this.loadTournaments();
+  }
+
+  private loadTournaments(): void {
     this.tournamentService.getTournaments().subscribe((data) => {
+      // Filtrar por año
       this.tournaments = data.filter(
         (tournament) => String(tournament.year) === this.year
       );
+
+      // Aplicar filtro de tipo si existe
+      this.applyTypeFilter();
+      this.groupTournamentsByCategory();
       this.isLoading = false;
     });
+  }
+
+  private applyTypeFilter(): void {
+    if (this.selectedType === 'all') {
+      this.filteredTournaments = this.tournaments;
+    } else {
+      this.filteredTournaments = this.tournaments.filter(
+        (tournament) => tournament.tournamentType === this.selectedType
+      );
+    }
+  }
+
+  private groupTournamentsByCategory(): void {
+    this.groupedTournaments = this.filteredTournaments.reduce((acc, tournament) => {
+      const category = tournament.category;
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(tournament);
+      return acc;
+    }, {});
+  }
+
+  selectTournamentType(type: 'all' | 'copa' | 'liga'): void {
+    this.selectedType = type;
+    this.currentTournamentType = type === 'all' ? '' :
+                                 type === 'copa' ? 'Copa Kalley' : 'Liga Antioquia';
+    this.applyTypeFilter();
+    this.groupTournamentsByCategory();
   }
 
   navigateToTournament(tournament: any): void {
     this.tournamentStateService.setSelectedTournament(tournament);
     this.router.navigate(['/tournament-details']);
+  }
+
+  getCategoryKeys(): string[] {
+    return Object.keys(this.groupedTournaments);
+  }
+
+  getTournamentTypeTitle(): string {
+    if (this.currentTournamentType) {
+      return `${this.currentTournamentType} - ${this.year}`;
+    }
+    return `Torneos - ${this.year}`;
+  }
+
+  // Método para obtener el conteo de categorías por tipo
+  getTypeCount(type: 'copa' | 'liga'): number {
+    return this.tournaments.filter(t => t.tournamentType === type).length;
+  }
+
+  // Método para verificar si hay torneos de un tipo específico
+  hasTypeData(type: 'copa' | 'liga'): boolean {
+    return this.tournaments.some(t => t.tournamentType === type);
   }
 }

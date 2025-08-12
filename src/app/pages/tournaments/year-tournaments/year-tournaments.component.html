@@ -6,23 +6,68 @@
         {{ buttonConfig.label }}
       </app-button>
     </div>
-    <h1 class="tournaments__title">Torneos - {{ year }}</h1>
+
+    <h1 class="tournaments__title">{{ getTournamentTypeTitle() }}</h1>
+
+    <!-- Filtros de tipo de torneo solo si no hay filtro específico en la URL -->
+    <div class="tournament-filters" *ngIf="!hasSpecificTypeFilter">
+      <button
+        class="filter-btn"
+        [class.active]="selectedType === 'all'"
+        (click)="selectTournamentType('all')">
+        Todos ({{ tournaments.length }})
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="selectedType === 'copa'"
+        (click)="selectTournamentType('copa')"
+        *ngIf="hasTypeData('copa')">
+        Copa Kalley ({{ getTypeCount('copa') }})
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="selectedType === 'liga'"
+        (click)="selectTournamentType('liga')"
+        *ngIf="hasTypeData('liga')">
+        Liga Antioquia ({{ getTypeCount('liga') }})
+      </button>
+    </div>
+
     <ng-container *ngIf="isLoading; else content">
       <div class="loading">
         <mat-spinner></mat-spinner>
         <p>Cargando...</p>
       </div>
     </ng-container>
+
     <ng-template #content>
-      <div class="tournaments__grid">
-        <div class="tournaments__card" *ngFor="let tournament of tournaments" (click)="navigateToTournament(tournament)"
-          [style.backgroundImage]="'url(' + tournament.imageTournament +')'">
-          <div class="overlay">
-            <h2>{{ tournament.title }}</h2>
-            <p>{{ tournament.category }}</p>
+      <ng-container *ngIf="getCategoryKeys().length > 0; else noData">
+        <div *ngFor="let category of getCategoryKeys()" class="category-section">
+          <h2 class="category-title">{{ category }}</h2>
+          <div class="tournaments__grid">
+            <div class="tournaments__card"
+                 *ngFor="let tournament of groupedTournaments[category]"
+                 (click)="navigateToTournament(tournament)"
+                 [style.backgroundImage]="'url(' + tournament.imageTournament +')'"
+                 [attr.data-tournament-type]="tournament.tournamentType">
+              <div class="overlay">
+                <h3>{{ tournament.title }}</h3>
+                <p>{{ tournament.phase || 'Fase Única' }}</p>
+                <span class="tournament-type-badge"
+                      [class]="'type-' + tournament.tournamentType">
+                  {{ tournament.tournamentType === 'copa' ? 'Copa Kalley' : 'Liga Antioquia' }}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-container>
+
+      <ng-template #noData>
+        <div class="no-data">
+          <p>No hay torneos disponibles para {{ currentTournamentType || 'este año' }}.</p>
+        </div>
+      </ng-template>
     </ng-template>
   </div>
 </main>
