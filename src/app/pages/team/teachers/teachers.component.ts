@@ -122,21 +122,20 @@ export class TeachersComponent implements OnInit {
     return this.teachers[this.currentTeacherIndex].imageUrl[1];
   }
 
-  updateCurrentTeacher(index: number): void {
-    this.currentTeacherIndex = index;
-  }
-
   buttonConfig: ButtonConfig = {
     label: 'Ver info del Profesor',
     action: () => {
-      // Sincronizar el índice actual con la tarjeta activa
-      this.currentTeacherIndex = this.currentCardIndex;
       this.openModal();
     },
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
   };
+
+  updateCurrentTeacher(index: number): void {
+    this.currentTeacherIndex = index;
+    this.currentCardIndex = index;
+  }
 
   openModal(): void {
     const modal = document.getElementById('modal');

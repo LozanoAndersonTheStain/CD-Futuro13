@@ -73,21 +73,20 @@ export class AdministratorsComponent implements OnInit {
     return this.administrators[this.currentAdministratorIndex].imageUrl[1];
   }
 
-  updateCurrentAdministrator(index: number): void {
-    this.currentAdministratorIndex = index;
-  }
-
   buttonConfig: ButtonConfig = {
     label: 'Ver info del Administrador',
     action: () => {
-      // Sincronizar el índice actual con la tarjeta activa
-      this.currentAdministratorIndex = this.currentCardIndex;
       this.openModal();
     },
     type: 'button',
     class: 'btn-primary',
     fontSize: '1rem',
   };
+
+  updateCurrentAdministrator(index: number): void {
+    this.currentAdministratorIndex = index;
+    this.currentCardIndex = index;
+  }
 
   openModal(): void {
     const modal = document.getElementById('modal');
