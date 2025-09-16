@@ -50,8 +50,8 @@ export class TournamentsComponent implements OnInit {
   }
 
   private loadTournamentInfos(): void {
-    // Usar el nuevo método del servicio que lee desde Firebase
-    this.tournamentService.getTournamentInfos().subscribe(tournamentInfos => {
+    this.tournamentService.getTournamentInfos().subscribe((tournamentInfos) => {
+      console.log('LOG - tournamentInfos in component:', tournamentInfos);
       this.tournamentInfos = tournamentInfos;
       this.isLoading = false;
     });
@@ -60,7 +60,7 @@ export class TournamentsComponent implements OnInit {
   navigateToTournament(tournamentInfo: TournamentInfo): void {
     // Navegar a los torneos del año específico con filtro de tipo
     this.router.navigate(['/tournaments', tournamentInfo.year], {
-      queryParams: { type: tournamentInfo.type }
+      queryParams: { type: tournamentInfo.type },
     });
   }
 

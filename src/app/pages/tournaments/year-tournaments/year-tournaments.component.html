@@ -11,23 +11,14 @@
 
     <!-- Filtros de tipo de torneo solo si no hay filtro específico en la URL -->
     <div class="tournament-filters" *ngIf="!hasSpecificTypeFilter">
-      <button
-        class="filter-btn"
-        [class.active]="selectedType === 'all'"
-        (click)="selectTournamentType('all')">
+      <button class="filter-btn" [class.active]="selectedType === 'all'" (click)="selectTournamentType('all')">
         Todos ({{ tournaments.length }})
       </button>
-      <button
-        class="filter-btn"
-        [class.active]="selectedType === 'copa'"
-        (click)="selectTournamentType('copa')"
+      <button class="filter-btn" [class.active]="selectedType === 'copa'" (click)="selectTournamentType('copa')"
         *ngIf="hasTypeData('copa')">
         Copa Kalley ({{ getTypeCount('copa') }})
       </button>
-      <button
-        class="filter-btn"
-        [class.active]="selectedType === 'liga'"
-        (click)="selectTournamentType('liga')"
+      <button class="filter-btn" [class.active]="selectedType === 'liga'" (click)="selectTournamentType('liga')"
         *ngIf="hasTypeData('liga')">
         Liga Antioquia ({{ getTypeCount('liga') }})
       </button>
@@ -45,17 +36,15 @@
         <div *ngFor="let category of getCategoryKeys()" class="category-section">
           <h2 class="category-title">{{ category }}</h2>
           <div class="tournaments__grid">
-            <div class="tournaments__card"
-                 *ngFor="let tournament of groupedTournaments[category]"
-                 (click)="navigateToTournament(tournament)"
-                 [style.backgroundImage]="'url(' + tournament.imageTournament +')'"
-                 [attr.data-tournament-type]="tournament.tournamentType">
+            <div class="tournaments__card" *ngFor="let tournament of groupedTournaments[category]"
+              (click)="navigateToTournament(tournament)"
+              [style.backgroundImage]="'url(' + tournament.imageTournament +')'"
+              [attr.data-tournament-type]="tournament.tournamentType">
               <div class="overlay">
                 <h3>{{ tournament.title }}</h3>
                 <p>{{ tournament.phase || 'Fase Única' }}</p>
-                <span class="tournament-type-badge"
-                      [class]="'type-' + tournament.tournamentType">
-                  {{ tournament.tournamentType === 'copa' ? 'Copa Kalley' : 'Liga Antioquia' }}
+                <span class="tournament-type-badge" [class]="'type-' + tournament.tournamentType">
+                  {{ tournament.cupName || (tournament.tournamentType === 'copa' ? 'Copa' : 'Liga') }}
                 </span>
               </div>
             </div>
